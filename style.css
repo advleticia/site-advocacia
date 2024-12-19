@@ -22,7 +22,7 @@ header .logo {
 header .logo img {
     max-width: 300px; /* Aumentando o tamanho da logo */
     height: auto;
-    margin-right: 20px; /* Espaço entre a logo e o nome */
+    margin-right: 15px; /* Espaço entre a logo e o nome */
 }
 
 header .logo .nome-escritorio {
@@ -34,6 +34,7 @@ nav ul {
     list-style-type: none;
     display: flex;
     justify-content: flex-end; /* Alinha os links à direita */
+    margin: 0;
 }
 
 nav ul li {
@@ -49,8 +50,4 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #e0e0e0;
-}
-
-footer .footer-container p {
-    font-size: 1.2em;
 }
