@@ -2,16 +2,16 @@
 header {
     background-color: #000;
     color: #fff;
-    padding: 30px 0;
+    padding: 20px;
 }
 
 .header-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between; /* Alinha a logo à esquerda e os links à direita */
     align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header .logo {
@@ -20,20 +20,20 @@ header .logo {
 }
 
 header .logo img {
-    max-width: 300px; /* Aumentando o tamanho da logo */
+    max-width: 200px; /* Aumentando o tamanho da logo */
     height: auto;
-    margin-right: 15px; /* Espaço entre a logo e o nome */
+    margin-right: 15px;
 }
 
 header .logo .nome-escritorio {
-    color: #f4a261; /* Cor da logo */
+    color: #f4a261; /* Cor do nome do escritório */
     font-size: 1.5em;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: flex-end; /* Alinha os links à direita */
+    padding: 0;
     margin: 0;
 }
 
@@ -43,11 +43,12 @@ nav ul li {
 
 nav ul li a {
     color: #fff;
-    font-size: 1.2em;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.2em;
 }
 
 nav ul li a:hover {
     color: #e0e0e0;
 }
+
