@@ -1,10 +1,11 @@
 /* Geral */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 10;
     padding: 0;
     background-color: #fff;
     color: #000;
+    line-heigth: 1,6; 
 }
 header img {
     display: block;
@@ -21,8 +22,8 @@ header {
 }
 
 h1, h2 {
-    margin: 0;
-    color: 3007bff; /*cor cinza*/
+    margin: 10px 20px;
+    color: 3007bff; 
 }
 
 /* Secções */
