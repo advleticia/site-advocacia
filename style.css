@@ -36,8 +36,8 @@ header .logo img {
     max-width: 180px; /* Logo maior */
 }
 
-header .logo h1 {
-    color: #fff;
+header .logo .nome-escritorio {
+    color: #f4a261; /* Cor similar à logo */
     font-size: 1.5em;
     margin-top: 10px;
 }
@@ -172,6 +172,30 @@ nav ul li a:hover {
 
 .contato button:hover {
     background-color: #111;
+}
+
+/* WhatsApp */
+.whatsapp {
+    margin-top: 30px;
+}
+
+.whatsapp a {
+    color: #25d366;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.whatsapp img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.whatsapp a:hover {
+    color: #128c7e;
 }
 
 /* Rodapé */
