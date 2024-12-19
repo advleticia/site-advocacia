@@ -22,9 +22,7 @@ header {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block; /* Corrigido para bloco */
 }
 
 header .logo {
@@ -35,7 +33,7 @@ header .logo {
 }
 
 header .logo img {
-    max-width: 600px; /* Aumentei ainda mais o tamanho da logo */
+    max-width: 600px; /* Logo maior */
     height: auto;
 }
 
@@ -49,6 +47,7 @@ header .logo p {
 nav ul {
     list-style-type: none;
     display: flex;
+    justify-content: center; /* Alinhar centralizado */
 }
 
 nav ul li {
