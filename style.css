@@ -1,17 +1,3 @@
-/* Reset e Estilos Globais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #fff;
-    color: #333;
-}
-
 /* Cabeçalho */
 header {
     background-color: #000;
@@ -24,29 +10,30 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Alinha a logo à esquerda e os links à direita */
     align-items: center;
 }
 
 header .logo {
-    text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 header .logo img {
-    max-width: 500px; /* Logo maior */
+    max-width: 300px; /* Aumentando o tamanho da logo */
     height: auto;
+    margin-right: 20px; /* Espaço entre a logo e o nome */
 }
 
 header .logo .nome-escritorio {
-    color: #f4a261; /* Cor similar à logo */
+    color: #f4a261; /* Cor da logo */
     font-size: 1.5em;
-    margin-top: 10px;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end; /* Alinha os links à direita */
 }
 
 nav ul li {
@@ -62,149 +49,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #e0e0e0;
-}
-
-/* Seção Inicial (Hero) */
-.hero {
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-
-.cta-button {
-    background-color: #333;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 1.2em;
-}
-
-.cta-button:hover {
-    background-color: #111;
-}
-
-/* Seção Sobre */
-.sobre {
-    background-color: #f4f4f4;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.sobre h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.sobre p {
-    font-size: 1.4em;
-    line-height: 1.8;
-}
-
-/* Áreas de Atuação */
-.areas {
-    background-color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.areas h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-.area-item {
-    margin-bottom: 30px;
-}
-
-.area-item h3 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.area-item p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-/* Seção Contato */
-.contato {
-    background-color: #f4f4f4;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.contato form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contato input, .contato textarea {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1.2em;
-}
-
-.contato button {
-    background-color: #333;
-    color: #fff;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.contato button:hover {
-    background-color: #111;
-}
-
-/* WhatsApp */
-.whatsapp {
-    margin-top: 30px;
-}
-
-.whatsapp a {
-    color: #25d366;
-    font-size: 1.5em;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
-.whatsapp img {
-    width: 50px;
-    margin-right: 10px;
-}
-
-.whatsapp a:hover {
-    color: #128c7e;
-}
-
-/* Rodapé */
-footer {
-    background-color: #000;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
 }
 
 footer .footer-container p {
