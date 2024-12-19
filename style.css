@@ -1,20 +1,14 @@
 /* Geral */
 body {
     font-family: Arial, sans-serif;
-    margin: 10px;
+    margin: 0; /* Removido o valor "10px" para evitar margem indesejada */
     padding: 0;
-    border: 5px;
     background-color: #fff;
     color: #000;
-    line-heigth: 1.6; 
-}
-header img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
+    line-height: 1.6; /* Corrigido erro de digitação */
 }
 
+/* Cabeçalho (Header) */
 header {
     background-color: #000;
     color: #fff;
@@ -22,17 +16,26 @@ header {
     padding: 20px;
 }
 
-h1, h2 {
-    margin: 0; 
+header img {
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+    max-width: 150px; /* Limita a largura da imagem */
+    height: auto;
 }
 
-/* Secções */
+/* Títulos */
+h1, h2 {
+    margin: 0;
+}
+
+/* Seções */
 .mission, .areas, .contact {
     margin: 20px;
     padding: 20px;
     border-bottom: 1px solid #000;
 }
 
+/* Listas */
 ul {
     list-style-type: none;
     padding: 0;
@@ -59,3 +62,4 @@ footer {
     color: #fff;
     padding: 10px;
 }
+
