@@ -1,3 +1,20 @@
+/* Resetando alguns estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
 /* Cabeçalho */
 header {
     background-color: #000;
@@ -5,54 +22,97 @@ header {
     padding: 20px 0;
 }
 
-/* Container para centralizar e aplicar o layout flex */
 .header-container {
     display: flex;
-    justify-content: space-between; /* Alinha a logo à esquerda e os links à direita */
-    align-items: center; /* Alinha verticalmente os itens no centro */
+    justify-content: space-between;
+    align-items: center;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Logo e nome do escritório */
 header .logo {
     display: flex;
     align-items: center;
 }
 
 header .logo img {
-    max-width: 250px; /* Ajuste o tamanho da logo aqui */
+    max-width: 250px; /* Ajuste o tamanho da logo */
     height: auto;
-    margin-right: 15px; /* Espaçamento entre a logo e o nome */
+    margin-right: 20px;
 }
 
 header .logo .nome-escritorio {
-    color: #f4a261; /* Cor do nome do escritório */
-    font-size: 1.5em;
-    margin: 0; /* Remove margens extras */
+    color: #f4a261; /* Cor da logo */
+    font-size: 1.8em;
+    font-weight: bold;
 }
 
-/* Estilização da navegação (links) */
 nav ul {
     list-style-type: none;
     display: flex;
     padding: 0;
-    margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px; /* Espaçamento entre os links */
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
     font-size: 1.2em;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
     color: #e0e0e0;
+}
+
+/* Seções */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* WhatsApp icon */
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.whatsapp-icon img:hover {
+    opacity: 0.7;
+}
+
+/* Rodapé */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
 
