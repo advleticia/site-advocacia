@@ -2,34 +2,38 @@
 header {
     background-color: #000;
     color: #fff;
-    padding: 20px;
+    padding: 20px 0;
 }
 
+/* Container para centralizar e aplicar o layout flex */
 .header-container {
     display: flex;
     justify-content: space-between; /* Alinha a logo à esquerda e os links à direita */
-    align-items: center;
+    align-items: center; /* Alinha verticalmente os itens no centro */
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Logo e nome do escritório */
 header .logo {
     display: flex;
     align-items: center;
 }
 
 header .logo img {
-    max-width: 200px; /* Aumentando o tamanho da logo */
+    max-width: 250px; /* Ajuste o tamanho da logo aqui */
     height: auto;
-    margin-right: 15px;
+    margin-right: 15px; /* Espaçamento entre a logo e o nome */
 }
 
 header .logo .nome-escritorio {
     color: #f4a261; /* Cor do nome do escritório */
     font-size: 1.5em;
+    margin: 0; /* Remove margens extras */
 }
 
+/* Estilização da navegação (links) */
 nav ul {
     list-style-type: none;
     display: flex;
@@ -38,7 +42,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px; /* Espaçamento entre os links */
 }
 
 nav ul li a {
