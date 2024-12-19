@@ -35,7 +35,7 @@ header .logo {
 }
 
 header .logo img {
-    max-width: 300px; /* Aumentei o tamanho da logo */
+    max-width: 400px; /* Aumentei o tamanho da logo */
     height: auto;
 }
 
@@ -85,8 +85,8 @@ nav ul li a:hover {
 }
 
 .btn {
-    background-color: #f4b400;
-    color: white;
+    background-color: #555; /* Cor cinza */
+    color: #000; /* Texto preto */
     padding: 15px 30px;
     text-decoration: none;
     font-weight: bold;
@@ -94,7 +94,8 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background-color: #e09b00;
+    background-color: #333;
+    color: white;
 }
 
 /* Seção Sobre */
@@ -159,8 +160,8 @@ nav ul li a:hover {
 }
 
 .contato button {
-    background-color: #000;
-    color: white;
+    background-color: #555; /* Cor cinza */
+    color: #000; /* Texto preto */
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
@@ -171,6 +172,7 @@ nav ul li a:hover {
 
 .contato button:hover {
     background-color: #333;
+    color: white;
 }
 
 /* Rodapé */
