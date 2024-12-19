@@ -33,7 +33,8 @@ header .logo {
 }
 
 header .logo img {
-    max-width: 180px; /* Logo maior */
+    max-width: 300px; /* Logo maior */
+    height: auto;
 }
 
 header .logo .nome-escritorio {
