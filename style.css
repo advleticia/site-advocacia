@@ -1,125 +1,166 @@
-/* Geral */
-body {
-    font-family: Arial, sans-serif;
+/* Reset Básico */
+* {
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #333;
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
-/* Cabeçalho (Header) */
+/* Corpo da Página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Cabeçalho */
 header {
     background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+    padding: 15px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .logo img {
-    display: block;
-    margin: 0 auto;
-    max-width: 150px; /* Limita o tamanho da logo */
+    max-width: 150px;
     height: auto;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.2em;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Seção de Apresentação (Hero) */
+/* Seção Inicial */
 .hero {
     background-color: #333;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 100px 20px;
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 1.5em;
+    margin-bottom: 30px;
 }
 
 .btn {
-    padding: 10px 20px;
     background-color: #f4b400;
     color: white;
+    padding: 15px 30px;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: bold;
+    border-radius: 5px;
 }
 
 .btn:hover {
     background-color: #e09b00;
 }
 
-/* Seções */
-.sobre, .areas, .contato {
+/* Seção Sobre */
+.sobre {
+    background-color: #f4f4f4;
     padding: 50px 20px;
     text-align: center;
 }
 
-.sobre h2, .areas h2, .contato h2 {
+.sobre h2 {
     font-size: 2em;
-    color: #000;
+    margin-bottom: 20px;
 }
 
-/* Lista de Áreas de Atuação */
-ul {
+/* Seção Áreas de Atuação */
+.areas {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.areas h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.areas ul {
     list-style-type: none;
     padding: 0;
 }
 
-ul li {
+.areas ul li {
+    font-size: 1.3em;
     margin: 10px 0;
-    font-size: 1.2em;
 }
 
-/* Formulário de Contato */
-form input, form textarea {
+/* Seção Contato */
+.contato {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contato form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato input, .contato textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1em;
 }
 
-form button {
-    padding: 10px 20px;
+.contato button {
     background-color: #000;
     color: white;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
+    font-size: 1.2em;
     font-weight: bold;
+    cursor: pointer;
 }
 
-form button:hover {
+.contato button:hover {
     background-color: #333;
 }
 
 /* Rodapé */
 footer {
     background-color: #000;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1em;
 }
