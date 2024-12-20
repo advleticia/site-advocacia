@@ -1,54 +1,145 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site de Letícia Costa de Oliveira Gonçalves de Souza, advogada especializada em direito civil, familiar e previdenciário.">
-    <title>Letícia Costa de Oliveira Gonçalves de Souza - Advocacia</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Escritório Letícia Costa de Oliveira</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 150px;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        .welcome {
+            background-color: #ccc;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .about, .services, .blog, .contact {
+            background-color: #fff;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .blog .recent-posts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .blog .recent-posts article {
+            background-color: #f9f9f9;
+            flex: 1 1 calc(33% - 20px);
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="logo.png" alt="Logo Letícia Costa de Oliveira">
-                <h1 class="nome-escritorio">Letícia Costa de Oliveira Gonçalves de Souza</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#areas">Áreas de Atuação</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+        <img src="logo.png" alt="Logo do Escritório">
+        <h1>Letícia Costa de Oliveira - Advocacia</h1>
     </header>
-    
-    <section id="sobre" class="section">
-        <h2>Sobre o Escritório</h2>
-        <p>O escritório Letícia Costa de Oliveira Gonçalves de Souza se dedica a fornecer soluções jurídicas de alta qualidade com um atendimento personalizado. Atuamos nas áreas de direito civil, familiar e previdenciário, com compromisso, ética e transparência.</p>
-    </section>
-    
-    <section id="areas" class="section">
-        <h2>Áreas de Atuação</h2>
-        <p>Com ampla experiência em diversas áreas do direito, nossa equipe oferece suporte jurídico especializado em questões civis, familiares e previdenciárias. Garantimos um atendimento eficiente e soluções práticas para o seu caso.</p>
+
+    <nav>
         <ul>
-            <li><strong>Direito Civil:</strong> Contratos, propriedades, responsabilidade civil, entre outros.</li>
-            <li><strong>Direito Familiar:</strong> Divórcios, guarda, pensão alimentícia, entre outros.</li>
-            <li><strong>Direito Previdenciário:</strong> Aposentadoria, benefícios, revisão de pensões, etc.</li>
+            <li><a href="#welcome">Bem-vindo</a></li>
+            <li><a href="#about">Sobre o Escritório</a></li>
+            <li><a href="#services">Áreas de Atuação</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Entre em Contato</a></li>
+        </ul>
+    </nav>
+
+    <section id="welcome" class="welcome">
+        <h2>Bem-vindo!</h2>
+        <p>Conheça nosso escritório e descubra como podemos ajudá-lo com suporte jurídico personalizado.</p>
+    </section>
+
+    <section id="about" class="about">
+        <h2>Sobre o Escritório</h2>
+        <p>Nosso compromisso é oferecer atendimento jurídico de qualidade, com foco em Direito Civil, Familiar e Previdenciário.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Áreas de Atuação</h2>
+        <ul>
+            <li>Direito Civil</li>
+            <li>Direito Familiar</li>
+            <li>Direito Previdenciário</li>
         </ul>
     </section>
-    
-    <section id="contato" class="section">
+
+    <section id="blog" class="blog">
+        <h2>Blog</h2>
+        <div class="recent-posts">
+            <article>
+                <h3>Título do Artigo 1</h3>
+                <p>Resumo do artigo 1...</p>
+                <a href="#">Leia mais</a>
+            </article>
+            <article>
+                <h3>Título do Artigo 2</h3>
+                <p>Resumo do artigo 2...</p>
+                <a href="#">Leia mais</a>
+            </article>
+            <article>
+                <h3>Título do Artigo 3</h3>
+                <p>Resumo do artigo 3...</p>
+                <a href="#">Leia mais</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
         <h2>Entre em Contato</h2>
-        <p>Para consultas, agende um horário ou entre em contato diretamente pelo WhatsApp.</p>
-        <a href="https://wa.me/5531984829306" class="whatsapp-icon" target="_blank">
-            <img src="whatsapp-icon.png" alt="WhatsApp">
-        </a>
+        <p>Entre em contato conosco pelo e-mail: <a href="mailto:Leticia.advog@outlook.com">Leticia.advog@outlook.com</a> ou pelo telefone: (31) 98482-9306.</p>
+        <a href="https://wa.me/5531984829306" style="display:inline-block; background-color:#25D366; color:white; padding:10px 20px; border-radius:5px; text-decoration:none;">Fale pelo WhatsApp</a>
     </section>
 
     <footer>
-        <p>&copy; 2024 Letícia Costa de Oliveira Gonçalves de Souza - Advocacia | Todos os direitos reservados</p>
+        <p>&copy; 2024 Letícia Costa de Oliveira - Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
+
