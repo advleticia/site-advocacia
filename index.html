@@ -11,12 +11,14 @@
             padding: 0;
             background-color: #f5f5f5;
             color: #333;
+            line-height: 1.6;
         }
         header {
             background-color: #000;
             color: #ccc;
             padding: 20px;
             text-align: center;
+            line-height: 1.4;
         }
         header img {
             max-width: 250px;
@@ -38,16 +40,18 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            line-height: 1.5;
         }
         section {
             padding: 20px;
+            line-height: 1.8;
         }
         .welcome {
             background-color: #ccc;
             text-align: center;
             padding: 50px 20px;
         }
-        .about, .services, .blog, .contact {
+        .about, .blog, .contact {
             background-color: #fff;
             margin: 20px auto;
             max-width: 1200px;
@@ -55,6 +59,36 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        services {
+        margin: 20px auto;
+        max-width: 1200px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .service-area {
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .service-area h3 {
+        color: #000;
+        margin-bottom: 10px;
+    }
+    .service-area p {
+        margin: 0;
+        color: #555;
+        line-height: 1.8;
+    }
+    .services h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
         .blog .recent-posts {
             display: flex;
             flex-wrap: wrap;
@@ -66,12 +100,14 @@
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            line-height: 1.7;
         }
         footer {
             background-color: #000;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 10px 0;]
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -99,38 +135,32 @@
 
     <section id="about" class="about">
         <h2>Sobre o Escritório</h2>
-        <p>Nosso escritório se dedica a fornecer soluções jurídicas de alta qualidade com um atendimento personalizado. Atuamos nas áreas de Direito Civil, Familiar e Previdenciário, com compromisso, ética e transparência.</p>
+        <p>Este escritório foi fundado com o compromisso de oferecer soluções jurídicas personalizadas e de alta qualidade. Sob a liderança da advogada Letícia Costa de Oliveira Gonçalves de Souza, formada em Direito em 2021 e aprovada na OAB de primeira no mesmo ano, o escritório tem como missão atender às necessidades dos clientes com dedicação e ética.
+
+Com uma sólida formação acadêmica, Letícia é pós-graduada em diversas áreas, incluindo Serviço Social, Ética e Direitos Humanos, Direitos Sociais e Competências Profissionais do Assistente Social, Seguridade em Serviço Social e Direito Previdenciário e Processo Previdenciário. Essa base multidisciplinar permite oferecer um atendimento abrangente, especialmente nas áreas de direito civil, familiar e previdenciário.
+
+Aqui, acreditamos que cada caso é único e merece atenção especial, sempre buscando a melhor solução jurídica para nossos clientes.</p>
     </section>
 
-    <section id="services" class="services">
-        <h2>Áreas de Atuação</h2>
-        <ul>
-            <li>Direito Civil</li>
-            <li>Direito Familiar</li>
-            <li>Direito Previdenciário</li>
-        </ul>
-    </section>
-
-    <section id="blog" class="blog">
-        <h2>Blog</h2>
-        <div class="recent-posts">
-            <article>
-                <h3>Título do Artigo 1</h3>
-                <p>Resumo do artigo 1...</p>
-                <a href="#">Leia mais</a>
-            </article>
-            <article>
-                <h3>Título do Artigo 2</h3>
-                <p>Resumo do artigo 2...</p>
-                <a href="#">Leia mais</a>
-            </article>
-            <article>
-                <h3>Título do Artigo 3</h3>
-                <p>Resumo do artigo 3...</p>
-                <a href="#">Leia mais</a>
-            </article>
-        </div>
-    </section>
+   <section id="services" class="services">
+    <h2>Áreas de Atuação</h2>
+    <div class="service-area">
+        <h3>Direito Previdenciário</h3>
+        <p>Atuação em processos relacionados a benefícios do INSS, como aposentadorias, pensões, auxílio-doença, revisão de benefícios e planejamento previdenciário. Também oferecemos suporte em demandas administrativas e judiciais para garantir os direitos previdenciários dos clientes.</p>
+    </div>
+    <div class="service-area">
+        <h3>Direito Civil</h3>
+        <p>Atendimento em questões como contratos, cobranças, responsabilidade civil, indenizações por danos materiais e morais, e regularização de imóveis. Trabalhamos com soluções personalizadas para conflitos patrimoniais e de relações jurídicas.</p>
+    </div>
+    <div class="service-area">
+        <h3>Direito Familiar</h3>
+        <p>Especializados em casos de divórcio, pensão alimentícia, guarda de filhos, regulamentação de visitas, reconhecimento e dissolução de união estável, inventários e partilhas. Oferecemos suporte humanizado e ético em momentos sensíveis para as famílias.</p>
+    </div>
+    <div class="service-area">
+        <h3>Direito das Sucessões</h3>
+        <p>Auxílio em processos relacionados a heranças, inventários, testamentos e planejamento sucessório. Nosso objetivo é garantir uma transição patrimonial justa e evitar conflitos familiares, sempre respeitando os desejos do falecido e os direitos dos herdeiros.</p>
+    </div>
+</section>
 
     <section id="contact" class="contact">
         <h2>Entre em Contato</h2>
