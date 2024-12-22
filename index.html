@@ -45,8 +45,8 @@
         section {
             padding: 20px;
             line-height: 1.8;
-   <style>
-    /* Estilo geral do corpo */
+  <style>
+    /* Estilo geral para o corpo */
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -55,9 +55,9 @@
         color: #333;
         line-height: 1.6;
     }
-    
+
     /* Estilo para a seção "Bem-vindo!" */
-    .welcome h2 
+    .welcome h2 {
         font-family: Arial, sans-serif; /* Mantém a fonte padrão */
         font-size: 1.8em;
         color: #000;
@@ -69,22 +69,23 @@
     .welcome p {
         text-align: center;
         color: #555;
+    }
 
-    /* Estilo dos títulos principais */
+    /* Estilo dos outros títulos principais */
     h2 {
-        font-family: 'Merriweather', serif; /* Uma fonte mais elegante e profissional */
+        font-family: 'Merriweather', serif; /* Fonte mais elegante */
         font-size: 2em;
         color: #333;
         text-align: center;
-        text-transform: uppercase; /* Texto em caixa alta */
+        text-transform: uppercase;
         margin-bottom: 20px;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombramento leve */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombreamento leve */
         position: relative;
         padding-bottom: 10px;
     }
 
-    /* Adiciona uma linha decorativa abaixo dos títulos */
-    h2::after {
+    /* Linha decorativa para os outros títulos */
+    h2:not(.welcome h2)::after {
         content: "";
         display: block;
         width: 80px;
@@ -93,22 +94,27 @@
         margin: 10px auto 0;
     }
 
-    /* Estilo específico para seções */
+    /* Seções */
     section {
         padding: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 30px auto;
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 800px; /* Limita a largura do conteúdo */
+    }
+             /* Ajuste para o texto não ficar tão extenso */
+    p, ul {
+        line-height: 1.8; /* Aumenta o espaçamento entre linhas */
+        text-align: justify; /* Justifica o texto para melhorar a legibilidade */
     }
 
-    /* Estilo do título do rodapé para evitar conflito */
-    footer h2 {
-        text-shadow: none; /* Remove o sombreamento do rodapé */
-        font-family: Arial, sans-serif;
-        
-</style>
-         
+    /* Títulos principais */
+    h2 {
+        margin-top: 40px; /* Adiciona mais espaço acima dos títulos */
+        margin-bottom: 20px; /* Mantém o espaçamento confortável abaixo */
+    }
+</style> 
         }
         .welcome {
             background-color: #ccc;
