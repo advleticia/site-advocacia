@@ -11,17 +11,15 @@
             padding: 0;
             background-color: #f5f5f5;
             color: #333;
-            line-height: 1.6; 
         }
         header {
             background-color: #000;
             color: #ccc;
             padding: 20px;
             text-align: center;
-            line-height: 1.4;
         }
         header img {
-            max-width: 350px;
+            max-width: 250px;
         }
         nav {
             background-color: #333;
@@ -36,7 +34,6 @@
         }
         nav ul li {
             margin: 0 15px;
-            line-height: 1.5;
         }
         nav ul li a {
             color: #fff;
@@ -44,82 +41,39 @@
         }
         section {
             padding: 20px;
-            line-height: 1.8;
- <style>
-    /* Estilo geral */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f5f5f5;
-        color: #333;
-        line-height: 1.6;
-    }
-
-    header {
-        background-color: #000;
-        color: #ccc;
-        padding: 20px;
-        text-align: center;
-    }
-
-    header img {
-        max-width: 350px;
-    }
-
-    nav {
-        background-color: #333;
-        padding: 10px 0;
-    }
-
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 0 15px;
-    }
-
-    nav ul li a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    section {
-        padding: 20px;
-        margin-bottom: 30px; /* Volta ao espaçamento padrão entre seções */
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Títulos principais */
-    h2 {
-        font-family: Arial, sans-serif; /* Volta para a fonte original */
-        font-size: 1.8em; /* Ajusta para um tamanho legível */
-        color: #333;
-        text-align: center;
-        margin-bottom: 10px; /* Espaçamento padrão abaixo dos títulos */
-        text-shadow: none; /* Remove qualquer sombreamento */
-    }
-
-    p, ul {
-        line-height: 1.6; /* Retorna ao espaçamento padrão entre linhas */
-        text-align: left; /* Alinha o texto à esquerda */
-    }
-
-    footer {
-        background-color: #000;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-    }
-</style>
-
+        }
+        .welcome {
+            background-color: #ccc;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .about, .services, .blog, .contact {
+            background-color: #fff;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .blog .recent-posts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .blog .recent-posts article {
+            background-color: #f9f9f9;
+            flex: 1 1 calc(33% - 20px);
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -145,65 +99,47 @@
 
     <section id="about" class="about">
         <h2>Sobre o Escritório</h2>
-        <p>Este escritório foi fundado com o compromisso de oferecer soluções jurídicas personalizadas e de alta qualidade. Sob a liderança da advogada Letícia Costa de Oliveira Gonçalves de Souza, formada em Direito em 2021 e aprovada na OAB de primeira no mesmo ano, o escritório tem como missão atender às necessidades dos clientes com dedicação e ética.
-
-Com uma sólida formação acadêmica, Letícia é pós-graduada em diversas áreas, incluindo Serviço Social, Ética e Direitos Humanos, Direitos Sociais e Competências Profissionais do Assistente Social, Seguridade em Serviço Social e Direito Previdenciário e Processo Previdenciário. Essa base multidisciplinar permite oferecer um atendimento abrangente, especialmente nas áreas de direito civil, familiar e previdenciário.
-
-Aqui, acreditamos que cada caso é único e merece atenção especial, sempre buscando a melhor solução jurídica para nossos clientes.</p>
-        
+        <p>Nosso escritório se dedica a fornecer soluções jurídicas de alta qualidade com um atendimento personalizado. Atuamos nas áreas de Direito Civil, Familiar e Previdenciário, com compromisso, ética e transparência.</p>
     </section>
 
-   <section id="services" class="services">
-    <h2>Áreas de Atuação</h2>
-    <div class="service-area">
-        <h3>Direito Previdenciário</h3>
-        <p>Atuação em processos relacionados a benefícios do INSS, como aposentadorias, pensões, auxílio-doença, revisão de benefícios e planejamento previdenciário. Também oferecemos suporte em demandas administrativas e judiciais para garantir os direitos previdenciários dos clientes.</p>
-    </div>
-    <div class="service-area">
-        <h3>Direito Civil</h3>
-        <p>Atendimento em questões como contratos, cobranças, responsabilidade civil, indenizações por danos materiais e morais, e regularização de imóveis. Trabalhamos com soluções personalizadas para conflitos patrimoniais e de relações jurídicas.</p>
-    </div>
-    <div class="service-area">
-        <h3>Direito Familiar</h3>
-        <p>Especializados em casos de divórcio, pensão alimentícia, guarda de filhos, regulamentação de visitas, reconhecimento e dissolução de união estável, inventários e partilhas. Oferecemos suporte humanizado e ético em momentos sensíveis para as famílias.</p>
-    </div>
-    <div class="service-area">
-        <h3>Direito das Sucessões</h3>
-        <p>Auxílio em processos relacionados a heranças, inventários, testamentos e planejamento sucessório. Nosso objetivo é garantir uma transição patrimonial justa e evitar conflitos familiares, sempre respeitando os desejos do falecido e os direitos dos herdeiros.</p>
-    </div>
-</section>
-
-</section>
+    <section id="services" class="services">
+        <h2>Áreas de Atuação</h2>
+        <ul>
+            <li>Direito Civil</li>
+            <li>Direito Familiar</li>
+            <li>Direito Previdenciário</li>
+        </ul>
+    </section>
 
     <section id="blog" class="blog">
         <h2>Blog</h2>
         <div class="recent-posts">
             <article>
-                <h3>Entenda a PL 4614/24: A Proposta de Reforma do Sistema de Previdência Social</h3>
-                <p>A PL 4614/24 (Projeto de Lei 4614/2024) é uma proposta que está em discussão no Congresso Nacional e visa reformar o sistema de Previdência Social no Brasil. Essa mudança tem gerado muito debate, pois propõe modificações significativas nas regras de aposentadoria, pensões e benefícios sociais. Vamos entender, de forma simples, o que está em jogo e como isso pode impactar os cidadãos brasileiros.</p>
-                <a href="pl4614.html">Leia mais</a>
+                <h3>Título do Artigo 1</h3>
+                <p>Resumo do artigo 1...</p>
+                <a href="#">Leia mais</a>
             </article>
             <article>
-                <h3>BPC: Benefício de Prestação Continuada</h3>
-                <p>O BPC (Benefício de Prestação Continuada) é um benefício assistencial concedido pelo Governo Federal a pessoas com deficiência e idosos com 65 anos ou mais que comprovem não ter meios de prover a própria manutenção e que se enquadrem nos critérios de vulnerabilidade social.</p>
-                <a href="bpc.html">Leia mais</a>
+                <h3>Título do Artigo 2</h3>
+                <p>Resumo do artigo 2...</p>
+                <a href="#">Leia mais</a>
             </article>
             <article>
                 <h3>Título do Artigo 3</h3>
                 <p>Resumo do artigo 3...</p>
-                <a href="bpc.html">Leia mais</a>
+                <a href="#">Leia mais</a>
             </article>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <h2>Entre em Contato</h2>
-        <p>Entre em contato conosco pelo e-mail: <a href="mailto:Leticia.advog@outlook.com">leticia.advog@outlook.com</a> ou pelo telefone: (31) 98482-9306.</p>
+        <p>Entre em contato conosco pelo e-mail: <a href="mailto:Leticia.advog@outlook.com">Leticia.advog@outlook.com</a> ou pelo telefone: (31) 98482-9306.</p>
         <a href="https://wa.me/5531984829306" style="display:inline-block; background-color:#25D366; color:white; padding:10px 20px; border-radius:5px; text-decoration:none;">Fale pelo WhatsApp</a>
     </section>
 
     <footer>
-        <p>&copy; 2024 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
+        <p>&copy; 2024 Letícia Costa de Oliveira - Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
