@@ -45,6 +45,56 @@
         section {
             padding: 20px;
             line-height: 1.8;
+   <style>
+    /* Estilo geral do corpo */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Estilo dos títulos principais */
+    h2 {
+        font-family: 'Merriweather', serif; /* Uma fonte mais elegante e profissional */
+        font-size: 2em;
+        color: #333;
+        text-align: center;
+        text-transform: uppercase; /* Texto em caixa alta */
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombramento leve */
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    /* Adiciona uma linha decorativa abaixo dos títulos */
+    h2::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 3px;
+        background-color: #333;
+        margin: 10px auto 0;
+    }
+
+    /* Estilo específico para seções */
+    section {
+        padding: 20px;
+        margin-bottom: 30px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilo do título do rodapé para evitar conflito */
+    footer h2 {
+        text-shadow: none; /* Remove o sombreamento do rodapé */
+        font-family: Arial, sans-serif;
+    }
+</style>
+         
         }
         .welcome {
             background-color: #ccc;
