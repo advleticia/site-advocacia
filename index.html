@@ -45,8 +45,8 @@
         section {
             padding: 20px;
             line-height: 1.8;
-  <style>
-    /* Estilo geral para o corpo */
+ <style>
+    /* Estilo geral */
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -55,98 +55,71 @@
         color: #333;
         line-height: 1.6;
     }
-     /* Estilo para a seção "Bem-vindo!" */
-    .welcome h2 {
-        font-family: 'Merriweather', serif; 
-        font-size: 1.8em;
-        color: #000;
+
+    header {
+        background-color: #000;
+        color: #ccc;
+        padding: 20px;
         text-align: center;
-        margin-bottom: 10px;
-        text-shadow: none; /* Remove o sombreamento */
     }
 
-    .welcome p {
-        text-align: center;
-        color: #555;
-    }
-    /* Estilo dos outros títulos principais */
-    h2 {
-        font-family: 'Merriweather', serif; /* Fonte mais elegante */
-        font-size: 2em;
-        color: #333;
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombreamento leve */
-        position: relative;
-        padding-bottom: 10px;
+    header img {
+        max-width: 350px;
     }
 
-    /* Linha decorativa para os outros títulos */
-    h2:not(.welcome h2)::after {
-        content: "";
-        display: block;
-        width: 80px;
-        height: 3px;
+    nav {
         background-color: #333;
-        margin: 10px auto 0;
+        padding: 10px 0;
     }
 
-    /* Seções */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
     section {
         padding: 20px;
-        margin-bottom: 30px auto;
+        margin-bottom: 30px; /* Volta ao espaçamento padrão entre seções */
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        max-width: 800px; /* Limita a largura do conteúdo */
-    }
-             /* Ajuste para o texto não ficar tão extenso */
-    p, ul {
-        line-height: 1.8; /* Aumenta o espaçamento entre linhas */
-        text-align: justify; /* Justifica o texto para melhorar a legibilidade */
     }
 
     /* Títulos principais */
     h2 {
-        margin-top: 40px; /* Adiciona mais espaço acima dos títulos */
-        margin-bottom: 20px; /* Mantém o espaçamento confortável abaixo */ 
-    
+        font-family: Arial, sans-serif; /* Volta para a fonte original */
+        font-size: 1.8em; /* Ajusta para um tamanho legível */
+        color: #333;
+        text-align: center;
+        margin-bottom: 10px; /* Espaçamento padrão abaixo dos títulos */
+        text-shadow: none; /* Remove qualquer sombreamento */
     }
-        .welcome {
-            background-color: #ccc;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        .about, .services, .blog, .contact {
-            background-color: #fff;
-            margin: 20px auto;
-            max-width: 1200px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .blog .recent-posts {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            line-height: 1.7;
-        }
-        .blog .recent-posts article {
-            background-color: #f9f9f9;
-            flex: 1 1 calc(33% - 20px);
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        footer {
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            line-height: 1.5;
-        }
-    </style>
+
+    p, ul {
+        line-height: 1.6; /* Retorna ao espaçamento padrão entre linhas */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    footer {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+    }
+</style>
+
 </head>
 <body>
     <header>
