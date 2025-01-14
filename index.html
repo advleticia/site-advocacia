@@ -154,24 +154,8 @@
         padding: 10px 0;
         line-height: 1.5;
         }
-  .about {
-    text-align: justify; /* Justifica todo o conteúdo */
-    line-height: 1.8; /* Ajusta o espaçamento entre linhas */
-}
-     
     </style>
 </head>
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/SEU_ID_DE_CHAT/1gtttc123';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-        
 <body>
     <header>
         <img src="logo.png" alt="Logo do Escritório">
@@ -312,30 +296,39 @@ Aqui, acreditamos que cada caso é único e merece atenção especial, sempre bu
 
 
     <section id="contact" class="contact">
-        <h2>Entre em Contato</h2>
-        <p>Entre em contato para esclarecer dúvidas ou agendar uma consulta personalizada.</p>
+    <h2>Entre em Contato</h2>
+    <p>Entre em contato para esclarecer dúvidas ou agendar uma consulta personalizada. Utilize o formulário abaixo ou escolha uma opção direta:</p>
 
-        <!-- Botão de agendamento no Calendly -->
-        <p>
-            <a href="https://calendly.com/leticia-advog/consultoriajuridica"
-               style="display: inline-block; background-color: #0078D4; color: white; padding: 10px 20px; 
+    <!-- Botão de agendamento no Teams -->
+    <p>
+        <a href="https://outlook.office365.com/owa/calendar/leticia.advog@outlook.com/bookings/" 
+           style="display: inline-block; background-color: #0078D4; color: white; padding: 10px 20px; 
                   border-radius: 5px; text-decoration: none; font-size: 16px;">
-                Agende uma Consulta
-            </a>
-        </p>
-    </section>
+            Agende uma Consulta no Teams
+        </a>
+    </p>
 
-   <!-- Ícone Flutuante do WhatsApp -->
-<a href="https://wa.me/5531984829306" 
-   style="position: fixed; bottom: 40px; right: 40px; z-index: 1000; 
-          display: flex; align-items: center; justify-content: center; 
-          width: 60px; height: 60px; background-color: #25D366; 
-          color: white; border-radius: 50%; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
-         alt="WhatsApp" style="width: 35px; height: 35px;">
-</a>
-<p>&copy; 2024 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
-</footer>
+    <!-- Formulário de Contato -->
+    <form action="mailto:leticia.advog@outlook.com" method="post" enctype="text/plain" style="margin-top: 20px;">
+        <label for="name">Nome Completo:</label><br>
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;"><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;"><br>
+
+        <label for="subject">Motivo da Consulta:</label><br>
+        <textarea id="subject" name="subject" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea><br>
+
+        <button type="submit" style="background-color: #25D366; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Enviar</button>
+    </form>
+
+    <!-- Informações Adicionais -->
+    <p>Ou entre em contato pelo WhatsApp para suporte rápido:</p>
+    <a href="https://wa.me/5531984829306" style="display:inline-block; background-color:#25D366; color:white; padding:10px 20px; border-radius:5px; text-decoration:none;">Fale pelo WhatsApp</a>
+</section>
+    <footer>
+        <p>&copy; 2024 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
 
