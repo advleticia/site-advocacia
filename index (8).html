@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escritório Letícia Costa de Oliveira Gonçalves de Souza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+         /* Estilo dos títulos principais */
+    h2 {
+        font-family: 'Merriweather', serif; /* Uma fonte mais elegante e profissional */
+        font-size: 2em;
+        color: #333;
+        text-align: center;
+        text-transform: uppercase; /* Texto em caixa alta */
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombramento leve */
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    /* Adiciona uma linha decorativa abaixo dos títulos */
+    h2::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 3px;
+        background-color: #333;
+        margin: 10px auto 0;
+    }
+
+    /* Estilo específico para seções */
+    section {
+        padding: 20px;
+        margin-bottom: 30px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilo do título do rodapé para evitar conflito */
+    footer h2 {
+        text-shadow: none; /* Remove o sombreamento do rodapé */
+        font-family: Arial, sans-serif;
+    }
+        header {
+            background-color: #000;
+            color: #040404;
+            padding: 5px;
+            text-align: center;
+            line-height: 1.2;
+        }
+        header img {
+            max-width: 350px;
+            margin-bottom: 5px;
+        }
+        header h1 {
+        margin-top: 0; /* Remove margem superior */
+        margin-bottom: 0; /* Remove margem inferior */
+        font-family: 'Merriweather', serif;
+        font-size: 2.0em; /* Ajuste o tamanho do texto, se necessário */
+        color: #959595
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+        section {
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .welcome {
+            background-color: #ccc;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .about, .services, .blog, .contact {
+            background-color:  #f9f9f9;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+         .blog .recent-posts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .blog .recent-posts article {
+            background-color: #ccc;
+            flex: 1 1 calc(33% - 20px);
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        services {
+        margin: 20px auto;
+        max-width: 1200px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .service-area {
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .service-area h3 {
+        color: #000;
+        margin-bottom: 10px;
+    }
+    .service-area p {
+        margin: 0;
+        color: #555;
+        line-height: 1.8;
+    }
+    .services h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+        
+    }
+    footer {
+        position: static; /* Fixa o rodapé na parte inferior */
+        bottom: 0; /* Alinha o rodapé ao fundo */
+        width: 100%; /* Faz com que o rodapé ocupe toda a largura */
+        background-color: #000; /* Fundo preto */
+        color: #040404; /* Texto branco */
+        text-align: center; /* Centraliza o texto */
+        padding: 5px 0; /* Espaçamento interno */
+        font-size: 14px; /* Tamanho da fonte */
+        z-index: 100; /* Garante que o rodapé fique sobre outros elementos */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo do Escritório">
+        <h1>LETÍCIA COSTA DE OLIVEIRA GONÇALVES DE SOUZA</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#welcome">Bem-vindo</a></li>
+            <li><a href="#about">Sobre o Escritório</a></li>
+            <li><a href="#services">Áreas de Atuação</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Entre em Contato</a></li>
+        </ul>
+    </nav>
+
+    <section id="welcome" class="welcome">
+        <h2>Bem-vindo!</h2>
+        <p>Explore nosso escritório e veja como podemos oferecer um suporte jurídico eficiente e adaptado às suas necessidades, com dedicação e profissionalismo.</p>
+    </section>
+
+    <section id="about" class="about">
+        <h2>Sobre o Escritório</h2>
+        <p>Este escritório foi fundado com o compromisso de oferecer soluções jurídicas personalizadas e de alta qualidade. Sob a liderança da advogada Letícia Costa de Oliveira Gonçalves de Souza, formada em Direito em 2021 e aprovada na OAB de primeira no mesmo ano, o escritório tem como missão atender às necessidades dos clientes com dedicação e ética.
+
+Com uma sólida formação acadêmica, Letícia é pós-graduada em diversas áreas, incluindo Serviço Social, Ética e Direitos Humanos, Direitos Sociais e Competências Profissionais do Assistente Social, Seguridade em Serviço Social e Direito Previdenciário e Processo Previdenciário. Essa base multidisciplinar permite oferecer um atendimento abrangente, especialmente nas áreas de direito civil, familiar e previdenciário.
+
+Aqui, acreditamos que cada caso é único e merece atenção especial, sempre buscando a melhor solução jurídica para nossos clientes.</p>
+    </section>
+
+<section id="services" class="services">
+    <h2>Áreas de Atuação</h2>
+
+    <div class="service-area">
+        <h3>Direito do Servidor Público Estatutário</h3>
+        <ul>
+            <li>Consultoria jurídica para servidores públicos, esclarecendo direitos e deveres previstos em estatutos e legislações aplicáveis.</li>
+            <li>Defesa administrativa em Processos Administrativos Disciplinares (PAD) e sindicâncias.</li>
+            <li>Revisão de atos administrativos ilegais ou abusivos, incluindo aposentadorias ou benefícios indeferidos.</li>
+            <li>Regularização de adicionais, gratificações, benefícios, progressão funcional e planos de carreira.</li>
+            <li>Assessoria para cálculo e concessão de aposentadorias estatutárias e revisão de benefícios previdenciários.</li>
+            <li>Representação em casos de afastamentos, como licença-prêmio e licença para tratamento de saúde.</li>
+            <li>Ações para reintegração ao cargo público após exoneração ou demissão ilegal.</li>
+            <li>Defesa em casos de assédio moral, perseguição administrativa e improbidade administrativa.</li>
+            <li>Consultoria e representação em recursos de concursos públicos, nomeações e posse.</li>
+        </ul>
+    </div>
+    <div class="service-area">
+        <h3>Direito Previdenciário</h3>
+        <ul>
+            <li>Assessoria em processos relacionados a benefícios previdenciários, como aposentadorias, pensões e auxílio-doença.</li>
+            <li>Atuação em benefícios assistenciais, incluindo o Benefício de Prestação Continuada (BPC)</li>
+            <li>Revisão de benefícios e planejamento previdenciário, garantindo uma análise minuciosa e personalizada.</li>
+            <li>Suporte jurídico em demandas administrativas e judiciais, assegurando os direitos e interesses dos clientes.</li>
+            <li>Elaboração de defesas administrativas e recursos em casos de indeferimento de benefícios pelo INSS.</li>
+            <li>Consultoria para servidores públicos sobre regimes próprios de previdência.</li>
+            <li>Planejamento previdenciário para autônomos e Microempreendedores Individuais (MEIs).</li>
+            <li> Assessoria em aposentadorias especiais, como para professores e profissionais da saúde.</li>
+        </ul>
+    </div>
+    <div class="service-area">
+        <h3>Direito Civil</h3>
+        <ul>
+            <li>Assessoria em questões contratuais, incluindo elaboração e revisão de contratos.</li>
+            <li>Mediação de conflitos envolvendo cobranças e responsabilidade civil.</li>
+            <li>Reivindicação de indenizações por danos materiais e morais.</li>
+            <li>Assistência na regularização de imóveis e resolução de disputas patrimoniais.</li>
+            <li>Acompanhamento em ações de cobrança e execuções judiciais.</li>
+            <li>Elaboração de contratos de locação, compra e venda de imóveis e bens móveis.</li>
+            <li>Consultoria para regularização fundiária e usucapião.</li>
+            <li>Atuação em casos de responsabilidade civil médica e hospitalar.</li>
+            <li> Representação em ações envolvendo condomínio, como cobranças e disputas.</li>
+        </ul>
+    </div>
+
+    <div class="service-area">
+        <h3>Direito Familiar</h3>
+        <ul>
+            <li>Atendimento especializado em casos de divórcio e dissolução de união estável.</li>
+            <li>Suporte na definição de pensão alimentícia e guarda de filhos.</li>
+            <li>Mediação para regulamentação de visitas e reconhecimento de paternidade/maternidade</li>
+            <li>Atuação em inventários, partilhas e outras questões familiares sensíveis.</li>
+            <li>Assessoria em ações de alimentos gravídicos para gestantes.</li>
+            <li>Consultoria para formalização de união estável ou contratos de convivência.</li>
+            <li>Representação em casos de divórcios litigiosos de alta complexidade.</li>
+            <li>Definição de regimes de bens no casamento e suas alterações.</li>
+            <li>Representação em ações de tutela, curatela e interdição.</li>
+        </ul>
+    </div>
+
+    <div class="service-area">
+        <h3>Direito das Sucessões</h3>
+        <ul>
+            <li>Assessoria em processos relacionados a heranças e inventários.</li>
+            <li>Elaboração e implementação de testamentos, além de planejamento sucessório.</li>
+            <li>Garantia de transição patrimonial justa e resolução de conflitos familiares.</li>
+            <li>Respeito aos desejos do falecido e aos direitos dos herdeiros durante todo o processo.</li>
+            <li>Regularização de inventários extrajudiciais e judiciais.</li>
+            <li>Planejamento patrimonial para famílias empresárias.</li>
+            <li>Assessoria em disputas sobre heranças internacionais.</li>
+            <li>Elaboração de doações e cláusulas restritivas (inalienabilidade, impenhorabilidade e incomunicabilidade).</li>
+            <li>Mediação de conflitos entre herdeiros para evitar litígios prolongados.</li>
+        </ul>
+    </div>
+
+</section>
+    
+<section id="blog" class="blog">
+        <h2>Blog</h2>
+        <div class="recent-posts">
+            <article>
+                <h3>O que é a PL 4614/24?</h3>
+                <p>A PL 4614/24 foi proposta como uma forma de modernizar e ajustar o sistema previdenciário do país, buscando equilíbrio fiscal e sustentabilidade a longo prazo. Ela trata de vários pontos, mas se concentra principalmente em como as pessoas podem se aposentar e quais serão as condições para obter benefícios no futuro....</p>
+                <a href="pl4614">Leia mais</a>
+            </article>
+            <article>
+                <h3>O Que é o BPC?</h3>
+                <p>O BPC (Benefício de Prestação Continuada) é um benefício assistencial concedido pelo Governo Federal a pessoas com deficiência e idosos com 65 anos ou mais que comprovem não ter meios de prover a própria manutenção e que se enquadrem nos critérios de vulnerabilidade social....</p>
+                <a href="bpc.html">Leia mais</a>
+            </article>
+            <article>
+                <h3>Reconhecimento de Filiação Socioafetiva a Maiores de Idade</h3>
+                <p>A filiação socioafetiva é o vínculo familiar baseado no afeto e na convivência, e não apenas em laços biológicos. Esse conceito tem ganhado destaque no direito de família, permitindo que relações de afeto, mesmo sem vínculo sanguíneo, sejam reconhecidas formalmente como vínculos familiares....</p>
+                <a href="filiaçãosocioafetiva.html">Leia mais</a>
+            </article>
+            <article>
+                <h3>Alteração no Código Civil para Sucessão na União Estável</h3>
+                <p>A união estável é uma entidade familiar reconhecida pelo direito brasileiro, caracterizada pela convivência pública, contínua e duradoura entre duas pessoas com o objetivo de constituir família. Ao longo dos anos, a união estável foi sendo gradualmente reconhecida e equiparada ao casamento em diversas questões legais, inclusive no campo da sucessão...</p>
+                <a href="sucessãonauniãoestável.html">Leia mais</a>
+            </article>
+            <article>
+                <h3>Pensão Alimentícia para Animal de Estimação</h3>
+                <p>A pensão alimentícia é tradicionalmente associada ao sustento de filhos em situações de separação ou divórcio, mas uma nova discussão tem emergido nos tribunais brasileiros: a possibilidade de se estabelecer pensão alimentícia para animais de estimação. Essa questão surge em situações onde um dos tutores do animal deseja garantir que o animal seja bem cuidado financeiramente após o fim de um relacionamento....</p>
+                <a href="pensãoparapet.html">Leia mais</a>
+            </article>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact">
+        <h2>Entre em Contato</h2>
+        <p>Entre em contato para esclarecer dúvidas ou agendar uma consulta personalizada.</p>
+
+        <!-- Botão de agendamento no Calendly -->
+        <p>
+            <a href="https://calendly.com/leticia-advog/consultoriajuridica"
+               style="display: inline-block; background-color: #0078D4; color: white; padding: 10px 20px; 
+                  border-radius: 5px; text-decoration: none; font-size: 16px;">
+                Agende uma Consulta
+            </a>
+        </p>
+   </section>
+
+<div style="text-align: center; margin: 20px; font-family: Arial, sans-serif;">
+    <!-- Título ou Instrução -->
+    <p style="color: #555; font-size: 14px; margin-bottom: 10px;">
+        Clique no botão abaixo para se inscrever e receber nossas atualizações. 
+        Ao clicar, você concorda com nossos 
+        <a href="https://advleticia.com/termo.html" target="_blank" style="color: #007BFF; text-decoration: underline;">
+            Termos de Ciência e Privacidade.
+        </a>
+    </p>
+
+    <!-- Botão -->
+    <a href="https://6ede7685.sibforms.com/serve/MUIFAO_lRNj2HrupAnHP3ZLMel3nGrU0zGbPS2wUpk5lRrG4-rZDnsIudT9G6LMeEHpzR1DOM56Y8E9GC3YKHupsrl74tcRe8128Tiablt2vVG87I3j32wINOqNuuqhe9_b8-H_blDGiRYt1ArTfTG9JDq9gr9F9CSUbgCRZl6NXJHDZJdONUqUtHvAtmsy4Vvky6gIOGVf_Sagy" target="_blank" 
+       style="display: inline-block; background-color: #333; color: #fff; padding: 12px 20px; 
+              text-decoration: none; font-size: 16px; border-radius: 5px; 
+              transition: background-color 0.3s ease;">
+        Inscreva-se Agora
+    </a>
+</div>
+
+
+
+<!-- Ícone Flutuante do WhatsApp -->
+<a href="https://wa.me/5531984829306" 
+   style="position: fixed; bottom: 100px; right: 40px; z-index: 1000; 
+          display: flex; align-items: center; justify-content: center; 
+          width: 60px; height: 60px; background-color: #25D366; 
+          color: white; border-radius: 50%; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
+         alt="WhatsApp" style="width: 35px; height: 35px;">
+</a>
+
+<footer>
+    <p>&copy; 2025 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
+    <p><a href="termo.html" target="_blank" style="text-decoration: none; color: #333;">Termo de Ciência sobre Compartilhamento de Dados</a></p>
+</footer>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6786b9573a842732606ebf38/1ihj47vut';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
+
