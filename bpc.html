@@ -15,21 +15,17 @@
         }
         header {
             background-color: #040404;
-            color: #040404;
-            padding: 5px;
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            line-height: 1.2;
         }
         header img {
-            max-width: 350px;
-            margin-bottom: 5px;
+            max-width: 200px;
+            margin-bottom: 10px;
         }
         header h1 {
-            margin-top: 0;
-            margin-bottom: 0;
-            font-family: 'Merriweather', serif;
-            font-size: 2.0em;
-            color: #959595;
+            margin: 0;
+            font-size: 1.8em;
         }
         nav {
             background-color: #333;
@@ -48,50 +44,29 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            line-height: 1.5;
         }
         section {
             padding: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 2em;
-            color: #333;
+        section h2 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
             text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-            position: relative;
-            padding-bottom: 10px;
+            color: #333;
         }
-        h2::after {
-            content: "";
-            display: block;
-            width: 80px;
-            height: 3px;
-            background-color: #333;
-            margin: 10px auto 0;
-        }
-        p {
-            margin-bottom: 20px;
+        section p {
+            margin-bottom: 15px;
             text-align: justify;
-            font-size: 1.1em;
-            color: #555;
         }
         footer {
-            position: static;
-            bottom: 0;
-            width: 100%;
             background-color: #000;
-            color: #040404;
+            color: #fff;
             text-align: center;
-            padding: 5px 0;
-            font-size: 14px;
-            z-index: 100;
+            padding: 10px 0;
         }
     </style>
 </head>
@@ -104,37 +79,45 @@
     <nav>
         <ul>
             <li><a href="index.html">Início</a></li>
-            <li><a href="#about">Sobre o Escritório</a></li>
-            <li><a href="#services">Áreas de Atuação</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Entre em Contato</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#direitos">Direitos</a></li>
+            <li><a href="#contato">Contato</a></li>
         </ul>
     </nav>
 
-    <section id="content">
-        <h2>Entenda o BPC</h2>
-        <h2>O Que é o BPC?</h2>
+    <section id="introducao">
+        <h2>O que é o BPC?</h2>
         <p>O BPC (Benefício de Prestação Continuada) é um benefício assistencial concedido pelo Governo Federal a pessoas com deficiência e idosos com 65 anos ou mais que comprovem não ter meios de prover a própria manutenção e que se enquadrem nos critérios de vulnerabilidade social.</p>
+    </section>
 
-        <h2>Quem Tem Direito ao BPC?</h2>
+    <section id="quem-tem-direito">
+        <h2>Quem tem direito ao BPC?</h2>
         <p>Para ter direito ao BPC, é necessário atender a alguns requisitos, como a renda per capita da família ser inferior a 1/4 do salário mínimo. O benefício é destinado a pessoas de baixa renda que não recebem aposentadoria, pensão ou qualquer outro benefício da Previdência Social.</p>
+    </section>
 
-        <h2>Como Solicitar o BPC?</h2>
+    <section id="como-solicitar">
+        <h2>Como solicitar o BPC?</h2>
         <p>O pedido do BPC deve ser feito pelo site do <a href="https://www.gov.br/pt-br" target="_blank">Instituto Nacional do Seguro Social (INSS)</a> ou nas agências do INSS. É necessário apresentar documentos que comprovem a renda familiar e a condição de vulnerabilidade.</p>
+    </section>
 
+    <section id="valor">
         <h2>Valor do BPC</h2>
         <p>O valor do BPC é equivalente a um salário mínimo mensal, sendo que o benefício não gera direito a 13º salário nem a acumulação com outros benefícios. É importante destacar que o BPC não é uma aposentadoria, mas sim um auxílio assistencial.</p>
+    </section>
 
+    <section id="revisao">
         <h2>Revisão do BPC</h2>
         <p>O BPC pode ser revisto a qualquer momento, com a exigência de que o beneficiário continue atendendo aos critérios de renda e vulnerabilidade. Caso o beneficiário melhore sua condição ou passe a ter um rendimento maior, o benefício pode ser cancelado.</p>
+    </section>
 
+    <section id="conclusao">
         <h2>Conclusão</h2>
         <p>O BPC é uma importante ferramenta para garantir a dignidade de idosos e pessoas com deficiência que não têm condições de prover sua própria subsistência. Esse benefício visa reduzir as desigualdades sociais, mas é fundamental que os beneficiários se mantenham informados sobre os requisitos para garantir que o benefício continue a ser pago corretamente.</p>
     </section>
 
     <footer>
         <p>&copy; 2025 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
-        <p><a href="termo.html" target="_blank" style="text-decoration: none; color: #333;">Termo de Ciência sobre Compartilhamento de Dados</a></p>
+        <p><a href="termo.html" target="_blank" style="text-decoration: none; color: #fff;">Termo de Ciência sobre Compartilhamento de Dados</a></p>
     </footer>
 
     <!--Start of Tawk.to Script-->
