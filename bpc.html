@@ -14,31 +14,67 @@
             line-height: 1.6;
         }
         header {
-            background-color: #000;
-            color: #fff;
-            padding: 20px;
+            background-color: #040404;
+            color: #040404;
+            padding: 5px;
             text-align: center;
+            line-height: 1.2;
         }
-        h1 {
-            color: #ccc;
+        header img {
+            max-width: 350px;
+            margin-bottom: 5px;
         }
-        .content {
+        header h1 {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: 'Merriweather', serif;
+            font-size: 2.0em;
+            color: #959595;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+        section {
             padding: 20px;
+            margin-bottom: 30px;
             background-color: #fff;
-            margin: 20px auto;
-            max-width: 1200px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            font-size: 1.8em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
+            font-family: 'Merriweather', serif;
+            font-size: 2em;
             color: #333;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #333;
+            margin: 10px auto 0;
         }
         p {
             margin-bottom: 20px;
@@ -46,22 +82,37 @@
             font-size: 1.1em;
             color: #555;
         }
-        strong {
-            font-weight: bold;
-        }
-        .highlight {
-            background-color: #f0f8ff;
-            padding: 5px;
-            border-radius: 5px;
+        footer {
+            position: static;
+            bottom: 0;
+            width: 100%;
+            background-color: #000;
+            color: #040404;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 14px;
+            z-index: 100;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Entenda o BPC: Benefício de Prestação Continuada</h1>
+        <img src="logo.png" alt="Logo do Escritório">
+        <h1>LETÍCIA COSTA DE OLIVEIRA GONÇALVES DE SOUZA</h1>
     </header>
 
-    <div class="content">
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#about">Sobre o Escritório</a></li>
+            <li><a href="#services">Áreas de Atuação</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Entre em Contato</a></li>
+        </ul>
+    </nav>
+
+    <section id="content">
+        <h2>Entenda o BPC</h2>
         <h2>O Que é o BPC?</h2>
         <p>O BPC (Benefício de Prestação Continuada) é um benefício assistencial concedido pelo Governo Federal a pessoas com deficiência e idosos com 65 anos ou mais que comprovem não ter meios de prover a própria manutenção e que se enquadrem nos critérios de vulnerabilidade social.</p>
 
@@ -79,6 +130,25 @@
 
         <h2>Conclusão</h2>
         <p>O BPC é uma importante ferramenta para garantir a dignidade de idosos e pessoas com deficiência que não têm condições de prover sua própria subsistência. Esse benefício visa reduzir as desigualdades sociais, mas é fundamental que os beneficiários se mantenham informados sobre os requisitos para garantir que o benefício continue a ser pago corretamente.</p>
-    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
+        <p><a href="termo.html" target="_blank" style="text-decoration: none; color: #333;">Termo de Ciência sobre Compartilhamento de Dados</a></p>
+    </footer>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6786b9573a842732606ebf38/1ihj47vut';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>
