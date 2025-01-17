@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BPC: Benefício de Prestação Continuada</title>
     <style>
-        body {
+         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -13,19 +13,60 @@
             color: #333;
             line-height: 1.6;
         }
+         /* Estilo dos títulos principais */
+    h2 {
+        font-family: 'Merriweather', serif; /* Uma fonte mais elegante e profissional */
+        font-size: 2em;
+        color: #333;
+        text-align: center;
+        text-transform: uppercase; /* Texto em caixa alta */
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombramento leve */
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    /* Adiciona uma linha decorativa abaixo dos títulos */
+    h2::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 3px;
+        background-color: #333;
+        margin: 10px auto 0;
+    }
+
+    /* Estilo específico para seções */
+    section {
+        padding: 20px;
+        margin-bottom: 30px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilo do título do rodapé para evitar conflito */
+    footer h2 {
+        text-shadow: none; /* Remove o sombreamento do rodapé */
+        font-family: Arial, sans-serif;
+    }
         header {
             background-color: #040404;
-            color: #fff;
-            padding: 10px;
+            color: #040404;
+            padding: 5px;
             text-align: center;
+            line-height: 1.2;
         }
         header img {
             max-width: 350px;
             margin-bottom: 5px;
         }
         header h1 {
-            margin: 0;
-            font-size: 1.8em;
+        margin-top: 0; /* Remove margem superior */
+        margin-bottom: 0; /* Remove margem inferior */
+        font-family: 'Merriweather', serif;
+        font-size: 2.0em; /* Ajuste o tamanho do texto, se necessário */
+        color: #959595
         }
         nav {
             background-color: #333;
@@ -39,7 +80,16 @@
             padding: 0;
         }
         nav ul li {
-            margin: 0 10px;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+        section {
+            padding: 20px;
+            line-height: 1.8;
         }
         nav ul li a {
             color: #fff;
