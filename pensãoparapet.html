@@ -4,87 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pensão Alimentícia para Animal de Estimação</title>
-    <style>
-        body {
+     <style>
+         body {
             font-family: Arial, sans-serif;
-            margin: 0;
+            margin: 0px;
             padding: 0;
             background-color: #f5f5f5;
             color: #333;
             line-height: 1.6;
         }
-        header {
-            background-color: #000;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #ccc;
-        }
-        .content {
-            padding: 20px;
-            background-color: #fff;
+         /* Estilo dos títulos principais */
+    h2 {
+        font-family: 'Merriweather', serif; /* Uma fonte mais elegante e profissional */
+        font-size: 2em;
+        color: #333;
+        text-align: center;
+        text-transform: uppercase; /* Texto em caixa alta */
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombramento leve */
+        position: relative;
+        padding-bottom: 10px;
+    }
+    h1 {
+        font-family: 'Merriweather', serif; /* Uma fonte mais elegante e profissional */
+        font-size: 1.5em;
+        color: #333;
+        text-align: justify;
+        text-transform: uppercase; /* Texto em caixa alta */
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombramento leve */
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+
+    /* Adiciona uma linha decorativa abaixo dos títulos */
+    h2::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 3px;
+        background-color: #333;
+        margin: 30px auto 0;
+    }
+
+    /* Estilo específico para seções */
+    section {
+        padding: 20px;
+        margin-bottom: 30px;
+        margin-left: 300px;
+        margin-right: 300px;    
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    }
+        .What is the BPC?, .Who is entitled to the BPC?, .How to request the BPC?, .BPC value, .BPC Review, .Conclusion {
+            background-color:  #f9f9f9;
             margin: 20px auto;
             max-width: 1200px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }    
+
+    /* Estilo do título do rodapé para evitar conflito */
+    footer h2 {
+        text-shadow: none; /* Remove o sombreamento do rodapé */
+        font-family: Arial, sans-serif;
+    }
+        header {
+            background-color: #040404;
+            color: #040404;
+            padding: 5px;
+            text-align: center;
+            line-height: 1.2;
+            top: 0
+            width: 100%
         }
-        h2 {
-            font-size: 1.8em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
+        header img {
+            max-width: 350px;
+            margin-bottom: 5px;
+        }
+        header h1 {
+        margin-top: 0; /* Remove margem superior */
+        margin-bottom: 0; /* Remove margem inferior */
+        font-family: 'Merriweather', serif;
+        font-size: 2.0em; /* Ajuste o tamanho do texto, se necessário */
+        color: #959595
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 5px;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 15px;
+        }
+        nav ul li a {
+            color: #040404;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+        section {
+            padding: 20px;
+            line-height: 1.8;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            font-size: 1.6em;
+            margin-bottom: 8px;
+            text-align: center;
             color: #333;
         }
-        p {
-            margin-bottom: 20px;
+        section p {
+            margin-bottom: 30px;
             text-align: justify;
-            font-size: 1.1em;
-            color: #555;
         }
-        strong {
-            font-weight: bold;
-        }
-        .highlight {
-            background-color: #f0f8ff;
-            padding: 5px;
-            border-radius: 5px;
+    footer {
+        position: static; /* Fixa o rodapé na parte inferior */
+        bottom: 0; /* Alinha o rodapé ao fundo */
+        width: 100%; /* Faz com que o rodapé ocupe toda a largura */
+        background-color: #040404; /* Fundo preto */
+        color: #f5f5f5; /* Texto branco */
+        text-align: center; /* Centraliza o texto */
+        padding: 5px 0; /* Espaçamento interno */
+        font-size: 14px; /* Tamanho da fonte */
+        z-index: 100; /* Garante que o rodapé fique sobre outros elementos */
+        margin: 0;
         }
     </style>
+
 </head>
 <body>
     <header>
-        <h1>Pensão Alimentícia para Animal de Estimação</h1>
+    <img src="logo.png" alt="Logo do Escritório">    
     </header>
 
-    <div class="content">
-        <h2>O Que é a Pensão Alimentícia para Animal de Estimação?</h2>
+    <h2>Pensão Alimentícia para Animal de Estimação</h2>
+
+    <section id="introducao">
+        <h1>O Que é a Pensão Alimentícia para Animal de Estimação?</h1>
         <p>A pensão alimentícia é tradicionalmente associada ao sustento de filhos em situações de separação ou divórcio, mas uma nova discussão tem emergido nos tribunais brasileiros: a possibilidade de se estabelecer pensão alimentícia para animais de estimação. Essa questão surge em situações onde um dos tutores do animal deseja garantir que o animal seja bem cuidado financeiramente após o fim de um relacionamento.</p>
-
-        <h2>Como Funciona a Pensão Alimentícia para Animais?</h2>
+    </section>
+        
+    <section id="introducao">
+        <h1>Como Funciona a Pensão Alimentícia para Animais?</h1>
         <p>Em termos práticos, a pensão alimentícia para animais de estimação se baseia na ideia de que os animais, embora considerados bens no direito civil, possuem um vínculo afetivo com seus tutores, e que os cuidados com eles podem ser abordados em termos jurídicos. Isso implica que, em caso de separação, o juiz pode determinar que um dos ex-companheiros arque com as despesas de alimentação, saúde e bem-estar do animal, como se fosse um tipo de pensão alimentícia.</p>
+    </section>
 
-        <h2>O Que Diz a Legislação Brasileira?</h2>
+    <section id="o-que-diz-a-lefislação-brasileira">
+        <h1>O Que Diz a Legislação Brasileira?</h1>
         <p>Atualmente, o Código Civil Brasileiro não trata especificamente da pensão alimentícia para animais de estimação, pois eles são considerados bens móveis. No entanto, algumas decisões judiciais têm avançado nesse sentido, reconhecendo o direito dos animais à manutenção de uma qualidade de vida após a separação de seus tutores. A tendência é que as discussões sobre esse tema cresçam à medida que os tribunais se deparam com mais casos relacionados ao bem-estar dos animais.</p>
-
-        <h2>Casos Judiciais: Decisões Recentes</h2>
+     </section>
+    
+    <section id="casos-judiciais">
+        <h1>Casos Judiciais: Decisões Recentes</h1>
         <p>Em algumas decisões recentes, tribunais têm concedido pensão alimentícia para animais de estimação, principalmente em situações onde o animal possui uma relação estreita com um dos tutores e onde há necessidade de garantir que ele continue recebendo os cuidados necessários. Essas decisões visam assegurar o bem-estar do animal, considerando o vínculo afetivo estabelecido entre ele e seus tutores.</p>
+     </section>
 
-        <h2>Critérios para Determinação da Pensão</h2>
+     <section id="critérios">
+        <h1>Critérios para Determinação da Pensão</h1>
         <p>Quando um juiz decide sobre a pensão alimentícia para animais, ele pode considerar uma série de fatores, como a renda dos envolvidos, a necessidade do animal, os custos com veterinários, alimentação e outros cuidados necessários para o bem-estar do animal. O juiz também pode levar em conta o grau de responsabilidade de cada tutor em relação ao animal e os acordos entre as partes.</p>
+     </section>
 
-        <h2>Por Que Esse Tema Está Ganhando Relevância?</h2>
+    <section id="relevância">
+        <h1>Por Que Esse Tema Está Ganhando Relevância?</h1>
         <p>A discussão sobre a pensão alimentícia para animais de estimação reflete uma mudança na forma como a sociedade enxerga os animais. Eles deixam de ser vistos apenas como bens materiais para serem reconhecidos como membros importantes da família, com direitos que precisam ser protegidos. O aumento de pets como parte fundamental das famílias tem contribuído para que o direito de família se adapte a essa nova realidade.</p>
+    </section>
 
-        <h2>O Futuro da Pensão Alimentícia para Animais de Estimação</h2>
+    <section id="futuro">
+        <h1>O Futuro da Pensão Alimentícia para Animais de Estimação</h1>
         <p>Embora não exista uma legislação específica sobre pensão alimentícia para animais de estimação, é possível que, à medida que as questões jurídicas relacionadas a animais se tornem mais comuns, o tema receba uma regulamentação mais clara. A evolução do direito animal e o reconhecimento do status jurídico dos animais de estimação podem resultar em novas leis que garantam a proteção e os cuidados necessários para o bem-estar deles, especialmente em situações de separação dos tutores.</p>
+    </section>
 
-        <h2>Conclusão: Protegendo os Direitos dos Animais</h2>
+    <section id="conclusão">
+        <h1>Conclusão: Protegendo os Direitos dos Animais</h1>
         <p>A pensão alimentícia para animais de estimação é um reflexo do crescente reconhecimento dos direitos dos animais dentro do direito de família. Com base no afeto e na convivência, os animais de estimação merecem cuidados e atenção em todas as situações, incluindo separações. Embora ainda seja um tema em desenvolvimento, as decisões judiciais começam a refletir uma realidade mais empática e protetora para com os animais, sinalizando um futuro em que o bem-estar deles seja uma prioridade em termos jurídicos.</p>
-    </div>
+     </section>
+    
 </body>
 </html>
