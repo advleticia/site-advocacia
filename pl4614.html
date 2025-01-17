@@ -5,68 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entenda a PL 4614/24: A Proposta de Reforma do Sistema de Previdência Social</title>
     <style>
-        body {
+         body {
             font-family: Arial, sans-serif;
-            margin: 0;
+            margin: 0px;
             padding: 0;
             background-color: #f5f5f5;
             color: #333;
             line-height: 1.6;
         }
-        header {
-            background-color: #000;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #ccc;
-        }
-        .content {
-            padding: 20px;
-            background-color: #fff;
+         /* Estilo dos títulos principais */
+    h2 {
+        font-family: 'Merriweather', serif; /* Uma fonte mais elegante e profissional */
+        font-size: 2em;
+        color: #333;
+        text-align: center;
+        text-transform: uppercase; /* Texto em caixa alta */
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombramento leve */
+        position: relative;
+        padding-bottom: 10px;
+    }
+    h1 {
+        font-family: 'Merriweather', serif; /* Uma fonte mais elegante e profissional */
+        font-size: 1.5em;
+        color: #333;
+        text-align: justify;
+        text-transform: uppercase; /* Texto em caixa alta */
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombramento leve */
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+
+    /* Adiciona uma linha decorativa abaixo dos títulos */
+    h2::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 3px;
+        background-color: #333;
+        margin: 30px auto 0;
+    }
+
+    /* Estilo específico para seções */
+    section {
+        padding: 20px;
+        margin-bottom: 30px;
+        margin-left: 300px;
+        margin-right: 300px;    
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    }
+        .What is the BPC?, .Who is entitled to the BPC?, .How to request the BPC?, .BPC value, .BPC Review, .Conclusion {
+            background-color:  #f9f9f9;
             margin: 20px auto;
             max-width: 1200px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }    
+
+    /* Estilo do título do rodapé para evitar conflito */
+    footer h2 {
+        text-shadow: none; /* Remove o sombreamento do rodapé */
+        font-family: Arial, sans-serif;
+    }
+        header {
+            background-color: #040404;
+            color: #040404;
+            padding: 5px;
+            text-align: center;
+            line-height: 1.2;
+            top: 0
+            width: 100%
         }
-        h2 {
-            font-size: 1.8em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
+        header img {
+            max-width: 350px;
+            margin-bottom: 5px;
+        }
+        header h1 {
+        margin-top: 0; /* Remove margem superior */
+        margin-bottom: 0; /* Remove margem inferior */
+        font-family: 'Merriweather', serif;
+        font-size: 2.0em; /* Ajuste o tamanho do texto, se necessário */
+        color: #959595
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 5px;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 15px;
+        }
+        nav ul li a {
+            color: #040404;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+        section {
+            padding: 20px;
+            line-height: 1.8;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            font-size: 1.6em;
+            margin-bottom: 8px;
+            text-align: center;
             color: #333;
         }
-        p {
-            margin-bottom: 20px;
+        section p {
+            margin-bottom: 30px;
             text-align: justify;
-            font-size: 1.1em;
-            color: #555;
         }
-        strong {
-            font-weight: bold;
-        }
-        .highlight {
-            background-color: #f0f8ff;
-            padding: 5px;
-            border-radius: 5px;
+    footer {
+        position: static; /* Fixa o rodapé na parte inferior */
+        bottom: 0; /* Alinha o rodapé ao fundo */
+        width: 100%; /* Faz com que o rodapé ocupe toda a largura */
+        background-color: #040404; /* Fundo preto */
+        color: #f5f5f5; /* Texto branco */
+        text-align: center; /* Centraliza o texto */
+        padding: 5px 0; /* Espaçamento interno */
+        font-size: 14px; /* Tamanho da fonte */
+        z-index: 100; /* Garante que o rodapé fique sobre outros elementos */
+        margin: 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Entenda a PL 4614/24: A Proposta de Reforma do Sistema de Previdência Social</h1>
+        <img src="logo.png" alt="Logo do Escritório">
     </header>
 
-    <div class="content">
-        <h2>O Que é a PL 4614/24?</h2>
-        <p>A PL 4614/24 foi proposta como uma forma de modernizar e ajustar o sistema previdenciário do país, buscando equilíbrio fiscal e sustentabilidade a longo prazo. Ela trata de vários pontos, mas se concentra principalmente em como as pessoas podem se aposentar e quais serão as condições para obter benefícios no futuro.</p>
+    <h2>Entenda a PL 4614/24: A Proposta de Reforma do Sistema de Previdência Social</h2>
 
+    <section id="introducao">
+        <h1>O Que é a PL 4614/24?</h1>
+        <p>A PL 4614/24 foi proposta como uma forma de modernizar e ajustar o sistema previdenciário do país, buscando equilíbrio fiscal e sustentabilidade a longo prazo. Ela trata de vários pontos, mas se concentra principalmente em como as pessoas podem se aposentar e quais serão as condições para obter benefícios no futuro.</p>
+        </section>
+
+        <section id="pontos da PL">
         <h2>Principais Pontos da PL 4614/24</h2>
-        
+
         <p><strong>- Alteração nas Idades de Aposentadoria</strong></p>
         <p>Uma das mudanças mais notáveis é o aumento da idade mínima para aposentadoria. Hoje, a idade mínima para se aposentar é de 62 anos para mulheres e 65 anos para homens, com uma exigência de tempo de contribuição de, no mínimo, 15 anos. A PL 4614/24 propõe um aumento gradual dessas idades, de acordo com a expectativa de vida da população, o que pode afetar aqueles que estão se preparando para a aposentadoria nos próximos anos.</p>
         
@@ -89,11 +188,39 @@
 
         <p><strong>- Geração mais jovem</strong></p>
         <p>A reforma é pensada, principalmente, para garantir a sustentabilidade do sistema previdenciário a longo prazo. Isso significa que a reforma não afeta apenas quem está perto de se aposentar, mas quem começa agora no mercado de trabalho, exigindo um planejamento mais cuidadoso.</p>
-
-        <h2>Conclusão</h2>
+        </section>
+    
+      <section id="CONCLUSÃO">
         <p>A PL 4614/24 representa uma mudança significativa nas regras da Previdência Social no Brasil. Embora possa parecer uma reforma complexa, seu objetivo é garantir que o sistema de aposentadorias e benefícios continue a existir de forma sustentável para as gerações futuras. Para aqueles que estão mais distantes da aposentadoria, pode ser o momento de começar a pensar em como as mudanças afetarão seus planos financeiros no longo prazo.</p>
-
         <p>Se você está preocupado com as alterações propostas pela PL 4614/24, é fundamental se informar bem sobre as novas regras e se planejar para o futuro. A reforma pode trazer desafios, mas também pode ser uma oportunidade para aprimorar o sistema e garantir que todos tenham acesso à Previdência quando precisarem.</p>
-    </div>
+    </section>
+     
+ <!-- Ícone Flutuante do WhatsApp -->
+<a href="https://wa.me/5531984829306" 
+   style="position: fixed; bottom: 100px; right: 40px; z-index: 1000; 
+          display: flex; align-items: center; justify-content: center; 
+          width: 60px; height: 60px; background-color: #25D366; 
+          color: white; border-radius: 50%; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
+         alt="WhatsApp" style="width: 35px; height: 35px;">
+</a>
+    <footer>
+        <p>&copy; 2025 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
+        <p><a href="termo.html" target="_blank" style="text-decoration: none; color: #f5f5f5;">Termo de Ciência sobre Compartilhamento de Dados</a></p>
+    </footer>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6786b9573a842732606ebf38/1ihj47vut';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>
