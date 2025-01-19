@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entenda a PL 4614/24: A Proposta de Reforma do Sistema de Previdência Social</title>
     <style>
-         body {
+        body {
             font-family: Arial, sans-serif;
-            margin: 0px;
+            margin: 0;
             padding: 0;
             background-color: #f5f5f5;
             color: #333;
@@ -25,18 +25,6 @@
         position: relative;
         padding-bottom: 10px;
     }
-    h1 {
-        font-family: 'Merriweather', serif; /* Uma fonte mais elegante e profissional */
-        font-size: 1.5em;
-        color: #333;
-        text-align: justify;
-        text-transform: uppercase; /* Texto em caixa alta */
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombramento leve */
-        position: relative;
-        padding-bottom: 10px;
-    }
-
 
     /* Adiciona uma linha decorativa abaixo dos títulos */
     h2::after {
@@ -45,28 +33,17 @@
         width: 80px;
         height: 3px;
         background-color: #333;
-        margin: 30px auto 0;
+        margin: 10px auto 0;
     }
 
     /* Estilo específico para seções */
     section {
         padding: 20px;
         margin-bottom: 30px;
-        margin-left: 300px;
-        margin-right: 300px;    
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    }
-        .What is the BPC?, .Who is entitled to the BPC?, .How to request the BPC?, .BPC value, .BPC Review, .Conclusion {
-            background-color:  #f9f9f9;
-            margin: 20px auto;
-            max-width: 1200px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }    
 
     /* Estilo do título do rodapé para evitar conflito */
     footer h2 {
@@ -79,8 +56,6 @@
             padding: 5px;
             text-align: center;
             line-height: 1.2;
-            top: 0
-            width: 100%
         }
         header img {
             max-width: 350px;
@@ -101,14 +76,14 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            margin: 5px;
+            margin: 0;
             padding: 0;
         }
         nav ul li {
-            margin: 15px;
+            margin: 0 15px;
         }
         nav ul li a {
-            color: #040404;
+            color: #fff;
             text-decoration: none;
             line-height: 1.5;
         }
@@ -116,38 +91,72 @@
             padding: 20px;
             line-height: 1.8;
         }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        section {
-            padding: 20px;
-            margin-bottom: 30px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        section h2 {
-            font-size: 1.6em;
-            margin-bottom: 8px;
+        .welcome {
+            background-color: #ccc;
             text-align: center;
-            color: #333;
+            padding: 50px 20px;
         }
-        section p {
-            margin-bottom: 30px;
-            text-align: justify;
+        .about, .services, .blog, .contact {
+            background-color:  #f9f9f9;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+         .blog .recent-posts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .blog .recent-posts article {
+            background-color: #ccc;
+            flex: 1 1 calc(33% - 20px);
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        services {
+        margin: 20px auto;
+        max-width: 1200px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .service-area {
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .service-area h3 {
+        color: #000;
+        margin-bottom: 10px;
+    }
+    .service-area p {
+        margin: 0;
+        color: #555;
+        line-height: 1.8;
+    }
+    .services h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+        
+    }
     footer {
         position: static; /* Fixa o rodapé na parte inferior */
         bottom: 0; /* Alinha o rodapé ao fundo */
         width: 100%; /* Faz com que o rodapé ocupe toda a largura */
-        background-color: #040404; /* Fundo preto */
+        background-color: #000; /* Fundo preto */
         color: #f5f5f5; /* Texto branco */
         text-align: center; /* Centraliza o texto */
         padding: 5px 0; /* Espaçamento interno */
         font-size: 14px; /* Tamanho da fonte */
         z-index: 100; /* Garante que o rodapé fique sobre outros elementos */
-        margin: 0;
         }
     </style>
 </head>
