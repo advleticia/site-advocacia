@@ -5,119 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escritório Letícia Costa de Oliveira Gonçalves de Souza</title>
     <style>
-        body {
-            font-family: 'Merriweather', serif;
+        /* Reset básico */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
+            box-sizing: border-box;
         }
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Cabeçalho */
         header {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px 20px;
         }
+
         header h1 {
             font-size: 36px;
-            margin: 0;
+            font-weight: normal;
         }
-        .sub-header p {
-            font-size: 20px;
+
+        header .sub-header {
             margin-top: 10px;
-            padding: 5px;
+            font-size: 20px;
             border-top: 2px solid #fff;
             border-bottom: 2px solid #fff;
             display: inline-block;
+            padding: 5px 0;
         }
+
+        /* Navegação */
+        nav {
+            background-color: #222;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        /* Seções */
         section {
             padding: 40px 20px;
             margin-bottom: 40px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            font-size: 28px;
-            color: #333;
+
+        section h2 {
             text-align: center;
+            font-size: 28px;
             margin-bottom: 20px;
         }
+
+        /* Áreas de Atuação */
         .service-area {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
-            margin-top: 30px;
+            gap: 20px;
         }
+
         .service-area div {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             width: 48%;
-            margin-bottom: 20px;
+            border-radius: 8px;
         }
+
         .service-area img {
             width: 100%;
             height: auto;
             border-radius: 8px;
         }
+
         .service-area h3 {
-            font-size: 24px;
+            font-size: 22px;
             margin-top: 15px;
         }
+
         .service-area ul {
-            margin-top: 10px;
-            list-style-type: none;
+            list-style: none;
             padding-left: 0;
+            margin-top: 10px;
         }
+
         .service-area ul li {
-            margin: 5px 0;
+            margin: 8px 0;
             color: #555;
         }
+
+        /* Blog */
         .blog .recent-posts {
             display: flex;
+            justify-content: space-between;
             gap: 20px;
-            justify-content: center;
             flex-wrap: wrap;
         }
+
         .blog .recent-posts article {
-            width: 30%;
+            width: 32%;
             background-color: #fff;
             padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             text-align: center;
         }
+
         .blog .recent-posts article h3 {
             font-size: 20px;
             margin-bottom: 15px;
         }
+
+        .blog .recent-posts article p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        /* Rodapé */
         footer {
             text-align: center;
             background-color: #333;
             color: #fff;
-            padding: 15px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 20px;
+            position: relative;
         }
+
+        footer p {
+            font-size: 14px;
+        }
+
         footer a {
             color: #fff;
             text-decoration: none;
         }
+
+        /* Botão WhatsApp */
         .whatsapp-button {
             position: fixed;
-            bottom: 80px;
+            bottom: 20px;
             right: 20px;
             background-color: #25D366;
-            border-radius: 50%;
             padding: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         .whatsapp-button img {
             width: 35px;
         }
+
+        /* Botão Calendly */
+        .calendly-button {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+
+        /* Chat */
         .chat-widget {
             position: fixed;
-            bottom: 20px;
+            bottom: 80px;
             right: 20px;
         }
     </style>
@@ -126,91 +195,72 @@
 
     <!-- Cabeçalho -->
     <header>
-         <img src="logo.png" alt="Direito do Servidor Público Estatutário">
+        <img src="logo.png">
         <h1>Letícia Costa de Oliveira Gonçalves de Souza</h1>
-        <div class="sub-header">
-            <p>Assessoria e Consultoria Jurídica</p>
-        </div>
+        <div class="sub-header">Assessoria e Consultoria Jurídica</div>
     </header>
 
-    <!-- Menu de navegação -->
+    <!-- Navegação -->
     <nav>
-        <ul style="display: flex; justify-content: center; list-style-type: none; background-color: #333; padding: 15px;">
-            <li><a href="#welcome" style="color: #fff; text-decoration: none; margin: 0 15px;">Bem-vindo</a></li>
-            <li><a href="#about" style="color: #fff; text-decoration: none; margin: 0 15px;">Sobre o Escritório</a></li>
-            <li><a href="#services" style="color: #fff; text-decoration: none; margin: 0 15px;">Áreas de Atuação</a></li>
-            <li><a href="#blog" style="color: #fff; text-decoration: none; margin: 0 15px;">Blog</a></li>
-            <li><a href="#contact" style="color: #fff; text-decoration: none; margin: 0 15px;">Entre em Contato</a></li>
+        <ul>
+            <li><a href="#welcome">Bem-vindo</a></li>
+            <li><a href="#about">Sobre o Escritório</a></li>
+            <li><a href="#services">Áreas de Atuação</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contato</a></li>
         </ul>
     </nav>
 
-    <!-- Seção de Bem-vindo -->
+    <!-- Bem-vindo -->
     <section id="welcome">
         <h2>Bem-vindo!</h2>
-        <p>Explore nosso escritório e veja como podemos oferecer um suporte jurídico eficiente e adaptado às suas necessidades.</p>
-        <a href="https://calendly.com/leticia-advog/consultoriajuridica" style="display: inline-block; background-color: #333; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; text-transform: uppercase;">Agende sua Consultoria</a>
+        <p>Explore nosso escritório e descubra como podemos fornecer um suporte jurídico de alta qualidade, personalizado para suas necessidades.</p>
+        <a href="https://calendly.com/leticia-advog/consultoriajuridica" class="calendly-button">Agende sua Consultoria</a>
     </section>
 
-    <!-- Seção Sobre o Escritório -->
+    <!-- Sobre o Escritório -->
     <section id="about">
         <h2>Sobre o Escritório</h2>
-        <p>Este escritório foi fundado para oferecer soluções jurídicas de alta qualidade, sempre com ética e dedicação. A advogada Letícia Costa de Oliveira Gonçalves de Souza, com uma formação robusta e experiência prática, lidera o escritório com o compromisso de garantir os melhores resultados para seus clientes.</p>
+        <p>Nosso escritório é comprometido com soluções jurídicas eficazes, oferecendo serviços especializados e personalizados para cada cliente.</p>
     </section>
 
-    <!-- Seção de Áreas de Atuação -->
+    <!-- Áreas de Atuação -->
     <section id="services">
         <h2>Áreas de Atuação</h2>
         <div class="service-area">
             <div>
-                <img src="imagem-direito-servidor.jpg" alt="Direito do Servidor Público Estatutário">
+                <img src="imagem-direito-servidor.jpg" alt="Direito do Servidor Público">
                 <h3>Direito do Servidor Público Estatutário</h3>
                 <ul>
-                    <li>Consultoria e defesa administrativa para servidores públicos.</li>
-                    <li>Ações de revisão de benefícios e aposentadoria.</li>
+                    <li>Consultoria para servidores públicos.</li>
+                    <li>Defesa administrativa em processos disciplinares.</li>
+                    <li>Aposentadoria e revisão de benefícios.</li>
                 </ul>
             </div>
             <div>
                 <img src="imagem-direito-previdenciario.jpg" alt="Direito Previdenciário">
                 <h3>Direito Previdenciário</h3>
                 <ul>
-                    <li>Assessoria em processos de aposentadoria e pensões.</li>
-                    <li>Revisão de benefícios e planejamento previdenciário.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="service-area">
-            <div>
-                <img src="imagem-direito-civil.jpg" alt="Direito Civil">
-                <h3>Direito Civil</h3>
-                <ul>
-                    <li>Consultoria e elaboração de contratos.</li>
-                    <li>Mediação de conflitos e ações de cobrança.</li>
-                </ul>
-            </div>
-            <div>
-                <img src="imagem-direito-familiar.jpg" alt="Direito Familiar">
-                <h3>Direito Familiar</h3>
-                <ul>
-                    <li>Atendimento em casos de divórcio, pensão alimentícia e guarda de filhos.</li>
-                    <li>Assessoria em questões de regime de bens e herança.</li>
+                    <li>Aposentadoria e pensões.</li>
+                    <li>Benefícios assistenciais e revisões.</li>
+                    <li>Planejamento previdenciário.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Seção Blog -->
+    <!-- Blog -->
     <section id="blog" class="blog">
         <h2>Blog</h2>
         <div class="recent-posts">
             <article>
                 <h3>Saiba mais sobre o BPC</h3>
-                <p>O BPC é um benefício assistencial do Governo Federal que garante uma ajuda financeira...</p>
+                <p>O BPC é um benefício assistencial oferecido a pessoas com deficiência e idosos de baixa renda...</p>
                 <a href="bpc.html">Leia mais</a>
             </article>
             <article>
                 <h3>Reconhecimento de Filiação Socioafetiva</h3>
-                <p>A filiação socioafetiva é um vínculo jurídico baseado no afeto e na convivência...</p>
+                <p>A filiação socioafetiva permite o reconhecimento de vínculos familiares com base no afeto...</p>
                 <a href="filiaçãosocioafetiva.html">Leia mais</a>
             </article>
         </div>
@@ -244,4 +294,3 @@
 
 </body>
 </html>
-
