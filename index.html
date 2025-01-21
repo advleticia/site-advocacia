@@ -152,6 +152,28 @@
         margin-bottom: 30px;
         
     }
+     .service-area ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        .service-area ul li {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .service-area {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-area {
+                grid-template-columns: 1fr;
+            }
     footer {
         position: static; /* Fixa o rodapé na parte inferior */
         bottom: 0; /* Alinha o rodapé ao fundo */
@@ -178,7 +200,8 @@
 <body>
     <header>
         <img src="logo.png" alt="Logo do Escritório">
-        <h1>LETÍCIA COSTA DE OLIVEIRA GONÇALVES DE SOUZA</h1> 
+        <h1>LETÍCIA COSTA DE OLIVEIRA GONÇALVES DE SOUZA</h1>
+        <div class="sub-header">Assessoria e Consultoria Jurídica</div>
     </header>
 
     <nav>
@@ -217,8 +240,11 @@ Aqui, acreditamos que cada caso é único e merece atenção especial, sempre bu
     </section>
 
 <section id="services" class="services">
-    <h2>Áreas de Atuação</h2>
+     <h2>Áreas de Atuação</h2>
         <div class="service-area">
+            <div>
+                <img src="imagem-direito-servidor.jpg" alt="Direito do Servidor Público">                   
+      <h3>Direito do Servidor Público Estatutário</h3>
         <ul>
             <li>Consultoria jurídica para servidores públicos, esclarecendo direitos e deveres previstos em estatutos e legislações aplicáveis.</li>
             <li>Defesa administrativa em Processos Administrativos Disciplinares (PAD) e sindicâncias.</li>
@@ -231,7 +257,8 @@ Aqui, acreditamos que cada caso é único e merece atenção especial, sempre bu
             <li>Consultoria e representação em recursos de concursos públicos, nomeações e posse.</li>
         </ul>
     </div>
-    <div class="service-area">
+    <div>
+        <img src="imagem-direito-previdenciario.jpg" alt="Direito Previdenciário">
         <h3>Direito Previdenciário</h3>
         <ul>
             <li>Assessoria em processos relacionados a benefícios previdenciários, como aposentadorias, pensões e auxílio-doença.</li>
@@ -244,7 +271,8 @@ Aqui, acreditamos que cada caso é único e merece atenção especial, sempre bu
             <li> Assessoria em aposentadorias especiais, como para professores e profissionais da saúde.</li>
         </ul>
     </div>
-    <div class="service-area">
+    <div>
+        <img src="imagem-direito-civil.jpg" alt="Direito Civil">
         <h3>Direito Civil</h3>
         <ul>
             <li>Assessoria em questões contratuais, incluindo elaboração e revisão de contratos.</li>
@@ -259,7 +287,8 @@ Aqui, acreditamos que cada caso é único e merece atenção especial, sempre bu
         </ul>
     </div>
 
-    <div class="service-area">
+    <div>
+        <img src="imagem-direito-civil.jpg" alt="Direito Civil">
         <h3>Direito Familiar</h3>
         <ul>
             <li>Atendimento especializado em casos de divórcio e dissolução de união estável.</li>
@@ -274,7 +303,8 @@ Aqui, acreditamos que cada caso é único e merece atenção especial, sempre bu
         </ul>
     </div>
 
-    <div class="service-area">
+    <div>
+        <img src="imagem-direito-civil.jpg" alt="Direito Civil">
         <h3>Direito das Sucessões</h3>
         <ul>
             <li>Assessoria em processos relacionados a heranças e inventários.</li>
