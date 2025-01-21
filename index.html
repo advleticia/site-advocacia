@@ -11,262 +11,237 @@
             padding: 0;
             background-color: #f5f5f5;
             color: #333;
-            line-height: 2.0;
-            font-size: 20px;
+            line-height: 1.6;
         }
-        h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 30px;
-            color: #333;
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        h2::after {
-            content: "";
-            display: block;
-            width: 80px;
-            height: 3px;
-            background-color: #333;
-            margin: 10px auto 0;
-        }
-
-        section {
-            padding: 20px;
-            margin-bottom: 30px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
         header {
-            background-color: #040404;
-            color: #040404;
-            padding: 0px;
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            line-height: 2.0;
+            padding: 50px 20px;
         }
-
         header h1 {
-            margin-top: 0;
-            margin-bottom: 0;
-            font-family: 'Laje Roboto', serif;
-            font-size: 30px;
-            color: #cccccc;
+            font-size: 36px;
+            margin: 0;
         }
-
         .sub-header p {
-            font-size: 18px;
-            font-weight: normal;
-            color: #cccccc;
+            font-size: 20px;
             margin-top: 10px;
             padding: 5px;
-            border-top: 2px solid #cccccc;
-            border-bottom: 2px solid #cccccc;
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
             display: inline-block;
         }
-
-        nav {
-            background-color: #333;
-            padding: 10px 0;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #f5f5f5;
-            text-decoration: none;
-            line-height: 1.5;
-            font-family: 'Merriweather', serif;
-            font-size: 18px;
-            text-transform: uppercase;
-        }
-
-        .service-area {
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
+        section {
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            background-color: #fff;
             border-radius: 8px;
-            background-color: #f9f9f9;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
+        h2 {
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .service-area {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .service-area div {
+            width: 48%;
+            margin-bottom: 20px;
+        }
         .service-area img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
             border-radius: 8px;
+        }
+        .service-area h3 {
+            font-size: 24px;
+            margin-top: 15px;
+        }
+        .service-area ul {
+            margin-top: 10px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .service-area ul li {
+            margin: 5px 0;
+            color: #555;
+        }
+        .blog .recent-posts {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .blog .recent-posts article {
+            width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .blog .recent-posts article h3 {
+            font-size: 20px;
             margin-bottom: 15px;
         }
-
         footer {
-            position: static;
-            bottom: 0;
-            width: 100%;
-            background-color: #000;
-            color: #f5f5f5;
             text-align: center;
-            padding: 5px 0;
-            font-size: 14px;
-            z-index: 100;
-            font-family: 'Arial', serif;
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: #25D366;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .whatsapp-button img {
+            width: 35px;
+        }
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
         }
     </style>
 </head>
 <body>
+
+    <!-- Cabeçalho -->
     <header>
-        <h1>LETÍCIA COSTA DE OLIVEIRA GONÇALVES DE SOUZA</h1>
+         <img src="logo.png" alt="Direito do Servidor Público Estatutário">
+        <h1>Letícia Costa de Oliveira Gonçalves de Souza</h1>
         <div class="sub-header">
             <p>Assessoria e Consultoria Jurídica</p>
         </div>
     </header>
 
+    <!-- Menu de navegação -->
     <nav>
-        <ul>
-            <li><a href="#welcome">Bem-vindo</a></li>
-            <li><a href="#about">Sobre o Escritório</a></li>
-            <li><a href="#services">Áreas de Atuação</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Entre em Contato</a></li>
+        <ul style="display: flex; justify-content: center; list-style-type: none; background-color: #333; padding: 15px;">
+            <li><a href="#welcome" style="color: #fff; text-decoration: none; margin: 0 15px;">Bem-vindo</a></li>
+            <li><a href="#about" style="color: #fff; text-decoration: none; margin: 0 15px;">Sobre o Escritório</a></li>
+            <li><a href="#services" style="color: #fff; text-decoration: none; margin: 0 15px;">Áreas de Atuação</a></li>
+            <li><a href="#blog" style="color: #fff; text-decoration: none; margin: 0 15px;">Blog</a></li>
+            <li><a href="#contact" style="color: #fff; text-decoration: none; margin: 0 15px;">Entre em Contato</a></li>
         </ul>
     </nav>
 
-    <section id="welcome" class="welcome">
+    <!-- Seção de Bem-vindo -->
+    <section id="welcome">
         <h2>Bem-vindo!</h2>
-        <p>Explore nosso escritório e veja como podemos oferecer um suporte jurídico eficiente e adaptado às suas necessidades, com dedicação e profissionalismo.</p>
-        <p>Entre em contato para esclarecer dúvidas ou agendar uma consultoria personalizada.</p>
-        <p>
-            <a href="https://calendly.com/leticia-advog/consultoriajuridica"
-               style="display: inline-block; background-color: #333; color: white; padding: 15px 25px; 
-                  border-radius: 5px; text-decoration: none; font-size: 18px; text-transform: uppercase;">
-                Agende sua Consultoria
-            </a>
-        </p>
+        <p>Explore nosso escritório e veja como podemos oferecer um suporte jurídico eficiente e adaptado às suas necessidades.</p>
+        <a href="https://calendly.com/leticia-advog/consultoriajuridica" style="display: inline-block; background-color: #333; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; text-transform: uppercase;">Agende sua Consultoria</a>
     </section>
 
-    <section id="about" class="about">
+    <!-- Seção Sobre o Escritório -->
+    <section id="about">
         <h2>Sobre o Escritório</h2>
-        <p>Este escritório foi fundado com o compromisso de oferecer soluções jurídicas personalizadas e de alta qualidade. Sob a liderança da advogada Letícia Costa de Oliveira Gonçalves de Souza, formada em Direito em 2021 e aprovada na OAB de primeira no mesmo ano, o escritório tem como missão atender às necessidades dos clientes com dedicação e ética.</p>
+        <p>Este escritório foi fundado para oferecer soluções jurídicas de alta qualidade, sempre com ética e dedicação. A advogada Letícia Costa de Oliveira Gonçalves de Souza, com uma formação robusta e experiência prática, lidera o escritório com o compromisso de garantir os melhores resultados para seus clientes.</p>
     </section>
 
-    <section id="services" class="services">
+    <!-- Seção de Áreas de Atuação -->
+    <section id="services">
         <h2>Áreas de Atuação</h2>
-
         <div class="service-area">
-            <img src="servidorpublico.png" alt="Direito do Servidor Público Estatutário">
-            <h3>Direito do Servidor Público Estatutário</h3>
-            <ul>
-                <li>Consultoria jurídica para servidores públicos, esclarecendo direitos e deveres previstos em estatutos e legislações aplicáveis.</li>
-                <li>Defesa administrativa em Processos Administrativos Disciplinares (PAD) e sindicâncias.</li>
-            </ul>
+            <div>
+                <img src="imagem-direito-servidor.jpg" alt="Direito do Servidor Público Estatutário">
+                <h3>Direito do Servidor Público Estatutário</h3>
+                <ul>
+                    <li>Consultoria e defesa administrativa para servidores públicos.</li>
+                    <li>Ações de revisão de benefícios e aposentadoria.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="imagem-direito-previdenciario.jpg" alt="Direito Previdenciário">
+                <h3>Direito Previdenciário</h3>
+                <ul>
+                    <li>Assessoria em processos de aposentadoria e pensões.</li>
+                    <li>Revisão de benefícios e planejamento previdenciário.</li>
+                </ul>
+            </div>
         </div>
 
         <div class="service-area">
-            <img src="previdenciario.png" alt="Direito Previdenciário">
-            <h3>Direito Previdenciário</h3>
-            <ul>
-                <li>Assessoria em processos relacionados a benefícios previdenciários, como aposentadorias, pensões e auxílio-doença.</li>
-                <li>Atuação em benefícios assistenciais, incluindo o Benefício de Prestação Continuada (BPC)</li>
-            </ul>
+            <div>
+                <img src="imagem-direito-civil.jpg" alt="Direito Civil">
+                <h3>Direito Civil</h3>
+                <ul>
+                    <li>Consultoria e elaboração de contratos.</li>
+                    <li>Mediação de conflitos e ações de cobrança.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="imagem-direito-familiar.jpg" alt="Direito Familiar">
+                <h3>Direito Familiar</h3>
+                <ul>
+                    <li>Atendimento em casos de divórcio, pensão alimentícia e guarda de filhos.</li>
+                    <li>Assessoria em questões de regime de bens e herança.</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="service-area">
-            <img src="civil.png" alt="Direito Civil">
-            <h3>Direito Civil</h3>
-            <ul>
-                <li>Assessoria em questões contratuais, incluindo elaboração e revisão de contratos.</li>
-                <li>Mediação de conflitos envolvendo cobranças e responsabilidade civil.</li>
-            </ul>
-        </div>
-
-        <div class="service-area">
-            <img src="familia.png" alt="Direito Familiar">
-            <h3>Direito Familiar</h3>
-            <ul>
-                <li>Atendimento especializado em casos de divórcio e dissolução de união estável.</li>
-                <li>Suporte na definição de pensão alimentícia e guarda de filhos.</li>
-                <li>Mediação para regulamentação de visitas e reconhecimento de paternidade/maternidade.</li>
-            </ul>
-        </div>
-
-        <div class="service-area">
-            <img src="sucessao.png" alt="Direito das Sucessões">
-            <h3>Direito das Sucessões</h3>
-            <ul>
-                <li>Assessoria em processos relacionados a heranças e inventários.</li>
-                <li>Elaboração e implementação de testamentos, além de planejamento sucessório.</li>
-            </ul>
-        </div>
-
     </section>
 
+    <!-- Seção Blog -->
     <section id="blog" class="blog">
         <h2>Blog</h2>
         <div class="recent-posts">
             <article>
                 <h3>Saiba mais sobre o BPC</h3>
-                <p>O BPC (Benefício de Prestação Continuada) é um benefício assistencial concedido pelo Governo Federal a pessoas com deficiência e idosos com 65 anos ou mais que comprovem não ter meios de prover a própria manutenção...</p>
+                <p>O BPC é um benefício assistencial do Governo Federal que garante uma ajuda financeira...</p>
                 <a href="bpc.html">Leia mais</a>
             </article>
             <article>
-                <h3>Reconhecimento de Filiação Socioafetiva a Maiores de Idade</h3>
-                <p>A filiação socioafetiva é o vínculo familiar baseado no afeto e na convivência, e não apenas em laços biológicos. Esse conceito tem ganhado destaque no direito de família...</p>
+                <h3>Reconhecimento de Filiação Socioafetiva</h3>
+                <p>A filiação socioafetiva é um vínculo jurídico baseado no afeto e na convivência...</p>
                 <a href="filiaçãosocioafetiva.html">Leia mais</a>
-            </article>
-            <article>
-                <h3>Alteração no Código Civil para Sucessão na União Estável</h3>
-                <p>A união estável é uma entidade familiar reconhecida pelo direito brasileiro, caracterizada pela convivência pública, contínua e duradoura entre duas pessoas...</p>
-                <a href="sucessãonauniãoestável.html">Leia mais</a>
-            </article>
-            <article>
-                <h3>Pensão Alimentícia para Animal de Estimação</h3>
-                <p>A pensão alimentícia é tradicionalmente associada ao sustento de filhos, mas uma nova discussão tem emergido nos tribunais brasileiros: a possibilidade de se estabelecer pensão alimentícia para animais de estimação...</p>
-                <a href="pensãoparapet.html">Leia mais</a>
             </article>
         </div>
     </section>
 
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
-        <p><a href="políticadeprivacidade.html" target="_blank" style="text-decoration: none; color: #f5f5f5;">Política de Privacidade</a></p>
+        <p><a href="políticadeprivacidade.html">Política de Privacidade</a></p>
     </footer>
 
-    <!-- WhatsApp Floating Icon -->
-    <a href="https://wa.me/5531984829306" 
-       style="position: fixed; bottom: 100px; right: 40px; z-index: 1000; 
-              display: flex; align-items: center; justify-content: center; 
-              width: 60px; height: 60px; background-color: #25D366; 
-              color: white; border-radius: 50%; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
-             alt="WhatsApp" style="width: 35px; height: 35px;">
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5531984829306" class="whatsapp-button">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
     </a>
 
-    <!-- Calendly Integration -->
-    <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/6786b9573a842732606ebf38/1ihj47vut';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/6786b9573a842732606ebf38/1ihj47vut';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+            })();
+        </script>
+    </div>
 
 </body>
 </html>
+
