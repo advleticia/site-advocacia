@@ -7,8 +7,8 @@
 <style>
         /* Reset básico */
         * {
-            margin: 1;
-            padding: 10;
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
@@ -31,19 +31,19 @@
         header {
             background-color: #040404;
             color: #040404;
-            padding: 0px;
+            padding: 20px 10px;
             text-align: center;
             line-height: 2.0;
         }
         header img {
             max-width: 550px;
-            margin-bottom: 0px;
+            height: auto;
         }
         header h1 {
-        margin-top: 0; /* Remove margem superior */
+        margin-top: 10; /* Remove margem superior */
         margin-bottom: 0; /* Remove margem inferior */
         font-family: 'Georgia', serif;
-        font-size: 25px; /* Ajuste o tamanho do texto, se necessário */
+        font-size: 22px; /* Ajuste o tamanho do texto, se necessário */
         color: #cccccc
         }
 
@@ -63,16 +63,17 @@
             padding: 10px 0;
         }
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-	    margin: 0;
-            padding: 0;
-        }
+         nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 10px 0;
+        background-color: #333;
+    }
 
-        nav ul li {
-            margin: 0 10px;
+   	nav ul li {
+        margin: 5px 10px;
         }
 
         nav ul li a {
@@ -80,19 +81,19 @@
             text-decoration: none;
 	    line-height: 1.5;
             font-family: 'Merriweather', serif;
-            font-size: 18px;
+            font-size: 16px;
             text-transform: uppercase;
         }
 
         /* Seções */
         section {
             padding: 10px;
-            margin-bottom: 0px;
+            margin: 10px auto;
         }
 
         section h2 {
             text-align: center;
-            font-size: 28px;
+            font-size: 26px;
             margin-bottom: 50px;
 	}
          /* Rodapé */
@@ -112,9 +113,9 @@
 	.welcome {
             background-color: #f9f9f9;
             text-align: center;
-            padding: 70px;
+            padding: 40px 20px;
             line-height: 2.0;
-	    font-size: 20px;
+	    font-size: 18px;
         }
         .about, .services, .blog, .contact {
             background-color:  #ccc;
@@ -130,30 +131,30 @@
         /* Áreas de Atuação (3 por linha) */
         .service-area {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Três colunas */
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
             padding: 10px 0;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .service-item {
             background-color: #fff;
-            padding: 30px;
-            border-radius: 15px;
+            padding: 20px;
+            border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
             text-align: center;
         }
 
         .service-item img {
-            width: 100px;
+            width: 80px;
             height: auto;
             border-radius: 15px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         .service-item h3 {
-            font-size: 22px;
-            margin-top: 10px;
+            font-size: 20px;
+            margin-top: 10px 0;
         }
 
         .service-item ul {
@@ -167,17 +168,48 @@
             color: #555;
         }
 
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .service-area {
-                grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
-            }
+         /* Responsividade */
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 18px;
         }
 
-        @media (max-width: 480px) {
-            .service-area {
-                grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
-            }
+        nav ul li a {
+            font-size: 14px;
+        }
+
+        .welcome {
+            font-size: 16px;
+        }
+
+        .service-item h3 {
+            font-size: 18px;
+        }
+
+        footer {
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 16px;
+        }
+
+        .welcome {
+            padding: 20px 10px;
+            font-size: 14px;
+        }
+
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 5px 0;
+        }
+    }
         }
   /* Blog */
         .blog .recent-posts {
