@@ -426,6 +426,38 @@
 </script>
 
 
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    // Inicializa o EmailJS
+    emailjs.init("ZBzBiwRp6rk58gU_w"); // Substitua pelo seu User ID
+
+    // Lida com o envio do formulário
+    document.getElementById("question-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Impede o recarregamento da página
+
+        // Coleta os dados do formulário
+        const formData = {
+            name: document.getElementById("user-name").value,
+            email: document.getElementById("user-email").value,
+            message: document.getElementById("user-question").value,
+        };
+
+        // Envia os dados para o EmailJS
+        emailjs
+            .send("service_1crleq2", "service_1crleq2", formData)
+            .then(
+                function () {
+                    alert("Sua pergunta foi enviada com sucesso!");
+                    document.getElementById("question-form").reset();
+                },
+                function (error) {
+                    alert("Ocorreu um erro ao enviar sua pergunta. Tente novamente.");
+                    console.error("Erro:", error);
+                }
+            );
+    });
+</script>
+
 <div style="text-align: center; margin: 20px; font-family: Arial, sans-serif;">
     <!-- Título ou Instrução -->
     <p style="color: #040404; font-size: 14px; margin-bottom: 10px;">
