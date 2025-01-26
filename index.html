@@ -431,20 +431,34 @@
     // Inicializa o EmailJS
     emailjs.init("ZBzBiwRp6rk58gU_w"); // Substitua pelo seu User ID
 
-    // Lida com o envio do formulário
+    // Função para lidar com o envio do formulário
     document.getElementById("question-form").addEventListener("submit", function (event) {
         event.preventDefault(); // Impede o recarregamento da página
 
-        // Coleta os dados do formulário
-        const formData = {
-            name: document.getElementById("user-name").value,
-            email: document.getElementById("user-email").value,
-            message: document.getElementById("user-question").value,
-        };
+        const userName = document.getElementById("user-name").value;
+        const userEmail = document.getElementById("user-email").value;
+        const userQuestion = document.getElementById("user-question").value;
+
+        // Adiciona a pergunta ao site
+        const questionsList = document.getElementById("questions-list");
+        const questionItem = document.createElement("div");
+        questionItem.style = "background-color: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); margin-bottom: 15px;";
+        questionItem.innerHTML = `
+            <h4 style="margin: 0 0 10px; font-size: 18px; color: #333;">${userName} perguntou:</h4>
+            <p style="margin: 0; font-size: 16px;">${userQuestion}</p>
+            <p style="margin: 10px 0 0; font-size: 16px; color: #555;"><strong>Resposta:</strong> Esta é uma resposta de exemplo. Sua pergunta foi registrada e será respondida em breve.</p>
+        `;
+        questionsList.appendChild(questionItem);
 
         // Envia os dados para o EmailJS
+        const formData = {
+            name: userName,
+            email: userEmail,
+            message: userQuestion,
+        };
+
         emailjs
-            .send("EMAIL", "PERGUNTAS", formData)
+            .send(EMAIL, PERGUNTAS, formData) // Substitua pelos seus IDs reais
             .then(
                 function () {
                     alert("Sua pergunta foi enviada com sucesso!");
@@ -457,6 +471,7 @@
             );
     });
 </script>
+
 
 <div style="text-align: center; margin: 20px; font-family: Arial, sans-serif;">
     <!-- Título ou Instrução -->
