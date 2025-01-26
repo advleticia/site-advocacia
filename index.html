@@ -16,7 +16,9 @@
             font-family:'Georgia', serif;
             background-color: #cccccc;
             color: #333;
-        }
+      
+/*Linha decorativa*/
+	}
 	h2::after {
         	 	content: "";
         	 	display: block;
@@ -25,15 +27,24 @@
         		background-color: #333;
         		margin: 10px auto 0;
     	}
+	h3::after {
+        	 	content: "";
+        	 	display: block;
+        	 	width: 100px;
+        		height: 5px;
+        		background-color: #f9f9f9;
+        		margin: 10px auto 0;
+			
+    	}
 
-        /* Cabeçalho */
+/* Cabeçalho */
        
         header {
             background-color: #040404;
             color: #040404;
             padding: 20px 10px;
             text-align: center;
-            line-height: 2.0;
+            line-height: 1.5;
         }
         header img {
             max-width: 550px;
@@ -57,7 +68,7 @@
             padding: 5px 0;
         }
 
-        /* Navegação */
+/* Navegação */
         nav {
             background-color: #333;
             padding: 10px 0;
@@ -88,15 +99,30 @@
         /* Seções */
         section {
             padding: 10px;
-            margin: 10px auto;
+            margin: auto;
         }
 
         section h2 {
             text-align: center;
             font-size: 26px;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
+            line-height: 2.0
 	}
-         /* Rodapé */
+	section h4 {
+            text-align: center;
+            font-size: normal;
+	    font-weight: normal;
+            line-height: 2.0
+	    margin: 1px
+
+	}
+	section p {
+            text-align: center;
+            font-size: 17px;
+            line-height: 1.5
+
+	}
+/* Rodapé */
         footer {
         position: static; /* Fixa o rodapé na parte inferior */
         bottom: 0; /* Alinha o rodapé ao fundo */
@@ -110,12 +136,15 @@
         font-family: 'Arial', serif;
         }
 
+/*Bem-vindo*/
+
 	.welcome {
             background-color: #f9f9f9;
             text-align: center;
             padding: 40px 20px;
-            line-height: 2.0;
+            line-height: 2.5;
 	    font-size: 18px;
+    	    margin: 0 auto; /* Centraliza a seção */
         }
         .about, .services, .blog, .contact {
             background-color:  #ccc;
@@ -126,15 +155,14 @@
             
 	}
        
-      
-
-        /* Áreas de Atuação (3 por linha) */
+/* Áreas de Atuação (3 por linha) */
         .service-area {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             padding: 10px 0;
             margin-bottom: 20px;
+	    line-height: 1.5
         }
 
         .service-item {
@@ -167,9 +195,17 @@
             margin: 8px 0;
             color: #555;
         }
+	.questions {
+	background-color: #040404;
+        text-align: center;
+        padding: 40px 20px;
+        line-height: 2.5;
+	font-size: 18px;
+	color: #f9f9f9
+    	}
 
-         /* Responsividade */
-    @media (max-width: 768px) {
+/* Responsividade */
+    @media (max-width: 700px) {
         header h1 {
             font-size: 18px;
         }
@@ -191,7 +227,7 @@
         }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 400px) {
         header h1 {
             font-size: 16px;
         }
@@ -209,34 +245,58 @@
         nav ul li {
             margin: 5px 0;
         }
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 5px; /* Reduz o padding no cabeçalho */
     }
-        }
-  /* Blog */
-        .blog .recent-posts {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Três colunas */
-            gap: 20px;
-            padding: 20px 0;
-            margin-bottom: 40px;
-        }
 
-        .blog .recent-posts article {
-            width: 32%;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            text-align: center;
-        }
+    header img {
+        max-width: 80%; /* Faz o logo ocupar menos espaço */
+        height: auto; /* Mantém a proporção do logo */
+    }
 
-        .blog .recent-posts article h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
+    header h1 {
+        font-size: 18px; /* Reduz o tamanho da fonte no título */
+        margin-top: 5px; /* Ajusta o espaçamento superior */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px; /* Reduz ainda mais o padding em telas muito pequenas */
+    }
+
+    header img {
+        max-width: 70%; /* Reduz o tamanho do logo */
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 16px; /* Reduz ainda mais o tamanho da fonte */
+        line-height: 1.2; /* Diminui o espaçamento vertical do texto */
+    }
+}
+@media (max-width: 480px) {
+    .welcome {
+        font-size: 14px; /* Diminui ainda mais o tamanho do texto em telas pequenas */
+        padding: 20px 10px; /* Reduz ainda mais o espaçamento interno */
+        line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+    }
+
+
+@media (max-width: 480px) {
+    .welcome {
+        font-size: 14px; /* Diminui ainda mais o tamanho do texto em telas pequenas */
+        padding: 20px 10px; /* Reduz ainda mais o espaçamento interno */
+        line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+    }
+   
 
     </style>
 </head>
 <body>
+
 <!-- Cabeçalho -->
 <header>
 <img alt="Logo do Escritório" src="logo2.PNG"/>
@@ -255,12 +315,15 @@
 <!-- BEM-VINDO -->
 <section class="welcome" id="welcome">
 <h2>BEM-VINDO!</h2>
-<p>Explore nosso escritório e veja como podemos oferecer um suporte jurídico eficiente e adaptado às suas necessidades, com dedicação e profissionalismo.</p>
-<p>Entre em contato para esclarecer dúvidas ou agendar uma consultoria personalizada.</p>
+<h4>Explore o escritório e veja como posso oferecer um suporte jurídico eficiente e adaptado às suas necessidades, com dedicação e profissionalismo.</h4>
+<h4>Entre em contato para esclarecer dúvidas ou agendar uma consultoria personalizada.
+
+</h4>
+
 <!-- Botão de agendamento no Calendly -->
 <p>
 <a href="https://calendly.com/leticia-advog/consultoriajuridica" style="display: inline-block; background-color: #333; color: white; padding: 15px 25px; 
-                  border-radius: 5px; text-decoration: none; font-size: 18px; text-transform: uppercase;">
+                  border-radius: 5px; text-decoration: none; font-size: 18px; text-transform: uppercase;line-height: 1.5">
                 Agende aqui!
             </a>
 </p>
@@ -313,14 +376,63 @@
 </div>
 </section>
 
+<section class="questions" id="questions">
+    <h3>PERGUNTAS E RESPOSTAS</h3>
+    
+
+    <!-- Formulário para envio de perguntas -->
+    <form id="question-form" onsubmit="submitQuestion(event)" style="max-width: 600px; margin: 0 auto; text-align: left;">
+        <label for="user-name" style="display: block; margin-bottom: 8px; font-weight: bold;">Seu nome:</label>
+        <input type="text" id="user-name" name="user-name" required placeholder="Digite seu nome" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;"/>
+
+        <label for="user-question" style="display: block; margin-bottom: 8px; font-weight: bold;">Sua pergunta:</label>
+        <textarea id="user-question" name="user-question" rows="4" required placeholder="Digite sua pergunta" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+
+        <button type="submit" style="display: block; width: 100%; padding: 10px; background-color: #333; color: white; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
+            Enviar
+        </button>
+    </form>
+
+    <!-- Área onde perguntas e respostas serão exibidas -->
+    <div class="questions-list" id="questions-list" style="text-align: left; margin-top: 30px; max-width: 800px; margin: 30px auto;">
+        <p style="font-size: 20px; margin-bottom: 15px;">PERGUNTAS JÁ RESPONDIDAS:</p>
+        <!-- Perguntas e respostas serão adicionadas aqui dinamicamente -->
+    </div>
+</section>
+
+<script>
+    // Função para tratar o envio da pergunta
+    function submitQuestion(event) {
+        event.preventDefault(); // Evita o recarregamento da página
+
+        const userName = document.getElementById('user-name').value;
+        const userQuestion = document.getElementById('user-question').value;
+
+        // Adiciona a pergunta e a resposta como exemplo (resposta pode ser gerenciada manualmente)
+        const questionsList = document.getElementById('questions-list');
+        const questionItem = document.createElement('div');
+        questionItem.style = "background-color: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); margin-bottom: 15px;";
+        questionItem.innerHTML = `
+            <h4 style="margin: 0 0 10px; font-size: 18px; color: #333;">${userName} perguntou:</h4>
+            <p style="margin: 0; font-size: 16px;">${userQuestion}</p>
+            <p style="margin: 10px 0 0; font-size: 16px; color: #555;"><strong>Resposta:</strong> Esta é uma resposta de exemplo. Sua pergunta foi registrada e será respondida em breve.</p>
+        `;
+
+        questionsList.appendChild(questionItem);
+
+        // Limpa os campos do formulário
+        document.getElementById('question-form').reset();
+    }
+</script>
+
 
 <div style="text-align: center; margin: 20px; font-family: Arial, sans-serif;">
     <!-- Título ou Instrução -->
-    <p style="color: #333; font-size: 14px; margin-bottom: 10px;">
+    <p style="color: #040404; font-size: 14px; margin-bottom: 10px;">
         Clique no botão abaixo para se inscrever e receber nossas atualizações. 
         Ao clicar, você concorda com nossos 
-        <a href="https://advleticia.com/termo.html" target="_blank" style="color: #007BFF; text-decoration: underline;">
-            Termos de Ciência e Privacidade.
+        <a href="https://advleticia.com/termo.html" target="_blank" style="color: #040404; text-decoration: underline;">
+            Política de Privacidade.
         </a>
     </p>
 
