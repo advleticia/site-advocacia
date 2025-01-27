@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"/>
@@ -292,8 +292,55 @@
         line-height: 1.5; /* Ajusta o espaçamento entre linhas */
     }
    
+ }
+
+    .faq {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 20px auto;
+    }
+
+    .faq-item {
+        margin-bottom: 15px;
+    }
+
+    .faq-item h4 {
+        cursor: pointer;
+        margin: 0;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .faq-item p {
+        margin: 0;
+        padding: 10px;
+        display: none;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+
+    .faq-item h4:hover {
+        background-color: #555;
+    }
 
     </style>
+<script>
+    // Script para alternar visibilidade das respostas do FAQ
+    document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll(".faq-item h4");
+
+        faqItems.forEach(item => {
+            item.addEventListener("click", function () {
+                const answer = this.nextElementSibling;
+                answer.style.display = answer.style.display === "none" || answer.style.display === "" ? "block" : "none";
+            });
+        });
+    });
+</script>
 </head>
 <body>
 
@@ -375,11 +422,9 @@
 </div>
 </div>
 </section>
-
 <section class="questions" id="questions">
     <h3>PERGUNTAS E RESPOSTAS</h3>
     
-
     <!-- Formulário para envio de perguntas -->
     <form id="question-form" onsubmit="submitQuestion(event)" style="max-width: 600px; margin: 0 auto; text-align: left;">
         <label for="user-name" style="display: block; margin-bottom: 8px; font-weight: bold;">Seu nome:</label>
@@ -401,76 +446,53 @@
 </section>
 
 <script>
-    // Função para tratar o envio da pergunta
+    // Função para enviar a pergunta para o Zapier
     function submitQuestion(event) {
-        event.preventDefault(); // Evita o recarregamento da página
-
+        event.preventDefault(); // Previne o comportamento padrão de envio do formulário
+        
+        // Captura os valores dos campos
         const userName = document.getElementById('user-name').value;
         const userQuestion = document.getElementById('user-question').value;
+        
+        // URL do seu Webhook do Zapier
+        const zapierWebhookUrl = 'https://hooks.zapier.com/hooks/catch/21471107/2ft55v8/';  // Substituído pela URL do seu Zapier
+        
+        // Cria um objeto com os dados a serem enviados
+        const data = {
+            userName: userName,
+            userQuestion: userQuestion
+        };
 
-        // Adiciona a pergunta e a resposta como exemplo (resposta pode ser gerenciada manualmente)
-        const questionsList = document.getElementById('questions-list');
-        const questionItem = document.createElement('div');
-        questionItem.style = "background-color: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); margin-bottom: 15px;";
-        questionItem.innerHTML = `
-            <h4 style="margin: 0 0 10px; font-size: 18px; color: #333;">${userName} perguntou:</h4>
-            <p style="margin: 0; font-size: 16px;">${userQuestion}</p>
-            <p style="margin: 10px 0 0; font-size: 16px; color: #555;"><strong>Resposta:</strong> Esta é uma resposta de exemplo. Sua pergunta foi registrada e será respondida em breve.</p>
-        `;
+        // Envia os dados via POST para o Zapier
+        fetch(zapierWebhookUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Exibe uma confirmação de envio
+            alert('Sua pergunta foi enviada com sucesso!');
 
-        questionsList.appendChild(questionItem);
+            // Limpa os campos do formulário
+            document.getElementById('question-form').reset();
 
-        // Limpa os campos do formulário
-        document.getElementById('question-form').reset();
+            // Adiciona a pergunta e a resposta à lista na página
+            const questionList = document.getElementById('questions-list');
+            const questionItem = document.createElement('div');
+            questionItem.innerHTML = `<strong>${userName} perguntou:</strong> <p>${userQuestion}</p><hr>`;
+            questionList.appendChild(questionItem);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Ocorreu um erro ao enviar sua pergunta. Tente novamente mais tarde.');
+        });
     }
 </script>
 
 
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-    // Inicializa o EmailJS
-    emailjs.init("ZBzBiwRp6rk58gU_w"); // Substitua pelo seu User ID
-
-    // Função para lidar com o envio do formulário
-    document.getElementById("question-form").addEventListener("submit", function (event) {
-        event.preventDefault(); // Impede o recarregamento da página
-
-        const userName = document.getElementById("user-name").value;
-        const userEmail = document.getElementById("user-email").value;
-        const userQuestion = document.getElementById("user-question").value;
-
-        // Adiciona a pergunta ao site
-        const questionsList = document.getElementById("questions-list");
-        const questionItem = document.createElement("div");
-        questionItem.style = "background-color: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); margin-bottom: 15px;";
-        questionItem.innerHTML = `
-            <h4 style="margin: 0 0 10px; font-size: 18px; color: #333;">${userName} perguntou:</h4>
-            <p style="margin: 0; font-size: 16px;">${userQuestion}</p>
-            <p style="margin: 10px 0 0; font-size: 16px; color: #555;"><strong>Resposta:</strong> Esta é uma resposta de exemplo. Sua pergunta foi registrada e será respondida em breve.</p>
-        `;
-        questionsList.appendChild(questionItem);
-
-        // Envia os dados para o EmailJS
-        const formData = {
-            name: userName,
-            email: userEmail,
-            message: userQuestion,
-        };
-
-        emailjs
-            .send(EMAIL, PERGUNTAS, formData) // Substitua pelos seus IDs reais
-            .then(
-                function () {
-                    alert("Sua pergunta foi enviada com sucesso!");
-                    document.getElementById("question-form").reset();
-                },
-                function (error) {
-                    alert("Ocorreu um erro ao enviar sua pergunta. Tente novamente.");
-                    console.error("Erro:", error);
-                }
-            );
-    });
-</script>
 
 
 <div style="text-align: center; margin: 20px; font-family: Arial, sans-serif;">
@@ -491,7 +513,6 @@
         Inscreva-se!
     </a>
 </div>
-
 
 
 
