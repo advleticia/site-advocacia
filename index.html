@@ -478,12 +478,6 @@
 
             // Limpa os campos do formulário
             document.getElementById('question-form').reset();
-
-            // Adiciona a pergunta e a resposta à lista na página
-            const questionList = document.getElementById('questions-list');
-            const questionItem = document.createElement('div');
-            questionItem.innerHTML = `<strong>${userName} perguntou:</strong> <p>${userQuestion}</p><hr>`;
-            questionList.appendChild(questionItem);
         })
         .catch((error) => {
             console.error('Error:', error);
