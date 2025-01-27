@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"/>
@@ -245,6 +245,55 @@
         nav ul li {
             margin: 5px 0;
         }
+}
+
+    .questions {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #040404;
+        color: #f9f9f9;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    form input, form textarea, form button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    form button {
+        background-color: #333;
+        color: white;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+        background-color: #555;
+    }
+
+    footer {
+        text-align: center;
+        background-color: #040404;
+        color: #f9f9f9;
+        padding: 15px;
+    }
+
 /* Ajustes para dispositivos menores */
 @media (max-width: 768px) {
     header {
@@ -329,17 +378,50 @@
 
     </style>
 <script>
-    // Script para alternar visibilidade das respostas do FAQ
-    document.addEventListener("DOMContentLoaded", function () {
-        const faqItems = document.querySelectorAll(".faq-item h4");
+    // Função para enviar o formulário ao webhook do Zapier
+    function submitQuestion(event) {
+        event.preventDefault(); // Impede o comportamento padrão do formulário
 
-        faqItems.forEach(item => {
-            item.addEventListener("click", function () {
-                const answer = this.nextElementSibling;
-                answer.style.display = answer.style.display === "none" || answer.style.display === "" ? "block" : "none";
-            });
+        // Captura os valores do formulário
+        const userName = document.getElementById('user-name').value.trim();
+        const userQuestion = document.getElementById('user-question').value.trim();
+
+        // Verifica se os campos estão preenchidos
+        if (!userName || !userQuestion) {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
+
+        // URL do Webhook do Zapier
+        const zapierWebhookUrl = 'https://hooks.zapier.com/hooks/catch/21471107/2ftjh4m/';
+
+        // Dados a serem enviados
+        const data = {
+            'user_name': userName,
+            'user_question': userQuestion
+        };
+
+        // Faz o envio dos dados ao Zapier
+        fetch(zapierWebhookUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Sua pergunta foi enviada com sucesso!');
+                document.getElementById('question-form').reset(); // Limpa o formulário
+            } else {
+                alert('Erro ao enviar a pergunta. Tente novamente.');
+            }
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            alert('Erro ao enviar a pergunta. Verifique sua conexão.');
         });
-    });
+    }
 </script>
 </head>
 <body>
@@ -426,17 +508,16 @@
 <section class="questions" id="questions">
     <h3>PERGUNTAS E RESPOSTAS</h3>
     
-    <!-- Formulário para envio de perguntas -->
-    <form id="question-form" onsubmit="submitQuestion(event)" style="max-width: 600px; margin: 0 auto; text-align: left;">
-        <label for="user-name" style="display: block; margin-bottom: 8px; font-weight: bold;">Seu nome:</label>
-        <input type="text" id="user-name" name="user-name" required placeholder="Digite seu nome" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;"/>
+    <section class="questions" id="questions">
+    <h3>Envie sua pergunta</h3>
+    <form id="question-form" onsubmit="submitQuestion(event)">
+        <label for="user-name">Seu nome:</label>
+        <input type="text" id="user-name" name="user-name" placeholder="Digite seu nome" required>
 
-        <label for="user-question" style="display: block; margin-bottom: 8px; font-weight: bold;">Sua pergunta:</label>
-        <textarea id="user-question" name="user-question" rows="4" required placeholder="Digite sua pergunta" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+        <label for="user-question">Sua pergunta:</label>
+        <textarea id="user-question" name="user-question" placeholder="Digite sua pergunta" rows="4" required></textarea>
 
-        <button type="submit" style="display: block; width: 100%; padding: 10px; background-color: #333; color: white; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
-            Enviar
-        </button>
+        <button type="submit">Enviar</button>
     </form>
 
     <!-- Área onde perguntas e respostas serão exibidas -->
