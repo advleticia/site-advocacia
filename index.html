@@ -447,43 +447,41 @@
 
 <script>
     // Função para enviar a pergunta para o Zapier
-    function submitQuestion(event) {
-        event.preventDefault(); // Previne o comportamento padrão de envio do formulário
-        
-        // Captura os valores dos campos
-        const userName = document.getElementById('user-name').value;
-        const userQuestion = document.getElementById('user-question').value;
-        
-        // URL do seu Webhook do Zapier
-        const zapierWebhookUrl = 'https://cors-anywhere.herokuapp.com/https://hooks.zapier.com/hooks/catch/21471107/2ft55v8/';  // Substituído pela URL do seu Zapier
-        
-        // Cria um objeto com os dados a serem enviados
-        const data = {
-            userName: userName,
-            userQuestion: userQuestion
-        };
+   function submitQuestion(event) {
+    event.preventDefault(); // Previne o envio padrão do formulário
+    
+    // Captura os valores dos campos
+    const userName = document.getElementById('user-name').value;
+    const userQuestion = document.getElementById('user-question').value;
+    
+    // URL do Webhook do Zapier
+    const zapierWebhookUrl = 'https://cors-anywhere.herokuapp.com/https://hooks.zapier.com/hooks/catch/21471107/2ft55v8/';  // Substituído pela URL do seu Zapier
+    
+    // Cria o objeto com os dados a serem enviados
+    const data = {
+        "user-name": userName, // Usando o nome da chave corretamente
+        "user-question": userQuestion // Usando o nome da chave corretamente
+    };
 
-        // Envia os dados via POST para o Zapier
-        fetch(zapierWebhookUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Exibe uma confirmação de envio
-            alert('Sua pergunta foi enviada com sucesso!');
+    // Envia os dados via POST para o Zapier
+    fetch(zapierWebhookUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data) // Certifique-se de enviar os dados como JSON
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert('Sua pergunta foi enviada com sucesso!');
+        document.getElementById('question-form').reset(); // Limpa o formulário
+    })
+    .catch((error) => {
+        console.error('Erro ao enviar a pergunta:', error);
+        alert('Ocorreu um erro ao enviar sua pergunta.');
+    });
+}
 
-            // Limpa os campos do formulário
-            document.getElementById('question-form').reset();
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            alert('Ocorreu um erro ao enviar sua pergunta. Tente novamente mais tarde.');
-        });
-    }
 </script>
 
 
