@@ -448,44 +448,57 @@
 
 <script>
     // Função para enviar a pergunta para o Zapier
-   function submitQuestion(event) {
-    event.preventDefault(); // Previne o envio padrão do formulário
-    
-    // Captura os valores dos campos
-    const userName = document.getElementById('user-name').value;
-    const userQuestion = document.getElementById('user-question').value;
-    
-    // URL do Webhook do Zapier
-    const zapierWebhookUrl = 'https://cors-anywhere.herokuapp.com/https://hooks.zapier.com/hooks/catch/21471107/2ft55v8/';  // Substituído pela URL do seu Zapier
-    
-    // Cria o objeto com os dados a serem enviados
-    const data = {
-        "user-name": userName, // Usando o nome da chave corretamente
-        "user-question": userQuestion // Usando o nome da chave corretamente
-    };
+    function submitQuestion(event) {
+        event.preventDefault(); // Previne o envio padrão do formulário
+        
+        // Captura os valores dos campos do formulário
+        const userName = document.getElementById('user-name').value.trim();
+        const userQuestion = document.getElementById('user-question').value.trim();
 
-    // Envia os dados via POST para o Zapier
-    fetch(zapierWebhookUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data) // Certifique-se de enviar os dados como JSON
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert('Sua pergunta foi enviada com sucesso!');
-        document.getElementById('question-form').reset(); // Limpa o formulário
-    })
-    .catch((error) => {
-        console.error('Erro ao enviar a pergunta:', error);
-        alert('Ocorreu um erro ao enviar sua pergunta.');
-    });
-}
+        // Exibe os dados capturados no console para depuração
+        console.log("Nome do usuário:", userName);
+        console.log("Pergunta:", userQuestion);
 
+        // Verifica se os campos estão preenchidos
+        if (!userName || !userQuestion) {
+            alert('Por favor, preencha todos os campos antes de enviar.');
+            return;
+        }
+
+        // URL do Webhook do Zapier
+        const zapierWebhookUrl = 'https://hooks.zapier.com/hooks/catch/21471107/2ft55v8/';
+
+        // Cria o objeto com os dados a serem enviados
+        const data = {
+            'user-name': userName,
+            'user-question': userQuestion
+        };
+
+        // Envia os dados para o Zapier
+        fetch(zapierWebhookUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data) // Certifique-se de enviar os dados como JSON
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro na resposta: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Resposta do Zapier:", data);
+            alert('Sua pergunta foi enviada com sucesso!');
+            document.getElementById('question-form').reset(); // Limpa o formulário após o envio
+        })
+        .catch(error => {
+            console.error('Erro ao enviar a pergunta:', error);
+            alert('Ocorreu um erro ao enviar sua pergunta. Por favor, tente novamente.');
+        });
+    }
 </script>
-
-
 
 
 <div style="text-align: center; margin: 20px; font-family: Arial, sans-serif;">
