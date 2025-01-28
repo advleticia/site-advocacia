@@ -1,0 +1,16 @@
+{
+  "perguntas": [
+    {
+      "id": 1,
+      "usuario": "João Silva",
+      "pergunta": "Quais são os requisitos para aposentadoria por tempo de contribuição?",
+      "resposta": "A aposentadoria por tempo de contribuição exige um tempo mínimo de contribuição ao INSS, variando conforme a reforma da previdência de 2019."
+    },
+    {
+      "id": 2,
+      "usuario": "Maria Oliveira",
+      "pergunta": "Como posso entrar com um pedido de guarda compartilhada?",
+      "resposta": "O pedido pode ser feito por meio de ação judicial ou acordo entre os pais, sempre priorizando o bem-estar da criança."
+    }
+  ]
+}
