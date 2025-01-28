@@ -1,281 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Escritório Letícia Costa de Oliveira Gonçalves de Souza</title>
-<style>
-        /* Reset básico */
-        * {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escritório Letícia Costa de Oliveira Gonçalves de Souza</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-         body {
-            font-family:'Georgia', serif;
             background-color: #cccccc;
             color: #333;
-      
-/*Linha decorativa*/
-	}
-	h2::after {
-        	 	content: "";
-        	 	display: block;
-        	 	width: 100px;
-        		height: 5px;
-        		background-color: #333;
-        		margin: 10px auto 0;
-    	}
-	h3::after {
-        	 	content: "";
-        	 	display: block;
-        	 	width: 100px;
-        		height: 5px;
-        		background-color: #f9f9f9;
-        		margin: 10px auto 0;
-			
-    	}
-
-/* Cabeçalho */
-       
+        }
         header {
             background-color: #040404;
-            color: #040404;
-            padding: 20px 10px;
+            color: #f9f9f9;
             text-align: center;
-            line-height: 1.5;
+            padding: 20px;
         }
         header img {
-            max-width: 550px;
+            max-width: 300px;
             height: auto;
         }
         header h1 {
-        margin-top: 10; /* Remove margem superior */
-        margin-bottom: 0; /* Remove margem inferior */
-        font-family: 'Georgia', serif;
-        font-size: 22px; /* Ajuste o tamanho do texto, se necessário */
-        color: #cccccc
+            margin: 10px 0;
         }
-
-        header .sub-header {
-            margin-top: 10px;
-            font-size: 8px;
-	    font-weight:'Montserrat', sans-serif;
-            border-top: 2px solid #040404;
-            border-bottom: 2px solid #040404;
-            display: inline-block;
-            padding: 5px 0;
-        }
-
-/* Navegação */
         nav {
             background-color: #333;
-            padding: 10px 0;
-        }
-
-         nav ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        list-style: none;
-        padding: 10px 0;
-        background-color: #333;
-    }
-
-   	nav ul li {
-        margin: 5px 10px;
-        }
-
-        nav ul li a {
-            color: #f9f9f9;
-            text-decoration: none;
-	    line-height: 1.5;
-            font-family: 'Merriweather', serif;
-            font-size: 16px;
-            text-transform: uppercase;
-        }
-
-        /* Seções */
-        section {
             padding: 10px;
-            margin: auto;
-        }
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Escritório Letícia Costa de Oliveira Gonçalves de Souza</title>
-<style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-         body {
-            font-family:'Georgia', serif;
-            background-color: #cccccc;
-            color: #333;
-      
-/*Linha decorativa*/
-	}
-	h2::after {
-        	 	content: "";
-        	 	display: block;
-        	 	width: 100px;
-        		height: 5px;
-        		background-color: #333;
-        		margin: 10px auto 0;
-    	}
-	h3::after {
-        	 	content: "";
-        	 	display: block;
-        	 	width: 100px;
-        		height: 5px;
-        		background-color: #f9f9f9;
-        		margin: 10px auto 0;
-			
-    	}
-
-/* Cabeçalho */
-       
-        header {
-            background-color: #040404;
-            color: #040404;
-            padding: 20px 10px;
             text-align: center;
-            line-height: 1.5;
         }
-        header img {
-            max-width: 550px;
-            height: auto;
-        }
-        header h1 {
-        margin-top: 10; /* Remove margem superior */
-        margin-bottom: 0; /* Remove margem inferior */
-        font-family: 'Georgia', serif;
-        font-size: 22px; /* Ajuste o tamanho do texto, se necessário */
-        color: #cccccc
-        }
-
-        header .sub-header {
-            margin-top: 10px;
-            font-size: 8px;
-	    font-weight:'Montserrat', sans-serif;
-            border-top: 2px solid #040404;
-            border-bottom: 2px solid #040404;
-            display: inline-block;
-            padding: 5px 0;
-        }
-
-/* Navegação */
-        nav {
-            background-color: #333;
-            padding: 10px 0;
-        }
-
-         nav ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        list-style: none;
-        padding: 10px 0;
-        background-color: #333;
-    }
-
-   	nav ul li {
-        margin: 5px 10px;
-        }
-
-        nav ul li a {
+        nav a {
             color: #f9f9f9;
+            margin: 0 15px;
             text-decoration: none;
-	    line-height: 1.5;
-            font-family: 'Merriweather', serif;
             font-size: 16px;
             text-transform: uppercase;
         }
-
-        /* Seções */
-        section {
-            padding: 10px;
-            margin: auto;
+        nav a:hover {
+            text-decoration: underline;
         }
-
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
         section h2 {
             text-align: center;
-            font-size: 26px;
             margin-bottom: 20px;
-            line-height: 2.0
-	}
-	section h4 {
-            text-align: center;
-            font-size: normal;
-	    font-weight: normal;
-            line-height: 2.0
-	    margin: 1px
-
-	}
-	section p {
-            text-align: center;
-            font-size: 17px;
-            line-height: 1.5
-
-	}
-/* Rodapé */
+        }
+        .questions-list {
+            margin-top: 20px;
+        }
+        .question-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .question-item strong {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form {
+            margin-top: 20px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #333;
+            color: #f9f9f9;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #555;
+        }
         footer {
-        position: static; /* Fixa o rodapé na parte inferior */
-        bottom: 0; /* Alinha o rodapé ao fundo */
-        width: 100%; /* Faz com que o rodapé ocupe toda a largura */
-        background-color: #040404; /* Fundo preto */
-        color: #f9f9f9; /* Texto branco */
-        text-align: center; /* Centraliza o texto */
-        padding: 15px; /* Espaçamento interno */
-        font-size: 14px; /* Tamanho da fonte */
-        z-index: 100; /* Garante que o rodapé fique sobre outros elementos */
-        font-family: 'Arial', serif;
-        }
-
-/*Bem-vindo*/
-
-	.welcome {
-            background-color: #f9f9f9;
+            background-color: #040404;
+            color: #f9f9f9;
             text-align: center;
-            padding: 40px 20px;
-            line-height: 2.5;
-	    font-size: 18px;
-    	    margin: 0 auto; /* Centraliza a seção */
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
-        .about, .services, .blog, .contact {
-            background-color:  #ccc;
-            margin: 10px auto;
-            max-width: 1800px;
-            padding: 0px;
-            border-radius: 8px;
-            
-	}
-       
-/* Áreas de Atuação (3 por linha) */
         .service-area {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            padding: 10px 0;
-            margin-bottom: 20px;
-	    line-height: 1.5
+            margin-top: 20px;
         }
-
         .service-item {
             background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
+        .service-item h3 {
+            margin-bottom: 10px;
+        }
         .service-item img {
             width: 80px;
             height: auto;
@@ -283,465 +121,131 @@
             margin-bottom: 10px;
         }
 
-        .service-item h3 {
-            font-size: 20px;
-            margin-top: 10px 0;
+        .blog-post {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background: #f9f9f9;
+            margin-bottom: 20px;
         }
-
-        .service-item ul {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 10px;
+        .blog-post h3 {
+            margin-bottom: 10px;
+            color: #333;
         }
-
-        .service-item ul li {
-            margin: 8px 0;
+        .blog-post p {
             color: #555;
         }
-	.questions {
-	background-color: #040404;
-        text-align: center;
-        padding: 40px 20px;
-        line-height: 2.5;
-	font-size: 18px;
-	color: #f9f9f9
-    	}
 
-/* Responsividade */
-    @media (max-width: 700px) {
-        header h1 {
-            font-size: 18px;
-        }
-
-        nav ul li a {
-            font-size: 14px;
-        }
-
-        .welcome {
-            font-size: 16px;
-        }
-
-        .service-item h3 {
-            font-size: 18px;
-        }
-
-        footer {
-            font-size: 12px;
-        }
-    }
-
-    @media (max-width: 400px) {
-        header h1 {
-            font-size: 16px;
-        }
-
-        .welcome {
-            padding: 20px 10px;
-            font-size: 14px;
-        }
-
-        nav ul {
-            flex-direction: column;
+        /* Botão flutuante do WhatsApp */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
             align-items: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            z-index: 1000;
         }
-
-        nav ul li {
-            margin: 5px 0;
+        .whatsapp-button img {
+            width: 35px;
+            height: 35px;
         }
-}
-
-    .questions {
-        text-align: center;
-        padding: 40px 20px;
-        background-color: #040404;
-        color: #f9f9f9;
-    }
-
-    form {
-        max-width: 600px;
-        margin: 0 auto;
-        text-align: left;
-    }
-
-    form label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: bold;
-    }
-
-    form input, form textarea, form button {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    form button {
-        background-color: #333;
-        color: white;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    form button:hover {
-        background-color: #555;
-    }
-
-    footer {
-        text-align: center;
-        background-color: #040404;
-        color: #f9f9f9;
-        padding: 15px;
-    }
-
-/* Ajustes para dispositivos menores */
-@media (max-width: 768px) {
-    header {
-        padding: 10px 5px; /* Reduz o padding no cabeçalho */
-    }
-
-    header img {
-        max-width: 80%; /* Faz o logo ocupar menos espaço */
-        height: auto; /* Mantém a proporção do logo */
-    }
-
-    header h1 {
-        font-size: 18px; /* Reduz o tamanho da fonte no título */
-        margin-top: 5px; /* Ajusta o espaçamento superior */
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 5px; /* Reduz ainda mais o padding em telas muito pequenas */
-    }
-
-    header img {
-        max-width: 70%; /* Reduz o tamanho do logo */
-        height: auto;
-    }
-
-    header h1 {
-        font-size: 16px; /* Reduz ainda mais o tamanho da fonte */
-        line-height: 1.2; /* Diminui o espaçamento vertical do texto */
-    }
-}
-@media (max-width: 480px) {
-    .welcome {
-        font-size: 14px; /* Diminui ainda mais o tamanho do texto em telas pequenas */
-        padding: 20px 10px; /* Reduz ainda mais o espaçamento interno */
-        line-height: 1.5; /* Ajusta o espaçamento entre linhas */
-    }
-
-
-@media (max-width: 480px) {
-    .welcome {
-        font-size: 14px; /* Diminui ainda mais o tamanho do texto em telas pequenas */
-        padding: 20px 10px; /* Reduz ainda mais o espaçamento interno */
-        line-height: 1.5; /* Ajusta o espaçamento entre linhas */
-    }
-   
- }
-
-    .faq {
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 8px;
-        max-width: 800px;
-        margin: 20px auto;
-    }
-
-    .faq-item {
-        margin-bottom: 15px;
-    }
-
-    .faq-item h4 {
-        cursor: pointer;
-        margin: 0;
-        padding: 10px;
-        background-color: #333;
-        color: #fff;
-        border-radius: 5px;
-    }
-
-    .faq-item p {
-        margin: 0;
-        padding: 10px;
-        display: none;
-        background-color: #fff;
-        border-radius: 5px;
-    }
-
-    .faq-item h4:hover {
-        background-color: #555;
-    }
-
     </style>
-<script>
-    // Função para enviar o formulário ao webhook do Zapier
-    function submitQuestion(event) {
-        event.preventDefault(); // Impede o comportamento padrão do formulário
-
-        // Captura os valores do formulário
-        const userName = document.getElementById('user-name').value.trim();
-        const userQuestion = document.getElementById('user-question').value.trim();
-
-        // Verifica se os campos estão preenchidos
-        if (!userName || !userQuestion) {
-            alert('Por favor, preencha todos os campos.');
-            return;
-        }
-
-        // URL do Webhook do Zapier
-        const zapierWebhookUrl = 'https://hooks.zapier.com/hooks/catch/21471107/2ftjh4m/';
-
-        // Dados a serem enviados
-        const data = {
-            'user_name': userName,
-            'user_question': userQuestion
-        };
-
-        // Faz o envio dos dados ao Zapier
-        fetch(zapierWebhookUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => {
-            if (response.ok) {
-                alert('Sua pergunta foi enviada com sucesso!');
-                document.getElementById('question-form').reset(); // Limpa o formulário
-            } else {
-                alert('Erro ao enviar a pergunta. Tente novamente.');
-            }
-        })
-        .catch(error => {
-            console.error('Erro:', error);
-            alert('Erro ao enviar a pergunta. Verifique sua conexão.');
-        });
-    }
-</script>
 </head>
 <body>
-
-<!-- Cabeçalho -->
-<header>
-<img alt="Logo do Escritório" src="logo2.PNG"/>
-<h1>LETÍCIA COSTA DE OLIVEIRA GONÇALVES DE SOUZA</h1>
-<h1>Advocacia e Consultoria Jurídica</h1>
+    <header>
+        <img src="logo.png" alt="Logo do Escritório">
+        <h1>Letícia Costa de Oliveira Gonçalves de Souza</h1>
+        <h2>Advocacia e Consultoria Jurídica</h2>
     </header>
-<!-- Navegação -->
-<nav>
-<ul>
-<li><a href="#welcome">Bem-vindo</a></li>
-<li><a href="#services">Áreas de Atuação</a></li>
-<li><a href="#blog">Blog</a></li>
-<li><a href="#contact">Contato</a></li>
-</ul>
-</nav>
-<!-- BEM-VINDO -->
-<section class="welcome" id="welcome">
-<h2>BEM-VINDO!</h2>
-<h4>Explore o escritório e veja como posso oferecer um suporte jurídico eficiente e adaptado às suas necessidades, com dedicação e profissionalismo.</h4>
-<h4>Entre em contato para esclarecer dúvidas ou agendar uma consultoria personalizada.
 
-</h4>
+    <nav>
+        <a href="#welcome">Bem-vindo</a>
+        <a href="#services">Áreas de Atuação</a>
+        <a href="#questions">Perguntas</a>
+        <a href="#blog">Blog</a>
+        <a href="#testimonials">Depoimentos</a>
+        <a href="#contact">Contato</a>
+    </nav>
 
-<!-- Botão de agendamento no Calendly -->
-<p>
-<a href="https://calendly.com/leticia-advog/consultoriajuridica" style="display: inline-block; background-color: #333; color: white; padding: 15px 25px; 
-                  border-radius: 5px; text-decoration: none; font-size: 18px; text-transform: uppercase;line-height: 1.5">
-                Agende aqui!
-            </a>
-</p>
-</section>
+    <section id="welcome">
+        <h2>BEM-VINDO!</h2>
+        <p>Explore o escritório e veja como podemos oferecer suporte jurídico eficiente e adaptado às suas necessidades, com dedicação e profissionalismo.</p>
+    </section>
 
+    <section id="services">
+        <h2>ÁREAS DE ATUAÇÃO</h2>
+        <div class="service-area">
+            <div class="service-item">
+		    <img src="servidorpublico.png">
+                <h3>Direito do Servidor Público</h3>
+                <p>Defesa estratégica dos direitos de servidores públicos, estatutários e celetistas, em processos administrativos, aposentadoria, entre outros.</p>
+            </div>
+            <div class="service-item">
+		    <img src="previdenciario.png">
+                <h3>Direito Previdenciário</h3>
+                <p>Consultoria e defesa em aposentadorias, benefícios por incapacidade, revisões de valores e reconhecimento de tempo de contribuição.</p>
+            </div>
+            <div class="service-item">
+		    <img src="civil.png">
+                <h3>Direito Civil</h3>
+                <p>Atuação em contratos, responsabilidade civil, cobranças, indenizações e regularização de bens.</p>
+            </div>
+            <div class="service-item">
+		    <img src="familia.png">
+                <h3>Direito Familiar</h3>
+                <p>Atendimento humanizado em divórcios, guarda de filhos, pensão alimentícia e inventários.</p>
+            </div>
+            <div class="service-item">
+		    <img src="sucessorio.png">
+                <h3>Direito das Sucessões</h3>
+                <p>Assessoria completa em inventários, testamentos e planejamento sucessório.</p>
+            </div>
+            <div class="service-item">
+		    <img src="imob.png">
+                <h3>Direito Imobiliário</h3>
+                <p>Consultoria em compra, venda, locação e regularização de imóveis, usucapião e contratos imobiliários.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="services" id="services">
+    <section id="questions">
+        <h2>PERGUNTAS E RESPOSTAS</h2>
+        <form id="question-form" onsubmit="enviarPergunta(event)">
+            <label for="user-name">Seu Nome:</label>
+            <input type="text" id="user-name" name="user-name" placeholder="Digite seu nome" required>
 
-<h2>ÁREAS DE ATUAÇÃO</h2>
-<div class="service-area">
+            <label for="user-question">Sua Pergunta:</label>
+            <textarea id="user-question" name="user-question" placeholder="Digite sua pergunta" rows="4" required></textarea>
 
-<div class="service-item">
-<img src="servidorpublico.png">
-<h3>Direito do Servidor Público</h3>
-    <p>Defesa estratégica dos direitos de servidores públicos, estatutários e celetistas, em questões como processos administrativos (PAD), assédio moral, aposentadoria, estabilidade, progressão na carreira, revisão de atos administrativos e rescisões contratuais.</p>
-</div>
+            <button type="submit">Enviar</button>
+        </form>
 
-<div class="service-item">
-<img src="previdenciario.png">
-<h3>Direito Previdenciário</h3>
-<p>Consultoria e defesa de segurados do INSS e servidores públicos em aposentadorias, pensões, benefícios por incapacidade, revisões de valores e reconhecimento de tempo de contribuição, com foco em garantir seus direitos.</p>
-</div>
+        <div class="questions-list" id="questions-list">
+            <!-- Perguntas serão carregadas aqui -->
+        </div>
+    </section>
 
-<div class="service-item">
-<img src="civil.png">
-<h3>Direito Civil</h3>
-<p>Atuação em contratos, responsabilidade civil, cobranças, indenizações, regularização de bens e solução de conflitos envolvendo direitos patrimoniais e pessoais, sempre buscando proteger seus interesses.</p>
-</div>
-</div>
+    <section id="blog">
+        <h2>BLOG</h2>
+        <div class="blog-post">
+            <h3>Como funciona a revisão de aposentadoria?</h3>
+            <p>A revisão de aposentadoria permite que o segurado analise possíveis erros no cálculo de seu benefício. Saiba mais sobre os tipos de revisão e como podemos ajudar.</p>
+        </div>
+        <div class="blog-post">
+            <h3>Planejamento sucessório: por que é importante?</h3>
+            <p>Entenda como o planejamento sucessório pode evitar conflitos familiares e garantir a divisão justa dos bens.</p>
+        </div>
+    </section>
 
-<div class="service-area">
-
-<div class="service-item">
-<img src="familia.png">
-<h3>Direito Familiar</h3>
-<p>Atendimento humanizado em divórcios, guarda de filhos, pensão alimentícia, reconhecimento e dissolução de união estável, inventários e partilhas, priorizando a resolução pacífica e o bem-estar das partes.</p>
-</div>
-
-<div class="service-item">
-<img src="sucessorio.png">
-<h3>Direito das Sucessões</h3>
-<p>Assessoria completa em inventários, partilhas, testamentos e planejamento sucessório, garantindo que a transmissão de bens e direitos ocorra de forma eficiente e harmônica.</p>
-</div>
-
-<div class="service-item">
-<img src="imob.png">
-<h3>Direito Imobiliário</h3>
-<p>Soluções jurídicas para compra, venda, locação, regularização de imóveis, contratos imobiliários, usucapião e resolução de conflitos relacionados à posse e propriedade, assegurando a segurança nas transações.</p>
-</div>
-</div>
-</section>
-
-<section class="questions" id="questions">
-    <h3>PERGUNTAS E RESPOSTAS</h3>
-    
-    <section class="questions" id="questions">
-    <h3>Envie sua pergunta</h3>
-    <form id="question-form" onsubmit="submitQuestion(event)">
-        <label for="user-name">Seu nome:</label>
-        <input type="text" id="user-name" name="user-name" placeholder="Digite seu nome" required>
-
-        <label for="user-question">Sua pergunta:</label>
-        <textarea id="user-question" name="user-question" placeholder="Digite sua pergunta" rows="4" required></textarea>
-
-        <button type="submit">Enviar</button>
-    </form>
-
-    <!-- Área onde perguntas e respostas serão exibidas -->
-    <div class="questions-list" id="questions-list" style="text-align: left; margin-top: 30px; max-width: 800px; margin: 30px auto;">
-        <p style="font-size: 20px; margin-bottom: 15px;">PERGUNTAS JÁ RESPONDIDAS:</p>
-        <!-- Perguntas e respostas serão adicionadas aqui dinamicamente -->
-    </div>
-</section>
-
-<script>
-    // Função para enviar a pergunta para o Zapier
-    function submitQuestion(event) {
-        event.preventDefault(); // Previne o envio padrão do formulário
-        
-        // Captura os valores dos campos do formulário
-        const userName = document.getElementById('user-name').value.trim();
-        const userQuestion = document.getElementById('user-question').value.trim();
-
-        // Exibe os dados capturados no console para depuração
-        console.log("Nome do usuário:", userName);
-        console.log("Pergunta:", userQuestion);
-
-        // Verifica se os campos estão preenchidos
-        if (!userName || !userQuestion) {
-            alert('Por favor, preencha todos os campos antes de enviar.');
-            return;
-        }
-
-        // URL do Webhook do Zapier
-        const zapierWebhookUrl = 'https://cors-anywhere.herokuapp.com/https://hooks.zapier.com/hooks/catch/21471107/2ftjh4m/';
-;
-
-        // Cria o objeto com os dados a serem enviados
-        const data = {
-            'user-name': userName,
-            'user-question': userQuestion
-        };
-
-        // Envia os dados para o Zapier
-        fetch(zapierWebhookUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data) // Certifique-se de enviar os dados como JSON
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Erro na resposta: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log("Resposta do Zapier:", data);
-            alert('Sua pergunta foi enviada com sucesso!');
-            document.getElementById('question-form').reset(); // Limpa o formulário após o envio
-        })
-        .catch(error => {
-            console.error('Erro ao enviar a pergunta:', error);
-            alert('Ocorreu um erro ao enviar sua pergunta. Por favor, tente novamente.');
-        });
-    }
-</script>
-
-<script>
-  async function carregarPerguntas() {
-    try {
-      const response = await fetch('https://github.com/advleticia/site-advocacia/blob/main/perguntas.json');
-      const data = await response.json();
-
-      const listaPerguntas = document.getElementById('questions-list');
-      listaPerguntas.innerHTML = ''; // Limpa antes de adicionar novas
-
-      data.perguntas.forEach(item => {
-        const perguntaHtml = `
-          <div style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
-            <strong>${item.usuario} perguntou:</strong>
-            <p>${item.pergunta}</p>
-            <strong>Resposta:</strong>
-            <p>${item.resposta}</p>
-          </div>
-        `;
-        listaPerguntas.innerHTML += perguntaHtml;
-      });
-    } catch (error) {
-      console.error("Erro ao carregar perguntas:", error);
-    }
-  }
-
-  // Carregar perguntas ao abrir a página
-  window.onload = carregarPerguntas;
-</script>
-
-<!-- Ícone Flutuante do WhatsApp -->
-<a href="https://wa.me/5531984829306" 
-   style="position: fixed; bottom: 100px; right: 40px; z-index: 1000; 
-          display: flex; align-items: center; justify-content: center; 
-          width: 60px; height: 60px; background-color: #25D366; 
-          color: white; border-radius: 50%; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
-         alt="WhatsApp" style="width: 35px; height: 35px;">
-</a>
-<!-- Rodapé -->
-
-<footer>
-    <p>&copy; 2025 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
-    <p><a href="políticadeprivacidade.html" target="_blank" style="text-decoration: none; color: #f5f5f5;">Política de Privacidade</a></p>
-</footer>
-
- <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6786b9573a842732606ebf38/1ihj47vut';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-</body>
-</html>
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5531984829306" class="whatsapp-button" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+   
