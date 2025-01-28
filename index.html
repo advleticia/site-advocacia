@@ -582,6 +582,34 @@
     }
 </script>
 
+<script>
+  async function carregarPerguntas() {
+    try {
+      const response = await fetch('https://SEU_USUARIO.github.io/SEU_REPOSITORIO/perguntas.json');
+      const data = await response.json();
+
+      const listaPerguntas = document.getElementById('questions-list');
+      listaPerguntas.innerHTML = ''; // Limpa antes de adicionar novas
+
+      data.perguntas.forEach(item => {
+        const perguntaHtml = `
+          <div style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+            <strong>${item.usuario} perguntou:</strong>
+            <p>${item.pergunta}</p>
+            <strong>Resposta:</strong>
+            <p>${item.resposta}</p>
+          </div>
+        `;
+        listaPerguntas.innerHTML += perguntaHtml;
+      });
+    } catch (error) {
+      console.error("Erro ao carregar perguntas:", error);
+    }
+  }
+
+  // Carregar perguntas ao abrir a página
+  window.onload = carregarPerguntas;
+</script>
 
 <!-- Ícone Flutuante do WhatsApp -->
 <a href="https://wa.me/5531984829306" 
