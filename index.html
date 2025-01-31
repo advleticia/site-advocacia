@@ -247,64 +247,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escritório Letícia Costa de Oliveira Gonçalves de Souza</title>
-    <script>
-        const API_KEY = "SUA_API_KEY_AQUI";
-        const TOKEN = "SEU_TOKEN_AQUI";
-        const LIST_ID_RECEBIDAS = "ID_DA_LISTA_RECEBIDAS";
-        const LIST_ID_APROVADAS = "ID_DA_LISTA_APROVADAS";
-
-        async function enviarPergunta(event) {
-            event.preventDefault();
-            const nome = document.getElementById("user-name").value;
-            const pergunta = document.getElementById("user-question").value;
-
-            if (!nome || !pergunta) {
-                alert("Por favor, preencha todos os campos.");
-                return;
-            }
-
-            const url = `https://api.trello.com/1/cards?name=${encodeURIComponent(nome)}&desc=${encodeURIComponent(pergunta)}&idList=${LIST_ID_RECEBIDAS}&key=${API_KEY}&token=${TOKEN}`;
-
-            try {
-                const response = await fetch(url, { method: "POST" });
-                if (!response.ok) {
-                    throw new Error("Erro ao enviar a pergunta. Verifique as credenciais.");
-                }
-                alert("Pergunta enviada com sucesso!");
-                document.getElementById("question-form").reset();
-            } catch (error) {
-                alert(error.message);
-            }
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #cccccc;
+            color: #333;
         }
-
-        async function carregarPerguntas() {
-            const url = `https://api.trello.com/1/lists/${LIST_ID_APROVADAS}/cards?key=${API_KEY}&token=${TOKEN}`;
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error("Erro ao carregar perguntas.");
-                }
-                const data = await response.json();
-                const perguntasList = document.getElementById("questions-list");
-                perguntasList.innerHTML = "";
-                data.slice(0, 10).forEach(card => {
-                    const div = document.createElement("div");
-                    div.classList.add("question-item");
-                    div.innerHTML = `<strong>${card.name}</strong><p>${card.desc}</p>`;
-                    perguntasList.appendChild(div);
-                });
-            } catch (error) {
-                console.error(error);
-            }
+        header {
+            background-color: #040404;
+            color: #f9f9f9;
+            text-align: center;
+            padding: 20px;
         }
-
-        document.addEventListener("DOMContentLoaded", carregarPerguntas);
-    </script>
+        header img {
+            max-width: 300px;
+            height: auto;
+        }
+        header h1 {
+            margin: 10px 0;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #f9f9f9;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .questions-list {
+            margin-top: 20px;
+        }
+        .question-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .question-item strong {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form {
+            margin-top: 20px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        form input, form textarea, form button {
+            width: 98%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #333;
+            color: #f9f9f9;
+            justify-content: center;
+        }
+        form button:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Letícia Costa de Oliveira Gonçalves de Souza</h1>
-        <h2>Advocacia e Consultoria Jurídica</h2>
     </header>
 
     <section id="questions">
@@ -312,32 +344,63 @@
         <form id="question-form" onsubmit="enviarPergunta(event)">
             <label for="user-name">Seu Nome:</label>
             <input type="text" id="user-name" name="user-name" placeholder="Digite seu nome" required>
-
             <label for="user-question">Sua Pergunta:</label>
             <textarea id="user-question" name="user-question" placeholder="Digite sua pergunta" rows="4" required></textarea>
-
             <button type="submit">Enviar</button>
         </form>
         <div class="questions-list" id="questions-list">
             <!-- Perguntas serão carregadas aqui -->
         </div>
     </section>
-</body>
-</html>
 
+    <script>
+        const apiKey = "SUA_API_KEY_AQUI";
+        const token = "SEU_TOKEN_AQUI";
+        const idListaRecebidas = "ID_DA_LISTA_RECEBIDAS";
+        const idListaAprovadas = "ID_DA_LISTA_APROVADAS";
 
-	
-    <section id="blog">
-        <h2>DÚVIDAS FREQUENTES</h2>
-        <div class="blog-post">
-            <h3>Como funciona a revisão de aposentadoria?</h3>
-            <p>A revisão de aposentadoria permite que o segurado analise possíveis erros no cálculo de seu benefício. Saiba mais sobre os tipos de revisão e como podemos ajudar.</p>
-        </div>
-        <div class="blog-post">
-            <h3>Planejamento sucessório: por que é importante?</h3>
-            <p>Entenda como o planejamento sucessório pode evitar conflitos familiares e garantir a divisão justa dos bens.</p>
-        </div>
-    </section>
+        function enviarPergunta(event) {
+            event.preventDefault();
+            const nome = document.getElementById("user-name").value;
+            const pergunta = document.getElementById("user-question").value;
+
+            fetch(`https://api.trello.com/1/cards?name=${encodeURIComponent(nome)}&desc=${encodeURIComponent(pergunta)}&idList=${idListaRecebidas}&key=${apiKey}&token=${token}`, {
+                method: "POST",
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Erro ao enviar a pergunta. Verifique as credenciais.");
+                }
+                return response.json();
+            })
+            .then(data => {
+                alert("Pergunta enviada com sucesso!");
+                document.getElementById("question-form").reset();
+                carregarPerguntas();
+            })
+            .catch(error => {
+                alert(error.message);
+            });
+        }
+
+        function carregarPerguntas() {
+            fetch(`https://api.trello.com/1/lists/${idListaAprovadas}/cards?key=${apiKey}&token=${token}`)
+            .then(response => response.json())
+            .then(data => {
+                const listaPerguntas = document.getElementById("questions-list");
+                listaPerguntas.innerHTML = "";
+                data.slice(0, 10).forEach(card => {
+                    const div = document.createElement("div");
+                    div.className = "question-item";
+                    div.innerHTML = `<strong>${card.name}</strong><p>${card.desc}</p>`;
+                    listaPerguntas.appendChild(div);
+                });
+            })
+            .catch(error => console.error("Erro ao carregar perguntas:", error));
+        }
+
+        window.onload = carregarPerguntas;
+    </script>
 
     <!-- Ícone Flutuante do WhatsApp -->
 <a href="https://wa.me/5531984829306" 
