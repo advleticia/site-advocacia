@@ -52,53 +52,6 @@
             text-align: center;
             margin-bottom: 20px;
         }
-        .questions-list {
-            margin-top: 20px;
-        }
-        .question-item {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            background: #f9f9f9;
-        }
-        .question-item strong {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-	.welcome {
-	    text-aling: center;
-	}
-	.center-button {
-    	 display: flex;
-   	 justify-content: center;
-   	 margin-top: 20px;
-	}
-
-        form {
-            margin-top: 20px;
-        }
-        form label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        form input, form textarea, form button {
-            width: 98%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        form button {
-            background-color: #333;
-            color: #f9f9f9;
-            justify-content: center;
-     
-        }
-        form button:hover {
-            background-color: #555;
-        }
         .service-area {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -121,7 +74,6 @@
             border-radius: 15px;
             margin-bottom: 10px;
         }
-
         .blog-post {
             border: 1px solid #ddd;
             padding: 15px;
@@ -136,8 +88,6 @@
         .blog-post p {
             color: #555;
         }
-
-        /* Botão flutuante do WhatsApp */
         .whatsapp-button {
             position: fixed;
             bottom: 20px;
@@ -158,17 +108,13 @@
             width: 35px;
             height: 35px;
         }
-	footer {
-        position: static; /* Fixa o rodapé na parte inferior */
-        bottom: 0; /* Alinha o rodapé ao fundo */
-        width: 100%; /* Faz com que o rodapé ocupe toda a largura */
-        background-color: #040404; /* Fundo preto */
-        color: #f9f9f9; /* Texto branco */
-        text-align: center; /* Centraliza o texto */
-        padding: 15px; /* Espaçamento interno */
-        font-size: 14px; /* Tamanho da fonte */
-        z-index: 100; /* Garante que o rodapé fique sobre outros elementos */
-        font-family: 'Arial', serif;
+        footer {
+            background-color: #040404;
+            color: #f9f9f9;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            font-family: 'Arial', serif;
         }
     </style>
 </head>
@@ -182,7 +128,6 @@
     <nav>
         <a href="#welcome">Bem-vindo</a>
         <a href="#services">Áreas de Atuação</a>
-        <a href="#questions">Perguntas</a>
         <a href="#blog">Blog</a>
         <a href="#testimonials">Depoimentos</a>
         <a href="#contact">Contato</a>
@@ -190,71 +135,49 @@
 
     <section id="welcome">
         <h2>BEM-VINDO!</h2>
-        <p>Explore o escritório e veja como podemos oferecer suporte jurídico eficiente e adaptado às suas necessidades, com dedicação e profissionalismo. Entre em contato para esclarecer dúvidas ou agendar uma consultoria personalizada</p>
-    <!-- Botão de agendamento no Calendly -->
-	<p>
-	<div class="center-button">
-    <a href="https://calendly.com/leticia-advog/consultoriajuridica" 
-       style="display: inline-block; background-color: #333; color: white; padding: 15px 25px; 
-              border-radius: 5px; text-decoration: none; font-size: 18px; text-transform: uppercase; line-height: 1.5;">
-        Agende aqui!
-    </a>
-</div>
-
-<div class="center-button">
-	</p>
+        <p>Explore o escritório e veja como podemos oferecer suporte jurídico eficiente e adaptado às suas necessidades, com dedicação e profissionalismo. Entre em contato para esclarecer dúvidas ou agendar uma consultoria personalizada.</p>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="https://calendly.com/leticia-advog/consultoriajuridica" 
+               style="display: inline-block; background-color: #333; color: white; padding: 15px 25px; 
+                      border-radius: 5px; text-decoration: none; font-size: 18px; text-transform: uppercase; line-height: 1.5;">
+                Agende aqui!
+            </a>
+        </div>
     </section>
 
     <section id="services">
         <h2>ÁREAS DE ATUAÇÃO</h2>
         <div class="service-area">
             <div class="service-item">
-		    <img src="servidorpublico.png">
+                <img src="servidorpublico.png">
                 <h3>Direito do Servidor Público</h3>
                 <p>Defesa estratégica dos direitos de servidores públicos, estatutários e celetistas, em processos administrativos, aposentadoria, entre outros.</p>
             </div>
             <div class="service-item">
-		    <img src="previdenciario.png">
+                <img src="previdenciario.png">
                 <h3>Direito Previdenciário</h3>
                 <p>Consultoria e defesa em aposentadorias, benefícios por incapacidade, revisões de valores e reconhecimento de tempo de contribuição.</p>
             </div>
             <div class="service-item">
-		    <img src="civil.png">
+                <img src="civil.png">
                 <h3>Direito Civil</h3>
                 <p>Atuação em contratos, responsabilidade civil, cobranças, indenizações e regularização de bens.</p>
             </div>
             <div class="service-item">
-		    <img src="familia.png">
+                <img src="familia.png">
                 <h3>Direito Familiar</h3>
                 <p>Atendimento humanizado em divórcios, guarda de filhos, pensão alimentícia e inventários.</p>
             </div>
             <div class="service-item">
-		    <img src="sucessorio.png">
+                <img src="sucessorio.png">
                 <h3>Direito das Sucessões</h3>
                 <p>Assessoria completa em inventários, testamentos e planejamento sucessório.</p>
             </div>
             <div class="service-item">
-		    <img src="imob.png">
+                <img src="imob.png">
                 <h3>Direito Imobiliário</h3>
                 <p>Consultoria em compra, venda, locação e regularização de imóveis, usucapião e contratos imobiliários.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="questions">
-        <h2>PERGUNTAS E RESPOSTAS</h2>
-        <form id="question-form" onsubmit="enviarPergunta(event)">
-            <label for="user-name">Seu Nome:</label>
-            <input type="text" id="user-name" name="user-name" placeholder="Digite seu nome" required>
-
-            <label for="user-question">Sua Pergunta:</label>
-            <textarea id="user-question" name="user-question" placeholder="Digite sua pergunta" rows="4" required></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
-
-        <div class="questions-list" id="questions-list">
-            <!-- Perguntas serão carregadas aqui -->
         </div>
     </section>
 
@@ -262,46 +185,29 @@
         <h2>DÚVIDAS FREQUENTES</h2>
         <div class="blog-post">
             <h3>Como funciona a revisão de aposentadoria?</h3>
-            <p>A revisão de aposentadoria permite que o segurado analise possíveis erros no cálculo de seu benefício. Saiba mais sobre os tipos de revisão e como podemos ajudar.</p>
-        </div>
-        <div class="blog-post">
-            <h3>Planejamento sucessório: por que é importante?</h3>
-            <p>Entenda como o planejamento sucessório pode evitar conflitos familiares e garantir a divisão justa dos bens.</p>
+            <p>A revisão de aposentadoria permite analisar possíveis erros no cálculo de benefícios.</p>
         </div>
     </section>
 
-    <!-- Ícone Flutuante do WhatsApp -->
-<a href="https://wa.me/5531984829306" 
-   style="position: fixed; bottom: 100px; right: 40px; z-index: 1000; 
-          display: flex; align-items: center; justify-content: center; 
-          width: 60px; height: 60px; background-color: #25D366; 
-          color: white; border-radius: 50%; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
-         alt="WhatsApp" style="width: 35px; height: 35px;">
-</a>
-	
-<footer>
-    <p>&copy; 2025 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
-    <p><a href="políticadeprivacidade.html" target="_blank" style="text-decoration: none; color: #f5f5f5;">Política de Privacidade</a></p>
-</footer>   
-	
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6786b9573a842732606ebf38/1ihj47vut';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+    <a href="https://wa.me/5531984829306" class="whatsapp-button">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+
+    <footer>
+        <p>&copy; 2025 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
+        <p><a href="politicadeprivacidade.html" target="_blank" style="text-decoration: none; color: #f5f5f5;">Política de Privacidade</a></p>
+    </footer>
+
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function(){
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6786b9573a842732606ebf38/1ihj47vut';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
 </body>
 </html>
-
-<!--End of Tawk.to Script-->
-</body>
-</html>
-
