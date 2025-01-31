@@ -194,11 +194,13 @@
     <!-- Botão de agendamento no Calendly -->
 	<p>
 	<div class="center-button">
-	<a href="https://calendly.com/leticia-advog/consultoriajuridica" style="display: inline-block; background-color: #333; color: white; padding: 15px 25px; 
-                  border-radius: 5px; text-decoration: none; font-size: 18px; text-transform: uppercase;line-height: 1.5">
-                Agende aqui!
-      
-	</a>
+    <a href="https://calendly.com/leticia-advog/consultoriajuridica" 
+       style="display: inline-block; background-color: #333; color: white; padding: 15px 25px; 
+              border-radius: 5px; text-decoration: none; font-size: 18px; text-transform: uppercase; line-height: 1.5;">
+        Agende aqui!
+    </a>
+</div>
+
 <div class="center-button">
 	</p>
     </section>
@@ -239,153 +241,22 @@
         </div>
     </section>
 
-
-
-        <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perguntas e Respostas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        header {
-            background-color: #000;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .question-item {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            background: #f9f9f9;
-        }
-        .question-item strong {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .button-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .view-all-button {
-            display: inline-block;
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Perguntas e Respostas</h1>
-    </header>
-
-    <section>
-        <h2>Faça sua Pergunta</h2>
-        <form id="question-form">
+    <section id="questions">
+        <h2>PERGUNTAS E RESPOSTAS</h2>
+        <form id="question-form" onsubmit="enviarPergunta(event)">
             <label for="user-name">Seu Nome:</label>
-            <input type="text" id="user-name" name="user-name" required>
-            
+            <input type="text" id="user-name" name="user-name" placeholder="Digite seu nome" required>
+
             <label for="user-question">Sua Pergunta:</label>
-            <textarea id="user-question" name="user-question" required></textarea>
-            
-            <button type="button" onclick="sendToTrello()">Enviar Pergunta</button>
+            <textarea id="user-question" name="user-question" placeholder="Digite sua pergunta" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
         </form>
-    </section>
 
-    <section>
-        <h2>Perguntas Recentes</h2>
-        <div id="questions-list">
-            <!-- As perguntas aprovadas serão carregadas aqui -->
-        </div>
-        <div class="button-container">
-            <a href="todas-perguntas.html" class="view-all-button">Ver todas as perguntas</a>
+        <div class="questions-list" id="questions-list">
+            <!-- Perguntas serão carregadas aqui -->
         </div>
     </section>
-
-    <script>
-        const trelloKey = "69419d0a661cc29d88dc99297629ef81"; // Substitua aqui
-        const trelloToken = "8c82fd32a85be337cc04b9c13648ffe96575aeb17e3a3510f078c4e3f7a35a16"; // Substitua aqui
-        const listRecebidasId = 6797b2ad9e67fd609df087d3; // Substitua com o ID da lista "Recebidas"
-        const listAprovadasId = "679cfcc30b93cb8a0fe47850"; // Lista "Perguntas Aprovadas"
-        
-        async function sendToTrello() {
-            const name = document.getElementById("user-name").value;
-            const question = document.getElementById("user-question").value;
-            
-            if (!name || !question) {
-                alert("Por favor, preencha todos os campos.");
-                return;
-            }
-            
-            const url = `https://api.trello.com/1/cards?key=${trelloKey}&token=${trelloToken}`;
-            
-            const response = await fetch(url, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    name: name,
-                    desc: question,
-                    idList: listRecebidasId
-                })
-            });
-            
-            if (response.ok) {
-                alert("Pergunta enviada com sucesso!");
-                document.getElementById("question-form").reset();
-            } else {
-                alert("Erro ao enviar a pergunta. Tente novamente mais tarde.");
-            }
-        }
-        
-        async function fetchQuestionsFromTrello() {
-            const url = `https://api.trello.com/1/lists/${listAprovadasId}/cards?key=${trelloKey}&token=${trelloToken}`;
-            
-            try {
-                const response = await fetch(url);
-                const cards = await response.json();
-                
-                const questionsList = document.getElementById("questions-list");
-                questionsList.innerHTML = "";
-                
-                cards.slice(0, 10).forEach(q => {
-                    const questionItem = document.createElement("div");
-                    questionItem.classList.add("question-item");
-                    questionItem.innerHTML = `<strong>${q.name} perguntou:</strong> ${q.desc}`;
-                    questionsList.appendChild(questionItem);
-                });
-            } catch (error) {
-                console.error("Erro ao buscar perguntas do Trello", error);
-            }
-        }
-        
-        fetchQuestionsFromTrello();
-    </script>
-</body>
-</html>
-
-
 
     <section id="blog">
         <h2>DÚVIDAS FREQUENTES</h2>
@@ -426,6 +297,10 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
+
 <!--End of Tawk.to Script-->
 </body>
 </html>
