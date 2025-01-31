@@ -251,10 +251,43 @@
             <button type="submit">Enviar</button>
         </form>
 
-        <div class="questions-list" id="questions-list">
-            <!-- Perguntas serão carregadas aqui -->
-        </div>
-    </section>
+        <section>
+    <h2>Perguntas Recentes</h2>
+    <div id="questions-list">
+        <!-- As perguntas aprovadas serão carregadas aqui -->
+    </div>
+    <div class="button-container">
+        <a href="todas-perguntas.html" class="view-all-button">Ver todas as perguntas</a>
+    </div>
+</section>
+
+<script>
+    async function fetchQuestionsFromTrello() {
+        const trelloKey = "69419d0a661cc29d88dc99297629ef81"; // Substitua aqui
+        const trelloToken = "8c82fd32a85be337cc04b9c13648ffe96575aeb17e3a3510f078c4e3f7a35a16"; // Substitua aqui
+        const listId = "679cfcc30b93cb8a0fe47850"; // ID da lista "Perguntas Aprovadas"
+        const url = `https://api.trello.com/1/lists/${listId}/cards?key=${trelloKey}&token=${trelloToken}`;
+        
+        try {
+            const response = await fetch(url);
+            const cards = await response.json();
+            
+            const questionsList = document.getElementById("questions-list");
+            questionsList.innerHTML = "";
+            
+            cards.slice(0, 10).forEach(q => {
+                const questionItem = document.createElement("div");
+                questionItem.classList.add("question-item");
+                questionItem.innerHTML = `<strong>${q.name} perguntou:</strong> ${q.desc}`;
+                questionsList.appendChild(questionItem);
+            });
+        } catch (error) {
+            console.error("Erro ao buscar perguntas do Trello", error);
+        }
+    }
+    
+    fetchQuestionsFromTrello();
+</script>
 
     <section id="blog">
         <h2>DÚVIDAS FREQUENTES</h2>
