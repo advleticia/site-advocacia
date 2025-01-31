@@ -242,21 +242,80 @@
     </section>
 
     <section id="questions">
-        <h2>PERGUNTAS E RESPOSTAS</h2>
-        <form id="question-form" onsubmit="enviarPergunta(event)">
-            <label for="user-name">Seu Nome:</label>
-            <input type="text" id="user-name" name="user-name" placeholder="Digite seu nome" required>
+    <h2>Perguntas e Respostas</h2>
+    <form id="question-form">
+        <label for="user-name">Seu Nome:</label>
+        <input type="text" id="user-name" name="user-name" required>
+        
+        <label for="user-question">Sua Pergunta:</label>
+        <textarea id="user-question" name="user-question" required></textarea>
+        
+        <button type="button" onclick="sendToTrello()">Enviar Pergunta</button>
+    </form>
 
-            <label for="user-question">Sua Pergunta:</label>
-            <textarea id="user-question" name="user-question" placeholder="Digite sua pergunta" rows="4" required></textarea>
+    <div class="questions-list" id="questions-list">
+        <!-- Perguntas aprovadas serão carregadas aqui -->
+    </div>
+</section>
 
-            <button type="submit">Enviar</button>
-        </form>
-
-        <div class="questions-list" id="questions-list">
-            <!-- Perguntas serão carregadas aqui -->
-        </div>
-    </section>
+<script>
+    const trelloKey = "SUA_NOVA_API_KEY"; 
+    const trelloToken = "SEU_NOVO_TRELLO_TOKEN";
+    const listRecebidasId = "ID_DA_LISTA_RECEBIDAS";
+    const listAprovadasId = "679cfcc30b93cb8a0fe47850";
+    
+    async function sendToTrello() {
+        const name = document.getElementById("user-name").value;
+        const question = document.getElementById("user-question").value;
+        
+        if (!name || !question) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+        
+        const url = `https://api.trello.com/1/cards?key=${trelloKey}&token=${trelloToken}`;
+        
+        const response = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                name: name,
+                desc: question,
+                idList: listRecebidasId
+            })
+        });
+        
+        if (response.ok) {
+            alert("Pergunta enviada com sucesso!");
+            document.getElementById("question-form").reset();
+        } else {
+            alert("Erro ao enviar a pergunta. Tente novamente mais tarde.");
+        }
+    }
+    
+    async function fetchQuestionsFromTrello() {
+        const url = `https://api.trello.com/1/lists/${listAprovadasId}/cards?key=${trelloKey}&token=${trelloToken}`;
+        
+        try {
+            const response = await fetch(url);
+            const cards = await response.json();
+            
+            const questionsList = document.getElementById("questions-list");
+            questionsList.innerHTML = "";
+            
+            cards.slice(0, 10).forEach(q => {
+                const questionItem = document.createElement("div");
+                questionItem.classList.add("question-item");
+                questionItem.innerHTML = `<strong>${q.name} perguntou:</strong> ${q.desc}`;
+                questionsList.appendChild(questionItem);
+            });
+        } catch (error) {
+            console.error("Erro ao buscar perguntas do Trello", error);
+        }
+    }
+    
+    fetchQuestionsFromTrello();
+</script>
 
     <section id="blog">
         <h2>DÚVIDAS FREQUENTES</h2>
