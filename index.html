@@ -22,9 +22,6 @@
             max-width: 300px;
             height: auto;
         }
-        header h1 {
-            margin: 10px 0;
-        }
         nav {
             background-color: #333;
             padding: 10px;
@@ -42,7 +39,7 @@
         }
         section {
             margin: 20px auto;
-            max-width: 800px;
+            max-width: 900px;
             padding: 20px;
             background: #f9f9f9;
             border-radius: 8px;
@@ -65,28 +62,11 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-        .service-item h3 {
-            margin-bottom: 10px;
-        }
         .service-item img {
             width: 80px;
             height: auto;
             border-radius: 15px;
             margin-bottom: 10px;
-        }
-        .blog-post {
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 5px;
-            background: #f9f9f9;
-            margin-bottom: 20px;
-        }
-        .blog-post h3 {
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .blog-post p {
-            color: #555;
         }
         .whatsapp-button {
             position: fixed;
@@ -103,10 +83,6 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-decoration: none;
             z-index: 1000;
-        }
-        .whatsapp-button img {
-            width: 35px;
-            height: 35px;
         }
         footer {
             background-color: #040404;
@@ -128,8 +104,7 @@
     <nav>
         <a href="#welcome">Bem-vindo</a>
         <a href="#services">Áreas de Atuação</a>
-        <a href="#blog">Blog</a>
-        <a href="#testimonials">Depoimentos</a>
+        <a href="#faq">Dúvidas Frequentes</a>
         <a href="#contact">Contato</a>
     </nav>
 
@@ -139,7 +114,7 @@
         <div style="text-align: center; margin-top: 20px;">
             <a href="https://calendly.com/leticia-advog/consultoriajuridica" 
                style="display: inline-block; background-color: #333; color: white; padding: 15px 25px; 
-                      border-radius: 5px; text-decoration: none; font-size: 18px; text-transform: uppercase; line-height: 1.5;">
+                      border-radius: 5px; text-decoration: none; font-size: 18px; text-transform: uppercase;">
                 Agende aqui!
             </a>
         </div>
@@ -149,43 +124,40 @@
         <h2>ÁREAS DE ATUAÇÃO</h2>
         <div class="service-area">
             <div class="service-item">
-                <img src="servidorpublico.png">
+                <img src="servidorpublico.png" alt="Direito do Servidor Público">
                 <h3>Direito do Servidor Público</h3>
-                <p>Defesa estratégica dos direitos de servidores públicos, estatutários e celetistas, em processos administrativos, aposentadoria, entre outros.</p>
+                <p>Defesa e consultoria especializada para servidores públicos estatutários e celetistas.</p>
             </div>
             <div class="service-item">
-                <img src="previdenciario.png">
+                <img src="previdenciario.png" alt="Direito Previdenciário">
                 <h3>Direito Previdenciário</h3>
-                <p>Consultoria e defesa em aposentadorias, benefícios por incapacidade, revisões de valores e reconhecimento de tempo de contribuição.</p>
+                <p>Auxílio em aposentadorias, benefícios, revisões e requerimentos junto ao INSS.</p>
             </div>
             <div class="service-item">
-                <img src="civil.png">
+                <img src="civil.png" alt="Direito Civil">
                 <h3>Direito Civil</h3>
-                <p>Atuação em contratos, responsabilidade civil, cobranças, indenizações e regularização de bens.</p>
+                <p>Atuação em contratos, responsabilidade civil, cobranças e indenizações.</p>
             </div>
             <div class="service-item">
-                <img src="familia.png">
+                <img src="familia.png" alt="Direito de Família">
                 <h3>Direito Familiar</h3>
-                <p>Atendimento humanizado em divórcios, guarda de filhos, pensão alimentícia e inventários.</p>
+                <p>Atendimento em divórcios, guarda de filhos, pensão alimentícia e inventários.</p>
             </div>
             <div class="service-item">
-                <img src="sucessorio.png">
-                <h3>Direito das Sucessões</h3>
-                <p>Assessoria completa em inventários, testamentos e planejamento sucessório.</p>
+                <img src="sucessorio.png" alt="Direito Sucessório">
+                <h3>Direito Sucessório</h3>
+                <p>Assessoria em inventários, testamentos e planejamento sucessório.</p>
             </div>
             <div class="service-item">
-                <img src="imob.png">
-                <h3>Direito Imobiliário</h3>
-                <p>Consultoria em compra, venda, locação e regularização de imóveis, usucapião e contratos imobiliários.</p>
+                <img src="ambiental.png" alt="Direito Ambiental">
+                <h3>Direito Ambiental</h3>
+                <p>Consultoria jurídica em questões ambientais, licenciamento e crimes ambientais.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="blog">
-        <h2>DÚVIDAS FREQUENTES</h2>
-        <div class="blog-post">
-            <h3>Como funciona a revisão de aposentadoria?</h3>
-            <p>A revisão de aposentadoria permite analisar possíveis erros no cálculo de benefícios.</p>
+            <div class="service-item">
+                <img src="consumidor.png" alt="Direito do Consumidor">
+                <h3>Direito do Consumidor</h3>
+                <p>Defesa do consumidor em fraudes, cobranças indevidas e problemas com produtos e serviços.</p>
+            </div>
         </div>
     </section>
 
@@ -195,19 +167,8 @@
 
     <footer>
         <p>&copy; 2025 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
-        <p><a href="politicadeprivacidade.html" target="_blank" style="text-decoration: none; color: #f5f5f5;">Política de Privacidade</a></p>
+        <p><a href="politicadeprivacidade.html" style="text-decoration: none; color: #f5f5f5;">Política de Privacidade</a></p>
     </footer>
 
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function(){
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/6786b9573a842732606ebf38/1ihj47vut';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
 </body>
 </html>
