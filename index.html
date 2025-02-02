@@ -22,6 +22,9 @@
             max-width: 300px;
             height: auto;
         }
+        header h1 {
+            margin: 10px 0;
+        }
         nav {
             background-color: #333;
             padding: 10px;
@@ -39,7 +42,7 @@
         }
         section {
             margin: 20px auto;
-            max-width: 900px;
+            max-width: 800px;
             padding: 20px;
             background: #f9f9f9;
             border-radius: 8px;
@@ -68,6 +71,22 @@
             border-radius: 15px;
             margin-bottom: 10px;
         }
+        .faq-item {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .faq-item h3 {
+            margin: 0;
+            color: #333;
+        }
+        .faq-answer {
+            display: none;
+            padding-top: 5px;
+            color: #555;
+        }
         .whatsapp-button {
             position: fixed;
             bottom: 20px;
@@ -83,6 +102,10 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-decoration: none;
             z-index: 1000;
+        }
+        .whatsapp-button img {
+            width: 35px;
+            height: 35px;
         }
         footer {
             background-color: #040404;
@@ -136,28 +159,29 @@
             <div class="service-item">
                 <img src="civil.png" alt="Direito Civil">
                 <h3>Direito Civil</h3>
-                <p>Atuação em contratos, responsabilidade civil, cobranças e indenizações.</p>
+                <p>Atuação em contratos, responsabilidade civil, cobranças, indenizações e regularização de bens.</p>
             </div>
             <div class="service-item">
                 <img src="familia.png" alt="Direito de Família">
                 <h3>Direito Familiar</h3>
-                <p>Atendimento em divórcios, guarda de filhos, pensão alimentícia e inventários.</p>
+                <p>Atendimento humanizado em divórcios, guarda de filhos, pensão alimentícia e inventários.</p>
             </div>
-            <div class="service-item">
-                <img src="sucessorio.png" alt="Direito Sucessório">
-                <h3>Direito Sucessório</h3>
-                <p>Assessoria em inventários, testamentos e planejamento sucessório.</p>
-            </div>
-            <div class="service-item">
-                <img src="ambiental.png" alt="Direito Ambiental">
-                <h3>Direito Ambiental</h3>
-                <p>Consultoria jurídica em questões ambientais, licenciamento e crimes ambientais.</p>
-            </div>
-            <div class="service-item">
-                <img src="consumidor.png" alt="Direito do Consumidor">
-                <h3>Direito do Consumidor</h3>
-                <p>Defesa do consumidor em fraudes, cobranças indevidas e problemas com produtos e serviços.</p>
-            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>DÚVIDAS FREQUENTES</h2>
+        <div class="faq-item">
+            <h3>Como funciona a revisão de aposentadoria?</h3>
+            <p class="faq-answer">A revisão de aposentadoria permite analisar possíveis erros no cálculo de benefícios.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Quais são os direitos do servidor público?</h3>
+            <p class="faq-answer">Os servidores públicos possuem direitos como estabilidade no cargo, progressão na carreira e aposentadoria diferenciada.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Como posso regularizar um imóvel?</h3>
+            <p class="faq-answer">A regularização pode ser feita por meio de usucapião, retificação de registro e outros procedimentos legais com acompanhamento jurídico.</p>
         </div>
     </section>
 
@@ -170,5 +194,14 @@
         <p><a href="politicadeprivacidade.html" style="text-decoration: none; color: #f5f5f5;">Política de Privacidade</a></p>
     </footer>
 
+    <script>
+        document.querySelectorAll('.faq-item h3').forEach(item => {
+            item.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
 </body>
 </html>
+
