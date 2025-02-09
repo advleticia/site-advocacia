@@ -11,7 +11,7 @@
             padding: 0;
             background-color: #cccccc;
             color: #333;
-            font-size: 18px;
+	    font-size: 18px;
         }
         header {
             background-color: #040404;
@@ -20,12 +20,11 @@
             padding: 20px;
         }
         header img {
-            max-width: 100%;
+            max-width: 300px;
             height: auto;
         }
         header h1 {
             margin: 10px 0;
-            font-size: 24px;
         }
         nav {
             background-color: #333;
@@ -34,58 +33,42 @@
         }
         nav a {
             color: #f9f9f9;
-            margin: 5px;
+            margin: 0 15px;
             text-decoration: none;
             font-size: 16px;
             text-transform: uppercase;
-            display: block;
         }
-        @media (min-width: 768px) {
-            nav a {
-                display: inline;
-            }
+        nav a:hover {
+            text-decoration: underline;
         }
+		
         section {
             margin: 20px auto;
-            max-width: 90%;
+            max-width: 1000px;
             padding: 20px;
             background: #f9f9f9;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+	}
         section h2 {
-            text-align: center;
+            text-align: center; /* Centralizando os títulos */
         }
         #welcome p {
-            text-align: justify;
+            text-align: justify; /* Justificando o texto da seção Bem-vindo */
         }
         .service-area {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-top: 20px;
         }
-        @media (min-width: 768px) {
-            .service-area {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media (min-width: 1024px) {
-            .service-area {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
+
         .service-item {
             background-color: #f5f5f5;
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
-        }
-        .service-item img {
-            width: 100px;
-            height: auto;
-            margin-bottom: 10px;
         }
         .faq-item {
             background: #f5f5f5;
@@ -99,14 +82,34 @@
             padding-top: 5px;
             color: #555;
         }
-        footer {
+	footer {
             background-color: #040404;
             color: #f9f9f9;
             text-align: center;
             padding: 15px;
             font-size: 14px;
+            font-family: 'Arial', serif;
         }
+/* Media queries para ajustes específicos */
+        @media (max-width: 768px) {
+    .service-area {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+            nav a {
+                font-size: 14px; /* Ajusta o tamanho da fonte no menu */
+                margin: 0 10px; /* Reduz o espaçamento no menu */
+            }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('.faq-item h3').forEach(item => {
+                item.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -124,18 +127,64 @@
 
     <section id="welcome">
         <h2>BEM-VINDO!</h2>
-        <p>Seja bem-vindo ao meu escritório de advocacia! Sou Letícia Costa de Oliveira Gonçalves de Souza e estou aqui para oferecer suporte jurídico com dedicação e comprometimento. Meu objetivo é entender suas necessidades e buscar as melhores soluções para o seu caso. Com um atendimento personalizado e humanizado, estou pronta para auxiliá-lo na defesa dos seus direitos. Entre em contato e vamos juntos encontrar o caminho ideal para sua demanda jurídica.</p>
+                <p>Seja bem-vindo ao meu escritório de advocacia! Sou Letícia Costa de Oliveira Gonçalves de Souza e estou aqui para oferecer suporte jurídico com dedicação e comprometimento. Meu objetivo é entender suas necessidades e buscar as melhores soluções para o seu caso. Com um atendimento personalizado e humanizado, estou pronta para auxiliá-lo na defesa dos seus direitos. Entre em contato e vamos juntos encontrar o caminho ideal para sua demanda jurídica.</p>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="https://calendly.com/leticia-advog/consultoriajuridica" 
+               style="display: inline-block; background-color: #333; color: white; padding: 15px 25px; 
+                      border-radius: 5px; text-decoration: none; font-size: 18px; text-transform: uppercase;">
+                Agende uma consultoria comigo
+            </a>
+        </div>
     </section>
 
     <section id="services">
         <h2>ÁREAS DE ATUAÇÃO</h2>
         <div class="service-area">
-            <div class="service-item"><img src="previdenciario.png" alt="Direito Previdenciário"><h3>Direito Previdenciário</h3><p>Atendimento especializado em aposentadorias e benefícios.</p></div>
-            <div class="service-item"><img src="servidorpublico.png" alt="Direito do Servidor Público"><h3>Direito do Servidor Público</h3><p>Defesa e consultoria para servidores públicos estatutários.</p></div>
-            <div class="service-item"><img src="civil.png" alt="Direito Civil"><h3>Direito Civil</h3><p>Atuação em contratos, indenizações e responsabilidade civil.</p></div>
-            <div class="service-item"><img src="trabalhista.png" alt="Direito Trabalhista"><h3>Direito Trabalhista</h3><p>Direitos do trabalhador, verbas rescisórias e reclamações trabalhistas.</p></div>
-            <div class="service-item"><img src="familia.png" alt="Direito de Família"><h3>Direito de Família</h3><p>Divórcios, guarda de filhos, pensão alimentícia e inventários.</p></div>
-            <div class="service-item"><img src="imobiliario.png" alt="Direito Imobiliário"><h3>Direito Imobiliário</h3><p>Compra, venda, locação, regularização de imóveis e usucapião.</p></div>
+            
+	<div class="service-item">
+		<img src="servidorpublico.png" alt="Direito do Servidor Público">
+		<h3>Servidor Público</h3>
+		<p>Defesa e consultoria especializada para servidores públicos estatutários e celetistas.</p></div>
+            
+	<div class="service-item">
+		<img src="previdenciario.png" alt="Direito Previdenciário">
+		<h3>Previdenciário</h3>
+		<p>Auxílio em aposentadorias, benefícios, revisões e requerimentos junto ao INSS.</p></div>
+          
+	<div class="service-item">
+		<img src="trab.png" alt="Direito Trabalhista">
+		<h3>Trabalhista</h3>
+		<p>Atuação em reclamatórias trabalhistas, rescisões contratuais, verbas rescisórias e direitos do trabalhador.</p></div>
+            
+	<div class="service-item">
+		<img src="civil.png" alt="Direito Civil">
+		<h3>Civil</h3>
+		<p>Atuação em contratos, responsabilidade civil, cobranças, indenizações e regularização de bens.</p></div>
+            
+	<div class="service-item">
+		<img src="familia.png" alt="Direito de Família">
+		<h3>Familiar</h3>
+		<p>Atendimento humanizado em divórcios, guarda de filhos, pensão alimentícia e inventários.</p></div>
+            
+	<div class="service-item">
+		<img src="sucessorio.png" alt="Direito Sucessório">
+		<h3>Sucessório</h3>
+		<p>Assessoria completa em inventários, partilhas, testamentos e planejamento sucessório.</p></div>
+            
+	<div class="service-item">
+		<img src="imob.png" alt="Direito Imobiliário">
+		<h3>Imobiliário</h3>
+		<p>Soluções jurídicas para compra, venda, locação, regularização de imóveis, contratos imobiliários e usucapião.</p></div>
+            
+	<div class="service-item">
+		<img src="consumidor.png" alt="Direito do Consumidor">
+		<h3>Consumidor</h3>
+		<p>Proteção dos direitos do consumidor em casos de fraudes, publicidade enganosa e cobranças indevidas.</p></div>
+            
+	<div class="service-item">
+		<img src="ambiental.png" alt="Direito do Consumidor">
+		<h3>Ambiental</h3>
+		<p>Consultoria e atuação em licenciamento ambiental, responsabilidade civil e proteção de recursos naturais.</p></div>
         </div>
     </section>
 
@@ -143,17 +192,13 @@
         <h2>DÚVIDAS FREQUENTES</h2>
         <div class="faq-item">
             <h3>Como funciona a revisão de aposentadoria?</h3>
-            <p class="faq-answer">A revisão permite corrigir possíveis erros no cálculo do benefício.</p>
+            <p class="faq-answer">A revisão de aposentadoria permite analisar possíveis erros no cálculo de benefícios.</p>
         </div>
         <div class="faq-item">
             <h3>Quais são os direitos do servidor público?</h3>
-            <p class="faq-answer">Os servidores públicos possuem direitos como estabilidade e progressão na carreira.</p>
+            <p class="faq-answer">Os servidores públicos possuem direitos como estabilidade no cargo, progressão na carreira e aposentadoria diferenciada.</p>
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2025 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
-    </footer>
 </body>
 </html>
 
