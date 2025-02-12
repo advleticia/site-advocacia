@@ -390,13 +390,18 @@
             <div class="contact-form">
              
 		<p>Se preferir, me encaminhe uma mensagem pelo formulário abaixo. Te retornarei o mais brevemente possível.</p>
-                <form action="enviar.php" method="post">
-                    <input type="text" name="nome" placeholder="Nome" class="form-field large-field" required>
-                    <input type="email" name="email" placeholder="E-mail" class="form-field large-field" required>
-                    
-                    <div class="flex-row">
-                        <input type="tel" name="telefone" placeholder="Telefone" class="form-field small-field">
-                        <select name="area" class="form-field small-field" required>
+                <form id="contactForm">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" required>
+
+  <label for="email">E-mail:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="telefone">Telefone:</label>
+  <input type="tel" id="telefone" name="telefone" required>
+
+  <label for="areas">Área de Atuação:</label>
+  <select id="areas" name="areas">
                             <option value="">Selecione</option>
                             <option value="">Servidor Público</option>
                             <option value="">Previdenciário</option>
@@ -408,18 +413,37 @@
                             <option value="">Consumidor</option>
                             <option value="">Ambiental</option>
                         </select>
-                    </div>
+        <label for="mensagem">Mensagem:</label>
+  <textarea id="mensagem" name="mensagem" required></textarea>
 
-                    <textarea name="mensagem" placeholder="Mensagem" class="form-field large-field" required></textarea>
-                    <button type="submit" class="submit-button large-field">Enviar</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Adicionando o link para o Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <button type="submit">Enviar</button>
+</form>
 
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Pegando os valores do formulário
+  var nome = document.getElementById("nome").value;
+  var email = document.getElementById("email").value;
+  var telefone = document.getElementById("telefone").value;
+  var areas = document.getElementById("areas").value;
+  var mensagem = document.getElementById("mensagem").value;
+
+  // Criando o corpo do e-mail
+  var emailBody = `Nome: ${nome}%0A`;
+  emailBody += `E-mail: ${email}%0A`;
+  emailBody += `Telefone: ${telefone}%0A`;
+  emailBody += `Área de Atuação: ${areas}%0A%0A`;
+  emailBody += `Mensagem:%0A${mensagem}`;
+
+  // Defina aqui o e-mail do Trello (copiado lá no primeiro passo)
+  var trelloEmail = "SEU_EMAIL_DO_TRELLO_AQUI";
+
+  // Abrir o cliente de e-mail para enviar
+  window.location.href = `mailto:${trelloEmail}?subject=Novo Contato&body=${emailBody}`;
+});
+</script>
 
 <section id="faq">
         <h2>DÚVIDAS FREQUENTES</h2>
