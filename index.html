@@ -390,13 +390,12 @@
             <div class="contact-form">
              
 		<p>Se preferir, me encaminhe uma mensagem pelo formulário abaixo. Te retornarei o mais brevemente possível.</p>
-                <form action="enviar.php" method="post">
+                <form action="contatoServlet" method="POST">
                     <input type="text" name="nome" placeholder="Nome" class="form-field large-field" required>
                     <input type="email" name="email" placeholder="E-mail" class="form-field large-field" required>
-                    
                     <div class="flex-row">
-                        <input type="tel" name="telefone" placeholder="Telefone" class="form-field small-field">
-                        <select name="area" class="form-field small-field" required>
+                    <input type="tel" name="telefone" placeholder="Telefone" class="form-field small-field">
+                    <select name="area" class="form-field small-field" required>
                             <option value="">Selecione</option>
                             <option value="">Servidor Público</option>
                             <option value="">Previdenciário</option>
@@ -408,10 +407,9 @@
                             <option value="">Consumidor</option>
                             <option value="">Ambiental</option>
                         </select>
+			<textarea name="mensagem" placeholder="Mensagem" class="form-field large-field" required></textarea>
+                   	<button type="submit" class="submit-button large-field">Enviar</button>
                     </div>
-
-                    <textarea name="mensagem" placeholder="Mensagem" class="form-field large-field" required></textarea>
-                    <button type="submit" class="submit-button large-field">Enviar</button>
                 </form>
             </div>
         </div>
@@ -420,6 +418,34 @@
 <!-- Adicionando o link para o Font Awesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class ContatoServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Pega os dados do formulário
+        String nome = request.getParameter("nome");
+        String email = request.getParameter("email");
+        String telefone = request.getParameter("telefone");
+        String area = request.getParameter("area");
+        String mensagem = request.getParameter("mensagem");
+
+        // Aqui você pode processar os dados (ex: enviar um e-mail ou armazenar em um banco de dados)
+
+        // Exemplo de resposta simples:
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.println("<html><body>");
+        out.println("<h1>Mensagem recebida com sucesso!</h1>");
+        out.println("<p>Nome: " + nome + "</p>");
+        out.println("<p>E-mail: " + email + "</p>");
+        out.println("<p>Telefone: " + telefone + "</p>");
+        out.println("<p>Área: " + area + "</p>");
+        out.println("<p>Mensagem: " + mensagem + "</p>");
+        out.println("</body></html>");
+    }
+}
 
 <section id="faq">
         <h2>DÚVIDAS FREQUENTES</h2>
@@ -491,5 +517,4 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 </body>
 </html>
-
 
