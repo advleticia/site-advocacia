@@ -1,27 +1,30 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $area = $_POST['area'];
+    $mensagem = $_POST['mensagem'];
 
-try {
-// Dados do formulário
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$mensagem = $_POST['mensagem'];
-
-// Seu endereço de e-mail
-$para = 'contato@advleticia.com'; // Substitua pelo seu e-mail
-
-// Assunto do e-mail
-$assunto = 'Novo contato pelo formulário do site';
-
-// Corpo do e-mail
-$corpo = "Nome: $nome\nEmail: $email\nMensagem: $mensagem";
-
-// Envio do e-mail
-mail($para, $assunto, $corpo);
-
-// Redirecionamento para uma página de confirmação
-    header('Location: obrigada.html'); // Crie um arquivo obrigado.html
-} catch (Exception $e) {
-    echo 'Erro ao enviar o e-mail: ' . $e->getMessage();
+    $destinatario = "Leticia.advog@outlook.com";
+    $assunto = "Novo contato do site";
+    
+    $corpo = "Nome: $nome\n";
+    $corpo .= "E-mail: $email\n";
+    $corpo .= "Telefone: $telefone\n";
+    $corpo .= "Área de Atuação: $area\n";
+    $corpo .= "Mensagem:\n$mensagem\n";
+    
+    $cabecalho = "From: $email\r\n";
+    $cabecalho .= "Reply-To: $email\r\n";
+    
+    if (mail($destinatario, $assunto, $corpo, $cabecalho)) {
+        echo "<script>alert('Mensagem enviada com sucesso!'); window.location.href = 'index.html';</script>";
+    } else {
+        echo "<script>alert('Erro ao enviar mensagem.'); window.location.href = 'index.html';</script>";
+    }
+} else {
+    echo "<script>alert('Acesso inválido.'); window.location.href = 'index.html';</script>";
 }
-
 ?>
+
