@@ -136,11 +136,17 @@
             	cursor: pointer;
         	}
 
-	       .faq-answer {
-            	display: none;
-            	padding-top: 5px;
-            	color: #555; /* Cinza médio */
-        	}
+	       	.faq-answer {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.faq-answer.show {
+    display: block;
+    opacity: 1;
+}
+
         
         	/* Ajustes para a seção de contato */
 		
@@ -267,10 +273,8 @@
 		const resposta = item.querySelector('.faq-answer');
 		
 		pergunta.addEventListener('click', () => {
-                resposta.style.display = resposta.style.display === 'block' ? 'none' : 'block';
-            	});
-        	});
-    		});
+    		resposta.classList.toggle('show');
+		});
     </script>
 
 </head>
@@ -375,11 +379,11 @@
                 	<div class="social-icons">
                     	<p>Acompanhe notícias e atualizações jurídicas em minhas redes sociais:</p>
                     	<div class="social-row">
-                        	<a href="https://www.instagram.com/seuusuario" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-                        	<a href="https://www.facebook.com/seuusuario" class="social-icon" target="_blank"><i class="fab fa-facebook"></i></a>
-                        	<a href="https://www.tiktok.com/@seuusuario" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
-                        	<a href="https://www.linkedin.com/in/seuusuario" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        	<a href="https://www.youtube.com/c/seuusuario" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                        	<a href="https://www.instagram.com/leticia.advog/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        	<a href="https://www.facebook.com/profile.php?id=100079562070489" class="social-icon" target="_blank"><i class="fab fa-facebook"></i></a>
+                        	<a href="https://www.tiktok.com/@leticia.advog" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        	<a href="https://www.linkedin.com/in/let%C3%ADcia-costa-de-oliveira-gon%C3%A7alves-de-souza-516b3624a/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        	<a href="https://www.youtube.com/@advleticia" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -408,6 +412,9 @@
 
                     <textarea name="mensagem" placeholder="Mensagem" class="form-field large-field" required></textarea>
                     <button type="submit" class="submit-button large-field">Enviar</button>
+
+<form action="enviar.php" method="post">
+    </form>
                 </form>
             </div>
         </div>
@@ -487,3 +494,5 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 </body>
 </html>
+
+
