@@ -407,18 +407,55 @@
                             <option value="">Imobiliário</option>
                             <option value="">Consumidor</option>
                             <option value="">Ambiental</option>
-                        </select>
-                    </div>
+                         </select>
 
-                    <textarea name="mensagem" placeholder="Mensagem" class="form-field large-field" required></textarea>
-                    <button type="submit" class="submit-button large-field">Enviar</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Adicionando o link para o Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <label for="mensagem">Mensagem:</label>
+  <textarea id="mensagem" name="mensagem" required></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Pegando os valores do formulário
+  var nome = document.getElementById("nome").value;
+  var email = document.getElementById("email").value;
+  var telefone = document.getElementById("telefone").value;
+  var areas = document.getElementById("areas").value;
+  var mensagem = document.getElementById("mensagem").value;
+
+  // Defina aqui suas credenciais do Trello
+  var apiKey = "6e6c30faa2161e3cda25e288b40d154a";
+  var token = "0f0ef50814b5f3d5f0646bfa136e374ecfda0730b14ea43f853408abf6f0848f";
+  var idLista = "6797b2ad9e67fd609df087d3";
+
+  // Criando o corpo da requisição para o Trello
+  var data = new URLSearchParams();
+  data.append("name", `Contato: ${nome}`);
+  data.append("desc", `**Nome:** ${nome}\n**E-mail:** ${email}\n**Telefone:** ${telefone}\n**Área de Atuação:** ${areas}\n**Mensagem:**\n${mensagem}`);
+  data.append("pos", "top");
+  data.append("idList", idLista);
+  data.append("key", apiKey);
+  data.append("token", token);
+
+  // Fazendo a requisição para criar um card no Trello
+  fetch("https://api.trello.com/1/cards", {
+    method: "POST",
+    body: data
+  })
+  .then(response => response.json())
+  .then(data => {
+    alert("Formulário enviado com sucesso! Seu contato foi registrado no Trello.");
+    document.getElementById("contactForm").reset();
+  })
+  .catch(error => {
+    console.error("Erro ao enviar o formulário:", error);
+    alert("Houve um erro ao enviar o formulário. Tente novamente.");
+  });
+});
+</script>
 
 
 <section id="faq">
