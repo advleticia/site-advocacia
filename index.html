@@ -426,46 +426,43 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 <script>
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-  event.preventDefault();
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
 
-  // Pegando os valores do formulário
-  var nome = document.getElementById("nome").value;
-  var email = document.getElementById("email").value;
-  var telefone = document.getElementById("telefone").value;
-  var areas = document.getElementById("areas").value;
-  var mensagem = document.getElementById("mensagem").value;
+        var nome = document.getElementById("nome").value;
+        var email = document.getElementById("email").value;
+        var telefone = document.getElementById("telefone").value;
+        var area = document.getElementById("area").value;
+        var mensagem = document.getElementById("mensagem").value;
 
-  // Defina aqui suas credenciais do Trello
-  var apiKey = "6e6c30faa2161e3cda25e288b40d154a";
-  var token = "0f0ef50814b5f3d5f0646bfa136e374ecfda0730b14ea43f853408abf6f0848f";
-  var idLista = "679d06c4574e3fde0bd3e4f9";
+        var apiKey = "SUA_CHAVE";
+        var token = "SEU_TOKEN";
+        var idLista = "ID_DA_LISTA";
 
-  // Criando o corpo da requisição para o Trello
-  var data = new URLSearchParams();
-  data.append("name", `Contato: ${nome}`);
-  data.append("desc", `**Nome:** ${nome}\n**E-mail:** ${email}\n**Telefone:** ${telefone}\n**Área de Atuação:** ${areas}\n**Mensagem:**\n${mensagem}`);
-  data.append("pos", "top");
-  data.append("idList", idLista);
-  data.append("key", apiKey);
-  data.append("token", token);
+        var data = new URLSearchParams();
+        data.append("name", `Contato: ${nome}`);
+        data.append("desc", `**Nome:** ${nome}\n**E-mail:** ${email}\n**Telefone:** ${telefone}\n**Área de Atuação:** ${area}\n**Mensagem:**\n${mensagem}`);
+        data.append("pos", "top");
+        data.append("idList", idLista);
+        data.append("key", apiKey);
+        data.append("token", token);
 
-  // Fazendo a requisição para criar um card no Trello
-  fetch("https://api.trello.com/1/cards", {
-    method: "POST",
-    body: data
-  })
-  .then(response => response.json())
-  .then(data => {
-    alert("Formulário enviado com sucesso! Seu contato foi registrado no Trello.");
-    document.getElementById("contactForm").reset();
-  })
-  .catch(error => {
-    console.error("Erro ao enviar o formulário:", error);
-    alert("Houve um erro ao enviar o formulário. Tente novamente.");
-  });
-});
-</script>
+        fetch("https://api.trello.com/1/cards", {
+            method: "POST",
+            body: data
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert("Formulário enviado com sucesso! Seu contato foi registrado no Trello.");
+            document.getElementById("contactForm").reset();
+        })
+        .catch(error => {
+            console.error("Erro ao enviar o formulário:", error);
+            alert("Houve um erro ao enviar o formulário. Tente novamente.");
+        });
+    });
+    </script>
+	
 <section id="faq">
         <h2>DÚVIDAS FREQUENTES</h2>
         <div class="faq-item">
