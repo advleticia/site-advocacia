@@ -390,29 +390,39 @@
             <div class="contact-form">
              
 		<p>Se preferir, me encaminhe uma mensagem pelo formulário abaixo. Te retornarei o mais brevemente possível.</p>
-                <form action="enviar.php" method="post">
-                    <input type="text" name="nome" placeholder="Nome" class="form-field large-field" required>
-                    <input type="email" name="email" placeholder="E-mail" class="form-field large-field" required>
+                <form action="https://formspree.io/f/mzzdaooj" method="POST">
+    <!-- Campo Nome -->
+    <input type="text" name="nome" placeholder="Nome" class="form-field large-field" required>
+    
+    <!-- Campo E-mail -->
+    <input type="email" name="email" placeholder="E-mail" class="form-field large-field" required>
                     
                     <div class="flex-row">
-                        <input type="tel" name="telefone" placeholder="Telefone" class="form-field small-field">
-                        <select name="area" class="form-field small-field" required>
-                            <option value="">Selecione</option>
-                            <option value="">Servidor Público</option>
-                            <option value="">Previdenciário</option>
-                            <option value="">Trabalhista</option>
-                            <option value="">Civil</option>
-                            <option value="">Familiar</option>
-			    <option value="">Sucessão</option>
-                            <option value="">Imobiliário</option>
-                            <option value="">Consumidor</option>
-                            <option value="">Ambiental</option>
-                        </select>
-                    </div>
-
-                    <textarea name="mensagem" placeholder="Mensagem" class="form-field large-field" required></textarea>
-                    <button type="submit" class="submit-button large-field">Enviar</button>
-                </form>
+                         <!-- Campo Telefone -->
+    <div class="flex-row">
+        <input type="tel" name="telefone" placeholder="Telefone" class="form-field small-field">
+        
+        <!-- Campo Áreas de Atuação -->
+        <select name="area" class="form-field small-field" required>
+            <option value="">Selecione</option>
+            <option value="Servidor Público">Servidor Público</option>
+            <option value="Previdenciário">Previdenciário</option>
+            <option value="Trabalhista">Trabalhista</option>
+            <option value="Civil">Civil</option>
+            <option value="Familiar">Familiar</option>
+            <option value="Sucessão">Sucessão</option>
+            <option value="Imobiliário">Imobiliário</option>
+            <option value="Consumidor">Consumidor</option>
+            <option value="Ambiental">Ambiental</option>
+        </select>
+    </div>
+    
+    <!-- Campo Mensagem -->
+    <textarea name="mensagem" placeholder="Mensagem" class="form-field large-field" required></textarea>
+    
+    <!-- Botão de Enviar -->
+    <button type="submit" class="submit-button large-field">Enviar</button>
+</form>
             </div>
         </div>
     </div>
