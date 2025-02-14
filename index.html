@@ -156,6 +156,7 @@
 		largura máxima: 100px; largura: 100%; 
 		preenchimento: 40px; 
 		} 
+		
 
 		.contact-content { 
 		display: flex; 
@@ -253,6 +254,16 @@
 		margem inferior: 30px; 
 		text-align: justify;
 		} 
+		@media (max-width: 768px) {
+    .contato-container {
+        display: block; /* Remove o layout de colunas */
+        text-align: center; /* Centraliza o conteúdo */
+    }
+
+    .formulario-contato, 
+    .info-contato {
+        width: 100%; /* Faz cada item ocupar toda a largura */
+        margin-bottom: 20px; /* Espaço entre os blocos */
 
 		footer {
 		background-color: #040404; /* Preto */
