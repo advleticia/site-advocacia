@@ -130,10 +130,11 @@
 }
 
 .sobre-container {
-	display: flex; 
-	justificar-conteúdo: espaço entre; 
-	largura máxima: 100px; largura: 100%; 
-	preenchimento: 40px; 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px;
+    align-items: center;
 }
 
 .foto-sobre {
@@ -142,13 +143,17 @@
     border-radius: 0px;
     box-shadow: none;
 }
+
 .sobre-mim-texto {
-        margin-left: 300px; /* Diminui a distância entre a foto e o texto */
-        max-width: 50px;
-    }
+    margin-left: 50px; /* Aumenta o espaço entre a foto e o texto */
+    max-width: 700px;
+    text-align: justify;
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas */
+}
+
 #sobre-mim p {
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.8;
     text-align: justify;
     max-width: 700px;
 }
