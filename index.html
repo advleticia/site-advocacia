@@ -333,76 +333,8 @@
     .contact-form {
         order: 2; /* Coloca o formulário embaixo das informações */
     }
-	
-			<div class="carousel-container">
-    <div class="carousel">
-        <div class="carousel-item">
-            <h3>Caso 1: Reintegração de Servidor Público</h3>
-            <p>Resumo do caso onde garantimos o direito à reintegração de um servidor público injustamente afastado, com base nos direitos garantidos pela legislação municipal.</p>
-        </div>
-        <div class="carousel-item">
-            <h3>Caso 2: Direito à Insalubridade</h3>
-            <p>Defendemos o direito de um servidor exposto a condições insalubres de trabalho, obtendo a reclassificação para o adicional devido.</p>
-        </div>
-        <div class="carousel-item">
-            <h3>Caso 3: Revisão de Benefício Previdenciário</h3>
-            <p>Revisamos o benefício previdenciário de um cliente que havia sido subavaliado, resultando em um aumento significativo no valor mensal.</p>
-        </div>
-    </div>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
 		}
-     .carousel-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
 
-        .carousel {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-item {
-            min-width: 100%;
-            box-sizing: border-box;
-            padding: 20px;
-            text-align: center;
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
-            margin: 10px 0;
-        }
-
-        .carousel h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .carousel p {
-            font-size: 1em;
-            color: #555;
-        }
-
-        button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        button.prev {
-            left: 10px;
-        }
-
-        button.next {
-            right: 10px;
-        }
 		footer {
 		background-color: #040404; /* Preto */
 		color: #f9f9f9; /* Branco */
@@ -424,7 +356,6 @@
     		resposta.classList.toggle('show');
 		});
     </script>
-	
 
 </head>
 <body>
@@ -559,35 +490,21 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 
-<script>
-    let currentIndex = 0;
-
-    const items = document.querySelectorAll('.carousel-item');
-    const totalItems = items.length;
-
-    document.querySelector('.next').addEventListener('click', () => {
-        if (currentIndex < totalItems - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0;
-        }
-        updateCarousel();
-    });
-
-    document.querySelector('.prev').addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = totalItems - 1;
-        }
-        updateCarousel();
-    });
-
-    function updateCarousel() {
-        const carousel = document.querySelector('.carousel');
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-</script>
+<section id="faq">
+        <h2>DÚVIDAS FREQUENTES</h2>
+        <div class="faq-item">
+            <p><strong>Como funciona a revisão de aposentadoria?</strong></p>
+            <p class="faq-answer">A revisão de aposentadoria permite analisar possíveis erros no cálculo de benefícios.</p>
+        </div>
+        <div class="faq-item">
+            <p><strong>Quais são os direitos do servidor público?</strong></p>
+            <p class="faq-answer">Os servidores públicos possuem direitos como estabilidade no cargo, progressão na carreira e aposentadoria diferenciada.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Letícia Costa de Oliveira Gonçalves de Souza - Todos os direitos reservados.</p>
+        <p><a href="políticadeprivacidade.html" target="_blank" style="text-decoration: none; color: #f5f5f5;">Política de Privacidade</a></p>
+    </footer>
 
 <script>
   async function carregarPerguntas() {
@@ -643,6 +560,12 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 </body>
 </html>
+
+
+
+
+
+
 
 
 
